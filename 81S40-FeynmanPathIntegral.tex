@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FeynmanPathIntegral}
+\pmcreated{2013-03-22 12:41:45}
+\pmmodified{2013-03-22 12:41:45}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Feynman path integral}
+\pmrecord{19}{32976}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81S40}
+%\pmkeywords{Feynman}
+%\pmkeywords{path integral}
+%\pmkeywords{quantum field theory}
+%\pmkeywords{Feynman diagrams}
+\pmrelated{LpSpace}
+\pmrelated{RichardFeynman}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\dotsint}{ \int \cdots}
+
+\begin{document}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{ranges}
+
+A generalisation of multi-dimensional integral, written
+\[
+  \int \mathcal{D}\phi \;\mathrm{exp} \left (\mathcal{F} [\phi] \right )
+\]
+where $\phi$ ranges over some restricted set of functions from a measure space $X$ to some space with reasonably nice algebraic structure. The simplest example is the case where 
+\[
+  \phi \in L^2[X,\RR]
+\]
+and 
+\[
+  F[\phi] = -\pi \int_X \phi^2(x) d\mu(x)
+\]
+in which case it can be argued that the result is $1$. The argument is by analogy to the Gaussian integral
+$\int_{\RR^n} dx_1\cdots dx_n e^{-\pi\sum x_j^2} \equiv 1$. Alas, one can absorb the $\pi$ into the measure on $X$.
+Alternatively, following Pierre Cartier and others, one can use this analogy to {\em define} a measure on $L^2$
+and proceed axiomatically.
+
+One can bravely trudge onward and hope to come up with something, say \`a la Riemann integral, by partitioning $X$,
+picking some representative of each partition, approximating the functional $F$ based on these
+and calculating a  multi-dimensional integral as usual over the sample values of $\phi$. This leads to some integral
+\[
+  \dotsint d\phi(x_1) \cdots d\phi(x_n) e^{f(\phi(x_1),\ldots,\phi(x_n))}.
+\]
+One hopes that taking successively finer partitions of $X$ will give a sequence of integrals which converge on some nice limit. I believe Pierre Cartier has shown that this doesn't usually happen, except for the trivial kind of example given above.
+
+The Feynman path integral was constructed as part of a re-formulation of \PMlinkescapetext{quantum field theory} by Richard Feynman, based on the sum-over-histories postulate of quantum mechanics, and can be thought of as an adaptation of Green's function methods for solving initial/boundary value problems. No appropriate measure has been found for this integral and attempts at pseudomeasures have given mixed results.
+
+{\bf Remark:}
+Note however that in solving quantum field theory problems one attacks the problem in the Feynman approach by
+`dividing' it \emph{via} Feynman diagrams that are directly related to specific quantum interactions;
+adding the contributions from such Feynman diagrams leads to high precision approximations to the final physical 
+solution which is finite and physically meaningful, or observable.
+
+\begin{thebibliography}{2}
+\bibitem{hk} Hui-Hsiung Kuo, {\it Introduction to Stochastic Integration}. New York: Springer (2006): 250 - 253
+\bibitem{jk} J. B. Keller \& D. W. McLaughlin, ``The Feynman Integral'' {\it Amer. Math. Monthly} {\bf 82} 5 (1975): 451 - 465
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

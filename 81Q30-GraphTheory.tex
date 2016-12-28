@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GraphTheory}
+\pmcreated{2013-05-16 20:59:21}
+\pmmodified{2013-05-16 20:59:21}
+\pmowner{karteef}{1114}
+\pmmodifier{unlord}{1}
+\pmtitle{graph theory}
+\pmrecord{50}{33532}
+\pmprivacy{1}
+\pmauthor{karteef}{1}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81Q30}
+\pmclassification{msc}{18G30}
+\pmclassification{msc}{05C50}
+\pmclassification{msc}{55U10}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{05C25}
+\pmclassification{msc}{05C99}
+\pmsynonym{category theory}{GraphTheory}
+%\pmkeywords{graph}
+%\pmkeywords{combinatorics}
+%\pmkeywords{Ramsey}
+%\pmkeywords{tree}
+\pmrelated{Graph}
+\pmrelated{Hypergraph}
+\pmrelated{Category}
+\pmrelated{CategoryTheory}
+\pmrelated{EulersPolyhedronTheorem}
+\pmrelated{Digraph}
+\pmrelated{Tree}
+\pmrelated{BinaryTree}
+\pmrelated{ProbabilisticMethod}
+\pmrelated{HamiltonianCycle}
+\pmrelated{Tournament}
+\pmrelated{RamseysTheorem}
+\pmrelated{Coloring}
+\pmrelated{GraphTopology}
+\pmrelated{DirectedGraph}
+\pmrelated{DepthFirstSearch}
+\pmrelated{DijkstrasAlgorithm}
+\pmdefines{graph morphism}
+\pmdefines{abstract graph}
+\pmdefines{category of graphs}
+
+\usepackage{amssymb, amsmath}
+\usepackage{graphicx}
+%\newtheorem{thm}{Theorem}
+
+%\theoremstyle{definition}
+%\newtheorem*{defn}{Definition}
+%\theoremstyle{definition}
+%\newtheorem*{rem}{Remark}
+
+%\theoremstyle{definition}
+%\newtheorem*{nott}{Notation}
+
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{cor}{Corollary}
+%\newtheorem*{eg}{Example}
+%\newtheorem*{ex}{Exercise}
+%\newtheorem*{prop}{Proposition}
+
+%\newcommand{\RR}{\mathbb{R}}
+%\newcommand{\QQ}{\mathbb{Q}}
+%\newcommand{\ZZ}{\mathbb{Z}}
+%\newcommand{\NN}{\mathbb{N}}
+%\newcommand{\leftbb}{[ \! [}
+%\newcommand{\rightbb}{] \! ]}
+%\newcommand{\bt}{\begin{thm}}
+%\newcommand{\et}{\end{thm}}
+%\newcommand{\Rel}{\mathbf{R}}
+%\newcommand{\er}{\thicksim}
+%\newcommand{\sqle}{\sqsubseteq}
+%\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+%\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+
+\begin{document}
+\PMlinkescapeword{branch}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{states}
+\emph{Graph theory} is the branch of mathematics that concerns itself with graphs.
+
+The concept of graph is extraordinarily simple, which explains the wide applicability of graph theory. It is usually agreed upon that graph theory proper was born in 1736, when Euler formalized the now-famous ``\PMlinkid{bridges of K\"onigsberg}{2810}'' problem. Graph theory has now grown to touch almost every mathematical discipline, in one form or another, and it likewise borrows from elsewhere tools for its own problems. Anyone who delves into the topic will quickly see that the lifeblood of graph theory is the abundancy of tricky questions and clever answers. There are, of course, general results that systematize the subject, but we also find an emphasis on the solutions of substantial problems over building machinery for its own sake.
+\begin{center}
+\includegraphics[scale=0.75]{koni}\\
+Graph theory representation of K\"onigsberg bridges problem
+\end{center}
+
+For quite a long time graph theory was regarded as a branch of topology concerned with $1$-dimensional simplices, however this view has faded away. The only remainder of the topological past is the topological graph theory, a branch of graph theory that primarily deals with drawing of graphs on surfaces. The most famous achievement of topological graph theory is the proof of the four-color conjecture (every political map on the surface of a plane or a sphere can be colored into four colors given that each country consists of only one piece).
+
+Now, a (finite) graph is usually thought of as a subset of pairs of elements of a finite set (called vertices), or more generally as a family of arbitrary sets in the case of hypergraphs. For instance, Ramsey theory as applied to graph theory deals with determining how disordered can graphs be. The central result here is the \PMlinkname{Ramsey's theorem}{RamseysTheorem2} which states that one can always find many vertices that are either all connected or disconnected from each other, given that the graph is sufficiently large. The other result is Szemer\'edi regularity lemma.
+
+The four-color conjecture mentioned above is one of the problems in graph coloring. There are many ways one can color a graph, but the most common are vertex coloring and edge coloring. In these type of colorings, one colors vertices (edges) of a graph so that no two vertices of the same color are adjacent (resp. no edges of the same color share a common vertex). The most common problem is to find a coloring using the fewest number of colors possible. Such problems often arise in scheduling problems.
+
+Graph theory benefits greatly from interaction with other fields of mathematics. For example, probabilistic methods have become the standard tool in the arsenal of graph theorists, and random graph theory has grown into a full-fledged branch of its own. There are close, mathematical links between the foundation of category theory and
+graph theory, as a category can be defined as a special type of meta-graph, and a supercategory
+may also have a meta-graph representation as a meta-category (\cite{MacLane2000}). Moreover, a graph can be regarded 
+as a one-dimensional $CW$ complex. Free groupoids can be employed to generate graphs using highly efficient computer programming; thus, the Cayley graph allows one to form a graph from a group, and the transformation groupoid is a
+way to form a groupoid from a group. On the other hand, the underlying graph of a transformation groupoid
+is a way to form a graph from a groupoid. Moreover, an \emph{isomorphism graph theorem} proves that the underlying
+graph of a transformation groupoid is isomorphic to the Cayley graph of the group whose action on itself forms the
+transformation groupoid. Graphs also have several applications in theoretical physics, as for example in the case of Feynman diagrams (that are graphs). Furthermore, there are several extensions of the graph concept such as the hypergraph; thus, many of the definitions of types of graphs carry over to hypergraphs, even though a hypergraph is a simple incidence structure. Examples are presented under the hypergraph entry of $k$-uniform and $k$-regular hypergraphs, and the connection is made to matrices via the incidence matrix associated with a hypergraph. 
+
+There is an alternative approach to defining \emph{abstract} graphs in terms of graph morphisms
+in the category of graphs. 
+
+\textbf{Definition 1.1}
+A \emph{graph morphism} $f$ from graph $A$ to graph $B$ can be defined as a pair of functions $f_E: A_E \to B_E$, and $f_V: A_V \to B_V$, preserving the source and target maps $s, t: A_E \to A_V$, as well as the dual map 
+$\epsilon : A_V \to A_E$ , where $A_E$ is the set of graph edges in graph $A$, and $A_V$ is the set of graph vertices in graph $A$; $B_E$, and $B_V$ are, respectively, the set of edges and the set of vertices of graph $B$.   
+
+
+
+%Some mention of the Hungarians' role in developing graph theory is in order. 
+%Can someone do them justice with a few words here?
+%
+%We should mention, somehow, Hamiltonian and Eulerian cycles, planarity, 
+%colouring, trees, Ramsey theory, random graphs and probabilistic proofs,
+%tournaments and directed graphs, networks, general applications to other 
+%combinatorics.  Important subdisciplines I'm forgetting to mention?  I'm not
+%sure if it's best to just list these topics or put them into an essay and say
+%a little something about each.
+
+%% bbukh: I do not know who wrote the above, but I added some sketchy 
+%% descriptions of some of the fields. If someone can improve them, 
+%% or add something new, that would be great
+
+% more about the overall aims and applications of graph theory?
+%
+% we should basically list and introduce sub-disciplines here.
+
+\begin{thebibliography}{9}
+\bibitem{MacLane2000} 
+S. Mac Lane and I. Moerdijk. {\em Sheaves in Geometry and Logic.}, Springer-Verlag:
+New York, Berlin and Heidelberg (2000).
+\end{thebibliography}
+
+%%%%%
+%%%%% % rerender
+\end{document}

@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CartanCalculus}
+\pmcreated{2013-03-22 15:35:39}
+\pmmodified{2013-03-22 15:35:39}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Cartan calculus}
+\pmrecord{14}{37507}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81R15}
+\pmclassification{msc}{17B70}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{53A45}
+\pmclassification{msc}{81Q60}
+\pmclassification{msc}{58A15}
+\pmclassification{msc}{14F40}
+\pmclassification{msc}{13N15}
+\pmsynonym{Lie superalgebra}{CartanCalculus}
+%\pmkeywords{Cartan's magic formula}
+%\pmkeywords{supercommutation relation}
+%\pmkeywords{graded derivation}
+%\pmkeywords{Lie superalgebra}
+\pmrelated{LieSuperalgebra3}
+\pmrelated{LieDerivative}
+\pmrelated{DifferentialForms}
+\pmdefines{anticommutator bracket}
+\pmdefines{Cartan's magic formula}
+\pmdefines{supercommutation relation}
+\pmdefines{graded derivation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition} 
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition} 
+\newtheorem{dfn}[thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{ex}[thm]{Example} 
+
+\newcommand{\lie}{\mathcal{L}}
+
+\begin{document}
+Suppose $M$ is a smooth manifold, and denote by $\Omega(M)$ the algebra of differential forms on $M$.  Then, the \emph{Cartan calculus} consists of the following three types of linear operators on $\Omega(M)$:
+\begin{enumerate}
+\item the exterior derivative $d$,
+\item the space of Lie derivative operators $\lie_X$, where $X$ is a vector field on $M$, and
+\item the space of contraction operators $\iota_X$, where $X$ is a vector field on $M$.
+\end{enumerate}
+
+The above operators satisfy the following identities for any vector fields $X$ and $Y$ on $M$:
+\begin{align}
+d^2 &= 0, \label{cartfirst}\\
+d \lie_X - \lie_X d &= 0, \\
+d \iota_X + \iota_X d &= \lie_X, \label{magic}\\
+\lie_X \lie_Y - \lie_Y \lie_X &= \lie_{[X,Y]}, \\
+\lie_X \iota_Y - \iota_Y \lie_X &= \iota_{[X,Y]},\\
+\iota_X \iota_Y + \iota_Y \iota_X &= 0, \label{cartlast}
+\end{align}
+where the brackets on the right hand side denote the Lie bracket of vector fields.
+
+The identity (\ref{magic}) is known as \emph{Cartan's magic formula} or \emph{Cartan's identity}
+
+\subsection*{Interpretation as a Lie Superalgebra}
+
+Since $\Omega(M)$ is a graded algebra, there is a natural grading on the space of linear operators on $\Omega(M)$.  Under this grading, the exterior derivative $d$ is degree $1$, the Lie derivative operators $\lie_X$ are degree $0$, and the contraction operators $\iota_X$ are degree $-1$.
+
+The identities (\ref{cartfirst})-(\ref{cartlast}) may each be written in the form
+\begin{equation}
+AB \pm BA = C,
+\end{equation}
+where a plus sign is used if $A$ and $B$ are both of odd degree, and a minus sign is used otherwise.  Equations of this form are called \emph{supercommutation relations} and are usually written in the form
+\begin{equation}\label{supercom}
+[A,B] = C,
+\end{equation}
+where the bracket in (\ref{supercom}) is a \emph{Lie superbracket}.  A Lie superbracket is a generalization of a Lie bracket.
+
+Since the Cartan Calculus operators are closed under the Lie superbracket, the vector space spanned by the Cartan Calculus operators has the structure of a \emph{Lie superalgebra}.
+
+\subsection*{Graded derivations of $\Omega(M)$}
+\begin{dfn}
+A degree $k$ linear operator $A$ on $\Omega(M)$ is a \emph{graded derivation} if it satisfies the following property for any $p$-form $\omega$ and any differential form $\eta$:
+\begin{equation}
+A (\omega \wedge \eta) = A(\omega) \wedge \eta + (-1)^{kp} \omega \wedge A(\eta).
+\end{equation}
+\end{dfn}
+
+All of the Calculus operators are graded derivations of $\Omega(M)$.
+
+%%%%%
+%%%%%
+\end{document}

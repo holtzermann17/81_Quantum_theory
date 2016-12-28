@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonoidalCategory}
+\pmcreated{2013-03-22 16:30:21}
+\pmmodified{2013-03-22 16:30:21}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{monoidal category}
+\pmrecord{14}{38681}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81-00}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{18D10}
+\pmsynonym{monoid}{MonoidalCategory}
+%\pmkeywords{Category}
+%\pmkeywords{monoidal category}
+%\pmkeywords{algebroids}
+%\pmkeywords{topological quantum field theories}
+%\pmkeywords{bifunctor}
+%\pmkeywords{TQFT}
+%\pmkeywords{monoidal category}
+\pmrelated{Category}
+\pmrelated{Algebroids}
+\pmrelated{Monoid}
+\pmrelated{StateOnTheTetrahedron}
+\pmdefines{unit coherence}
+\pmdefines{associativity coherence}
+\pmdefines{tensor product}
+\pmdefines{unit object}
+\pmdefines{associativity isomorphism}
+\pmdefines{left unit isomorphism}
+\pmdefines{right unit isomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A \emph{monoidal category} is a category which has the structure of a monoid, that is, among the objects there is a binary operation which is associative and has an unique neutral or unit element.   Specifically, a category $\mathcal{C}$ is \emph{monoidal} if
+\begin{enumerate}
+\item there is a bifunctor $\otimes: \mathcal{C}\times\mathcal{C}\to \mathcal{C}$, where the images of object $(A,B)$ and morphism $(f,g)$ are written $A\otimes B$ and $f\otimes g$ respectively,
+\item there is an isomorphism $a_{ABC}: (A\otimes B)\otimes C \cong A\otimes (B\otimes C)$, for arbitrary objects $A,B,C$ in $\mathcal{C}$, such that $a_{ABC}$ is natural in $A,B$ and $C$.  In other words,
+\begin{itemize}
+\item $a_{-BC}: (-\otimes B)\otimes C \Rightarrow -\otimes(B\otimes C)$ is a natural transformation for arbitrary objects $B,C$ in $\mathcal{C}$,
+\item $a_{A-C}: (A\otimes -)\otimes C \Rightarrow A\otimes(-\otimes C)$ is a natural transformation for arbitrary objects $A,C$ in $\mathcal{C}$,
+\item $a_{AB-}: (A\otimes B)\otimes - \Rightarrow A\otimes(B\otimes -)$ is a natural transformation for arbitrary objects $A,B$ in $\mathcal{C}$,
+\end{itemize}
+\item there is an object $I$ in $\mathcal{C}$ called the \emph{unit object} (or simply the \emph{unit}),
+\item for any object $A$ in $\mathcal{C}$, there are isomorphisms: 
+$$l_A: I\otimes A\cong A \qquad \mbox{and} \qquad r_A: A\otimes I\cong A,$$
+such that $l_A$ and $r_A$ are natural in $A$: both $l: I\otimes - \Rightarrow -$ and $r: -\otimes I\Rightarrow - $ are natural transformations
+\end{enumerate}
+satisfying the following commutative diagrams:
+\begin{itemize}
+\item \emph{unit coherence law}
+$$\xymatrix@+=2cm{(A\otimes I)\otimes B \ar[rr]^{a_{AIB}} \ar[dr]_{r_A\otimes 1_B} & & A\otimes (I\otimes B) \ar[dl]^{1_A \otimes r_B} \\ & A\otimes B & }$$
+\item \emph{associativity coherence law}
+$$\xymatrix@+=2cm{((A\otimes B)\otimes C)\otimes D \ar[rr]^{a_{A\otimes B,C,C}} \ar[d]_{a_{ABC}\otimes 1_D} &&  (A\otimes B)\otimes (C\otimes D) \ar[dd]^{a_{A,B,C\otimes D}} \\ 
+(A\otimes (B\otimes C))\otimes D \ar[d]_{a_{A,B\otimes C,D}} && \\
+A\otimes ((B\otimes C)\otimes D) \ar[rr]_{1_A\otimes a_{BCD}} && A \otimes (B\otimes (C\otimes D))}$$
+\end{itemize}
+The bifunctor $\otimes$ is called the \emph{tensor product} on $\mathcal{C}$, and the natural isomorphisms $a,l,r$ are called the \emph{associativity isomorphism}, the \emph{left unit isomorphism}, and the \emph{right unit isomorphism} respectively.
+
+Some examples of monoidal categories are
+\begin{itemize}
+\item
+A prototype is the category of isomorphism classes of vector spaces over a field $\mathbb{K}$, herein the tensor product is the associative operation and the field $\mathbb{K}$ itself is the unit element.
+\item
+The category of sets is monoidal.  The tensor product here is just the set-theoretic cartesian product, and any singleton can be used as the unit object.
+\item
+The category of (left) modules over a ring $R$ is monoidal.  The tensor product is the usual \PMlinkname{tensor product}{TensorProduct} of modules, and $R$ itself is the unit object.
+\item
+The category of bimodules over a ring $R$ is monoidal.  The tensor product and the unit object are the same as in the previous example.
+\end{itemize}
+
+Monoidal categories play an important role in the topological quantum field theories (TQFT).
+
+%%%%%
+%%%%%
+\end{document}

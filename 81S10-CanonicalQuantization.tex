@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CanonicalQuantization}
+\pmcreated{2013-03-22 15:53:34}
+\pmmodified{2013-03-22 15:53:34}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{canonical quantization}
+\pmrecord{18}{37894}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81S10}
+\pmclassification{msc}{53D50}
+\pmclassification{msc}{46L65}
+%\pmkeywords{quantization}
+%\pmkeywords{quantum}
+%\pmkeywords{Hamiltonian}
+%\pmkeywords{Poisson algebra}
+%\pmkeywords{correspondence principle}
+\pmrelated{Quantization}
+\pmrelated{PoissonBracket}
+\pmrelated{HamiltonianOperatorOfAQuantumSystem}
+\pmrelated{SchrodingerOperator}
+\pmrelated{AsymptoticMorphismsAndWignerWeylMoyalQuantizationProcedures}
+\pmdefines{operator substitution rule}
+\pmdefines{operator ordering problem}
+
+\usepackage{amssymb, amsmath, amsthm}
+%%%\usepackage{xypic}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition} 
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition} 
+\newtheorem{dfn}[thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\newtheorem{ex}{Example}
+
+\newcommand{\lie}{\mathcal{L}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\grad}{\nabla}
+\newcommand{\reals}{\mathbb{R}}
+\DeclareMathOperator{\Op}{Op}
+
+\begin{document}
+Canonical quantization is a method of relating, or associating, a classical system of the form $(T^*X, \omega, H)$, where $X$ is a manifold, $\omega$ is the canonical symplectic form on $T^*X$, with a (more complex) quantum system represented by $H \in C^\infty(X)$, where $H$ is the 
+\PMlinkname{Hamiltonian operator}{HamiltonianOperatorOfAQuantumSystem}. Some of the early formulations of quantum mechanics used such quantization methods under the umbrella of the \emph{correspondence principle or postulate}.
+The latter states that a correspondence exists between certain classical and quantum operators,
+(such as the Hamiltonian operators) or algebras (such as Lie or Poisson (brackets)), with the
+classical ones being in the real ($\mathbb{R}$) domain, and the quantum ones being in the complex ($\mathbb{C}$) domain.
+Whereas all classical observables and states are specified only by real numbers, the 'wave' amplitudes in quantum
+theories are represented by complex functions. \\
+
+Let $(x^i, p_i)$ be a set of Darboux coordinates on $T^*X$. Then we may obtain from each coordinate function an operator on the Hilbert space $\mathcal{H} = L^2(X, \mu)$, consisting of functions on $X$ that are square-integrable with respect to some measure $\mu$, by the \emph{operator substitution} rule:
+\begin{align}
+x^i \mapsto \hat{x}^i &= x^i \cdot, \label{sub1}\\
+p_i \mapsto \hat{p}_i &= -i \hbar \pdiff{}{x^i} \label{sub2},
+\end{align}
+where $x^i \cdot$ is the ``multiplication by $x^i$'' operator.  Using this rule, we may obtain operators from a larger class of functions.  For example,
+\begin{enumerate}
+\item $x^i x^j \mapsto \hat{x}^i \hat{x}^j = x^i x^j \cdot$,
+\item $p_i p_j \mapsto \hat{p}_i \hat{p}_j = -\hbar^2 \pdiff{^2}{x^i x^j}$,
+\item if $i \neq j$ then $x^i p_j \mapsto \hat{x}^i \hat{p}_j = -i \hbar x^i \pdiff{}{x^j}$.
+\end{enumerate}
+
+\begin{rmk}
+The substitution rule creates an ambiguity for the function $x^i p_j$ when $i=j$, since $x^i p_j = p_j x^i$, whereas $\hat{x}^i \hat{p}_j \neq \hat{p}_j \hat{x}^i$.  This is the \emph{operator ordering} problem.  One possible solution is to choose 
+\begin{equation*}x^i p_j \mapsto \frac{1}{2}\left(\hat{x}^i \hat{p}_j + \hat{p}_j \hat{x}^i\right),\end{equation*}
+since this choice produces an operator that is self-adjoint and therefore corresponds to a physical observable.  More generally, there is a construction known as \emph{Weyl quantization} that uses Fourier transforms to extend the substitution rules (\ref{sub1})-(\ref{sub2}) to a map
+\begin{align*}
+C^\infty(T^*X) &\to \Op (\mathcal{H}) \\
+f &\mapsto \hat{f}.
+\end{align*}
+\end{rmk}
+
+\begin{rmk}
+This procedure is called ``canonical'' because it preserves the canonical Poisson brackets.  In particular, we have that 
+\begin{equation*}\frac{-i}{\hbar}[\hat{x}^i, \hat{p}_j] := \frac{-i}{\hbar}\left(\hat{x}^i\hat{p}_j - \hat{p}_j\hat{x}^i\right) = \delta^i_j,
+\end{equation*}
+which agrees with the Poisson bracket $\{ x^i, p_j \} = \delta^i_j$.
+\end{rmk}
+
+\begin{ex}
+Let $X = \reals$.  The Hamiltonian function for a one-dimensional point particle with mass $m$ is
+\begin{equation*}
+H = \frac{p^2}{2m} + V(x),
+\end{equation*}
+where $V(x)$ is the potential energy.  Then, by operator substitution, we obtain the Hamiltonian operator
+\begin{equation*}
+\hat{H} = \frac{-\hbar^2}{2m} \frac{d^2}{dx^2} + V(x).
+\end{equation*}
+\end{ex}
+%%%%%
+%%%%%
+\end{document}

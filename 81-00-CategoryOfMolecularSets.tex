@@ -1,0 +1,265 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryOfMolecularSets}
+\pmcreated{2013-03-22 18:16:02}
+\pmmodified{2013-03-22 18:16:02}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{category of molecular sets}
+\pmrecord{38}{40868}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81-00}
+\pmclassification{msc}{18E05}
+\pmclassification{msc}{92B05}
+\pmclassification{msc}{18D35}
+\pmsynonym{class of molecular set variables and their transformations}{CategoryOfMolecularSets}
+\pmsynonym{mcv-observable}{CategoryOfMolecularSets}
+%\pmkeywords{molecular set theory}
+%\pmkeywords{molecular set variables and their transformations}
+\pmrelated{MolecularSetVariable}
+\pmrelated{MolecularSetTheory}
+\pmrelated{SupercategoriesOfComplexSystems}
+\pmrelated{ComplexSystemsBiology}
+\pmrelated{SupercategoryOfVariableMolecularSets}
+\pmrelated{IndexOfCategories}
+\pmrelated{CategoryOfQuantumAutomata}
+\pmdefines{category of molecular sets}
+\pmdefines{molecular set}
+\pmdefines{molecular set mapping}
+\pmdefines{states of molecular sets}
+\pmdefines{uni-molecular chemical reaction}
+\pmdefines{chemical transformation}
+\pmdefines{molecular set variable}
+\pmdefines{molecular transformation}
+\pmdefines{$m.c.v.$ observable}
+\pmdefines{mcv-observable}
+\pmdefines{states of molecular se}
+
+% this is the default PlanetMath preamble.  
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\subsection{Molecular sets as representations of chemical reactions}
+
+A \emph{uni-molecular chemical reaction} is defined by the natural transformations    
+$$\eta: h^A\longrightarrow h^B,$$  specified in the following commutative diagram representing molecular sets and their quantum transformations:
+\begin{equation}
+\def\labelstyle{\textstyle}
+\xymatrix@M=0.1pc @=4pc{h^A(A) = Hom(A,A) \ar[r]^{\eta_{A}}
+\ar[d]_{h^A(t)} &  h^B (A) = Hom(B,A)\ar[d]^{h^B (t)} \\  {h^A (B) =
+Hom(A,B)}  \ar[r]_{\eta_{B}} & {h^B (B) = Hom(B,B)}},
+\end{equation}
+
+with the \emph{states of molecular sets} $A_u = a_1, \ldots, a_n$ and
+$B_u = b_1, \ldots b_n$ being defined as the endomorphism sets $Hom(A,A)$ and $Hom(B,B)$, respectively. In general, \emph{molecular sets} $M_S$ are defined as finite sets whose elements are molecules; the \emph{molecules} are mathematically defined in terms of their molecular observables as specified next. In order to define molecular observables one needs to define first the concept of a molecular class variable or $m.c.v$.
+
+ A \emph{molecular class variables} is defined as a family of molecular sets $[M_S]_{i \in I}$,
+with $I$ being either an indexing set, or a proper class, that defines the variation range of the $m.c.v$}.
+Most physical, chemical or biochemical applications require that $I$ is restricted to a finite set, (that is, without any sub-classes). A morphism, or molecular mapping,  $M_t: M_S \to M_S$ of molecular sets,  with $t \in T$ being real time values, is defined as a time-dependent mapping or function $M_S (t)$ also called a  \emph{molecular transformation}, $M_t$.
+
+An \emph{$m.c.v.$ observable} of $B$, characterizing the products of chemical type ``B'' of a chemical reaction is defined as a morphism:
+
+$$\gamma : Hom(B,B) \longrightarrow \Re ,$$
+where $\Re$ is the set or field of real numbers. This mcv-observable is subject
+to the following commutativity conditions:
+\begin{equation}
+\def\labelstyle{\textstyle}
+  \xymatrix@M=0.1pc @=4pc{Hom(A,A) \ar[r]^{f}  \ar[d]_{e} & Hom(B,B)\ar[d]^{\gamma} \\  {Hom(A,A)}  \ar[r]_{\delta} & {R},}
+\end{equation}~
+with  $c: A^*_u  \longrightarrow  B^*_u$, and $A^*_u$, $B^*_u$  being, respectively,
+specially prepared \emph{fields of states} of the molecular sets $A_u$, and $B_u$ within a measurement uncertainty range, $\Delta$, which is determined by Heisenberg's uncertainty relation, or the commutator of the observable operators involved, such as $[A^*, B^*]$, associated with the observable $A$ of molecular set $A_u$, and respectively, with the obssevable $B$ of molecular set $B_u$, in the case of a molecular set $A_u$ interacting with molecular set $B_u$.  
+
+ With these concepts and preliminary data one can now define the category of molecular sets and their transformations 
+as follows.
+
+\subsection{Category of molecular sets and their transformations}
+\begin{definition}
+ The \emph{category of molecular sets} is defined as the category $C_M$ whose objects are molecular sets $M_S$ and whose morphisms are molecular transformations $M_t$. 
+\end{definition}
+
+\begin{remark}
+ This is a mathematical representation of chemical reaction systems in terms of molecular sets that vary with time 
+(or $msv$'s), and their transformations as a result of diffusion, collisions, and chemical reactions. 
+\end{remark}
+
+\begin{thebibliography}{9}
+
+\bibitem{BAF60}
+Bartholomay, A. F.: 1960. Molecular Set Theory. A mathematical representation for chemical reaction mechanisms. \emph{Bull. Math. Biophys.}, \textbf{22}: 285-307.
+
+\bibitem{BAF65}
+Bartholomay, A. F.: 1965. Molecular Set Theory: II. An aspect of biomathematical theory of sets., \emph{Bull. Math. Biophys.} \textbf{27}: 235-251.
+
+\bibitem{BAF71}
+Bartholomay, A.: 1971. Molecular Set Theory: III. The Wide-Sense Kinetics of Molecular Sets ., \emph{Bulletin of Mathematical Biophysics}, \textbf{33}: 355-372.
+
+\bibitem{ICB2}
+Baianu, I. C.: 1983, Natural Transformation Models in Molecular
+Biology., in \emph{Proceedings of the SIAM Natl. Meet}., Denver,
+CO.; Eprint at cogprints.org with No. 3675.
+
+\bibitem{ICB2}
+Baianu, I.C.: 1984, A Molecular-Set-Variable Model of Structural
+and Regulatory Activities in Metabolic and Genetic Networks
+\emph{FASEB Proceedings} \textbf{43}, 917.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

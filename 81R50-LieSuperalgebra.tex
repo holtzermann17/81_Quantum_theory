@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LieSuperalgebra}
+\pmcreated{2013-03-22 15:35:44}
+\pmmodified{2013-03-22 15:35:44}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Lie superalgebra}
+\pmrecord{16}{37509}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{17B60}
+\pmclassification{msc}{17B01}
+\pmclassification{msc}{81Q60}
+\pmsynonym{Lie super algebra}{LieSuperalgebra}
+\pmsynonym{graded Lie algebra}{LieSuperalgebra}
+%\pmkeywords{supergeometry}
+%\pmkeywords{supersymmetry}
+\pmrelated{CartanCalculus}
+\pmrelated{Superalgebra}
+\pmrelated{GradedAlgebra}
+\pmrelated{LieAlgebroids}
+\pmrelated{SuperfieldsSuperspace}
+\pmrelated{SupersymmetryOrSupersymmetries}
+\pmrelated{LieAlgebroids}
+\pmrelated{JordanBanachAndJordanLieAlgebras}
+\pmrelated{LieAlgebra}
+\pmrelated{LieAlgebraCohomology}
+\pmrelated{SuperAlgebra}
+\pmrelated{CartanCalculus}
+\pmrelated{QuantumGravityTheories}
+\pmrelated{Fu}
+\pmdefines{vector superspace}
+\pmdefines{Lie superbracket}
+\pmdefines{supercommutator bracket}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition} 
+\newtheorem{dfn}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\newtheorem{ex}{Example} 
+
+
+\newcommand{\lie}{\mathcal{L}}
+\begin{document}
+\begin{dfn}
+  A \emph{Lie superalgebra} is a vector superspace equipped with a bilinear map
+\begin{equation}
+\begin{split}
+[\cdot,\cdot]: V \otimes V &\rightarrow V, \\
+v \otimes w &\mapsto [v, w],
+\end{split}
+\end{equation}
+satisfying the following properties:
+\begin{enumerate}
+\item If $v$ and $w$ are homogeneous vectors, then $[v,w]$ is a homogeneous vector of degree $|v| + |w| \pmod 2$,
+\item For any homogeneous vectors $v, w$, $[v,w] = (-1)^{|v||w| + 1} [w,v]$,
+\item For any homogeneous vectors $u,v,w$, $(-1)^{|u||w|}[u, [v,w]] + (-1)^{|v||u|} [v, [w, u]] + (-1)^{|w||v|} [w,[u,v]]$ = 0.
+\end{enumerate}
+The map $[\cdot,\cdot]$ is called a \emph{Lie superbracket}.
+\end{dfn}
+
+\begin{ex}
+A Lie algebra $V$ can be considered as a Lie superalgebra by setting $V = V_0$ and, therefore, $V_1 = \{0\}$.
+\end{ex}
+
+\begin{ex}
+Any associative superalgebra $A$ has a Lie superalgebra structure where, for any homogeneous elements $a,b \in A$, the Lie superbracket is defined by the equation
+\begin{equation}\label{supercomm}
+[a, b] = ab - (-1)^{|a||b|}ba.
+\end{equation}
+
+ The Lie superbracket (\ref{supercomm}) is called the \emph{supercommutator bracket} on $A$.
+\end{ex}
+
+
+
+\begin{ex}
+  The space of graded derivations of a supercommutative superalgebra, equipped with the supercommutator bracket, is a Lie superalgebra.
+\end{ex}
+
+
+
+\begin{dfn}
+A \emph{vector superspace} is a vector space $V$ equipped with a decomposition $V = V_0 \oplus V_1$.  
+\end{dfn}
+
+Let $V = V_0 \oplus V_1$ be a vector superspace.  Then any element of $V_0$ is said to be \emph{even}, and any element of $V_1$ is said to be \emph{odd}.  By the definition of the direct sum, any element $v$ of $V$ can be uniquely written as $v = v_0 + v_1$, where $v_0 \in V_0$ and $v_1 \in V_1$.
+
+\begin{dfn}
+A vector $v \in V$ is \emph{homogeneous} of degree $i$ if $v \in V_i$ for $i = 0$ or $1$.
+\end{dfn}
+
+If $v \in V$ is homogeneous, then the degree of $v$ is denoted by $|v|$.  In other words, if $v \in V_i$, then $|v| = i$ by definition.
+
+\begin{rmk}
+The vector $0$ is homogeneous of both degree $0$ and $1$, and thus $|0|$ is not well-defined.
+\end{rmk}
+
+
+%%%%%
+%%%%%
+\end{document}

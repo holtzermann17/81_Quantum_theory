@@ -1,0 +1,532 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SuperfieldsSuperspaceAndSupergravity}
+\pmcreated{2013-03-22 18:17:03}
+\pmmodified{2013-03-22 18:17:03}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{superfields, superspace and supergravity}
+\pmrecord{23}{40894}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81R60}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{83C47}
+\pmclassification{msc}{83C75}
+\pmclassification{msc}{83C45}
+\pmclassification{msc}{81P05}
+\pmsynonym{quantum gravity}{SuperfieldsSuperspaceAndSupergravity}
+\pmsynonym{quantum space-times}{SuperfieldsSuperspaceAndSupergravity}
+%\pmkeywords{superspace}
+%\pmkeywords{quantum space-times}
+%\pmkeywords{superfields}
+%\pmkeywords{supergravity}
+%\pmkeywords{supersymmetry and L-superalgebras}
+\pmrelated{SupersymmetryOrSupersymmetries}
+\pmrelated{NormedAlgebra}
+\pmrelated{Supercategories}
+\pmrelated{QuantumGravityTheories}
+\pmrelated{SuperalgebroidsAndHigherDimensionalAlgebroids}
+\pmrelated{AxiomaticTheoryOfSupercategories}
+\pmrelated{LieSuperalgebra3}
+\pmrelated{MetricSuperfields}
+\pmrelated{SuperalgebroidsAndHigherDimensionalAlgebroids}
+\pmdefines{superspace}
+\pmdefines{superfields}
+\pmdefines{supergravity}
+\pmdefines{supersymmetry and L-superalgebras}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate,color}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+\def\blue{\textcolor{blue}}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\midsqn}[1]{\ar@{}[dr]|{#1}}
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+\subsection{Superspace, superfields, supergravity and Lie superalgebras.} 
+\bigbreak
+
+In general, a \emph{superfield}--or \emph{quantized gravity field}- has a highly reducible representation of the supersymmetry algebra, and the problem of specifying a supergravity theory can be defined as a search for those 
+representations that allow the construction of consistent local actions, perhaps considered 
+as either quantum group, or quantum groupoid, actions. Extending quantum symmetries to include
+quantized gravity fields--specified as `superfields'-- is called \emph{supersymmetry} in current theories of Quantum Gravity. Graded `Lie' algebras (or Lie superalgebras) represent the quantum operator supersymmetries
+by defining these simultaneously for both \emph{fermion} (spin $1/2$) and \emph{boson} (integer or 0 spin particles).
+
+The quantized physical space with supersymmetric properties is then called a \emph{`superspace'},
+(another name for \emph{`quantized space with supersymmetry'}) in Quantum Gravity. The following subsection defines
+these physical concepts in precise mathematical terms.
+
+
+\subsubsection{Mathematical definitions and propagation equations for superfields in superspace:
+Graded Lie algebras}
+
+Supergravity, in essence, is an extended supersymmetric theory of
+both matter and gravitation ({\em viz}. Weinberg, 1995 \cite{Weinberg2000}). 
+A first approach to supersymmetry relied on a curved `superspace' 
+(Wess and Bagger,1983 \cite{WB83}) and is analogous to supersymmetric gauge theories (see, for
+example, Sections 27.1 to 27.3 of Weinberg, 1995). Unfortunately,
+a complete non--linear supergravity theory might be forbiddingly
+complicated and furthermore, the constraints that need be made on
+the graviton superfield appear somewhat subjective, 
+(according to Weinberg, 1995). In a different approach to supergravity, 
+one considers the physical components of the gravitational superfield
+which can be then identified based on `flat-space' superfield methods 
+(Chs. 26 and 27 of Weinberg, 1995). By implementing the {\em gravitational
+weak-field approximation} one obtains several of the most important
+consequences of supergravity theory, including masses for the
+hypothetical `gravitino' and `gaugino particles' whose existence might be
+expected from supergravity theories. Furthermore, by adding on the
+higher order terms in the gravitational constant to the
+supersymmetric transformation, the general coordinate
+transformations form a \emph{closed algebra} and the Lagrangian that
+describes the interactions of the physical fields is then {\em invariant}
+under such transformations.The first quantization of such a flat-space
+superfield would obviously involve its `deformation', and as a result its corresponding
+\emph{supersymmetry algebra} becomes \emph{non--commutative}.
+
+\subsubsection{Metric superfield}
+
+Because in supergravity both spinor and tensor fields are being
+considered, the gravitational fields are represented in terms of
+\emph{tetrads}, $e^a_\mu(x),$ rather than in terms of Einstein's general
+relativistic metric $g_{\mu \nu}(x)$. The connections between
+these two distinct representations are as follows:
+
+\begin{equation}
+g_{\mu\nu}(x) = \eta_{ab}~ e^a_\mu (x)e^b_\gamma(x)~,
+\end{equation}
+
+with the general coordinates being indexed by $\mu,\nu,$ etc.,
+whereas local coordinates that are being defined in a locally
+inertial coordinate system are labeled with superscripts a, b,
+etc.;   $ \eta_{ab}$ is the diagonal matrix with elements +1, +1,
++1 and -1. The tetrads are invariant to two distinct types of
+symmetry transformations--the local Lorentz transformations:
+\begin{equation}
+e^a_\mu (x)\longmapsto \Lambda^a_b (x) e^b_\mu (x)~,
+\end{equation}
+(where $\Lambda^a_b$ is an arbitrary real matrix), and the general
+coordinate transformations:
+\begin{equation}
+x^\mu \longmapsto (x')^\mu(x) ~.
+\end{equation}
+In a weak gravitational field the tetrad may be represented as:
+\begin{equation}
+e^a_\mu (x)=\delta^a_\mu(x)+ 2\kappa \Phi^a_\mu (x)~,
+\end{equation}
+where $\Phi^a_\mu(x)$ is small compared with $\delta^a_\mu(x)$ for
+all $x$ values, and $\kappa= \surd 8\pi G$, where G is Newton's
+gravitational constant. As it will be discussed next, the
+supersymmetry algebra (SA) implies that the graviton has a
+fermionic superpartner, the hypothetical \emph{`gravitino'}, with
+helicities $\pm$ 3/2. Such a self-charge-conjugate massless
+particle as the `gravitiono' with helicities $\pm$ 3/2 can only have
+\emph{low-energy} interactions if it is represented by a Majorana
+field $\psi _\mu(x)$ which is invariant under the gauge
+transformations:
+\begin{equation}
+\psi _\mu(x)\longmapsto \psi _\mu(x)+\delta _\mu \psi(x) ~,
+\end{equation}
+
+with $\psi(x)$ being an arbitrary Majorana field as defined by
+Grisaru and Pendleton (1977). The tetrad field $\Phi _{\mu
+\nu}(x)$ and the graviton field $\psi _\mu(x)$ are then
+incorporated into a term $H_\mu (x,\theta)$ defined as the
+\emph{metric superfield}. The relationships between $\Phi _{\mu _
+\nu}(x)$ and $\psi _\mu(x)$, on the one hand, and the components
+of the metric superfield $H_\mu (x,\theta)$, on the other hand,
+can be derived from the transformations of the whole metric
+superfield:
+\begin{equation}
+H_\mu (x,\theta)\longmapsto H_\mu (x,\theta)+ \Delta _\mu
+(x,\theta)~,
+\end{equation}
+by making the simplifying-- and physically realistic-- assumption
+of a weak gravitational field (further details can be found, for
+example, in Ch.31 of vol.3. of Weinberg, 1995). The interactions
+of the entire superfield $H_\mu (x)$ with matter would be then
+described by considering how a weak gravitational field,
+$h_{\mu_\nu}$ interacts with an energy-momentum tensor $T^{\mu
+\nu}$ represented as a linear combination of components of a real
+vector superfield $\Theta^\mu$.  Such interaction terms would,
+therefore, have the form:
+\begin{equation}
+ I_{\mathcal M}= 2\kappa \int dx^4 [H_\mu \Theta^\mu]_D ~,
+\end{equation}
+($\mathcal M$ denotes `matter') integrated over a four-dimensional
+(Minkowski) spacetime with the metric defined by the superfield
+$H_\mu (x,\theta)$. The term $\Theta^\mu$, as defined above, is
+physically a \emph{supercurrent} and satisfies the conservation
+conditions:
+\begin{equation}
+\gamma^\mu \mathbf{D} \Theta _\mu = \mathbf{D} ~,
+\end{equation}
+where $\mathbf{D}$ is the four-component super-derivative and $X$
+denotes a real chiral scalar superfield. This leads immediately to
+the calculation of the interactions of matter with a weak
+gravitational field as:
+\begin{equation}
+I_{\mathcal M} = \kappa \int d^4 x T^{\mu \nu}(x)h_{\mu \nu}(x) ~,
+\end{equation}
+It is interesting to note that the gravitational actions for the
+superfield that are invariant under the generalized gauge
+transformations $H_\mu \longmapsto H _\mu  + \Delta _\mu$ lead to
+solutions of the Einstein field equations for a homogeneous,
+non-zero vacuum energy density $\rho _V$ that correspond to either
+a de Sitter space for $\rho _V>0$, or an anti-de Sitter space for
+$\rho _V <0$. Such spaces can be represented in terms of the
+hypersurface equation
+\begin{equation}
+x^2_5 \pm \eta _{\mu,\nu} x^\mu x^\nu = R^2 ~,
+\end{equation}
+in a {\em quasi-Euclidean five-dimensional space} with the metric
+specified as:
+\begin{equation}
+ds^2 = \eta _{\mu,\nu} x^\mu x^\nu \pm dx^2_5 ~,
+\end{equation}
+with '$+$' for de Sitter space and '$-$' for anti-de Sitter space,
+respectively.
+
+\med
+The spacetime symmetry groups, or extended symmetry groupoids, as the case may
+be-- are different from the `classical' Poincar\'e symmetry group
+of translations and Lorentz transformations. Such spacetime
+symmetry groups, in the simplest case, are therefore the
+$\rO(4,1)$ group for the \emph{de Sitter space} and the $\rO(3,2)$ group
+for the \emph{anti--de Sitter space}. A detailed calculation indicates
+that the transition from ordinary flat space to a bubble of
+anti-de Sitter space is \emph{not} favored energetically and,
+therefore, the ordinary (de Sitter) flat space is stable (viz.
+Coleman and De Luccia, 1980), even though quantum fluctuations
+might occur to an anti--de Sitter bubble within the limits
+permitted by the Heisenberg uncertainty principle.
+
+\subsection {Supersymmetry algebras and Lie (graded) superalgebras.}
+
+It is well known that \emph{continuous symmetry transformations}
+can be represented in terms of a \emph{Lie algebra} of linearly
+independent \emph{symmetry generators} $t_j$ that satisfy the
+commutation relations:
+
+\begin{equation}
+[t_j,t_k] = \iota \Sigma_l C_{jk} t_l ~,
+\end{equation}
+
+Supersymmetry is similarly expressed in terms of the symmetry
+generators $t_j$ of a \textit{graded (`Lie') algebra} which is in
+fact defined as a \textit{superalgebra}) by satisfying relations of the
+general form:
+\begin{equation}
+t_j t_k - (-1)^{\eta _j \eta _k} t_k  t_j = \iota \Sigma_l C_{jk}
+^l t_l ~.
+\end{equation}
+The generators for which $\eta _j =1$ are fermionic whereas those
+for which $\eta _j =0$ are bosonic. The coefficients $C^l_{jk}$
+are structure constants satisfying the following conditions:
+\begin{equation}
+C _{jk} ^l = -(-1)^{\eta _j \eta _k} C _{jk} ^l ~.
+\end{equation}
+If the generators $ _j$ are quantum Hermitian operators, then the
+structure constants satisfy the reality conditions $C_{jk}^* = -
+C_{jk}$~.  Clearly, such a graded algebraic structure is a superalgebra
+and not a proper Lie algebra; thus graded Lie algebras are often called
+\textit{`Lie superalgebras'}.
+
+\med
+The standard computational approach in QM utilizes the S-matrix
+approach, and therefore, one needs to consider the general,
+\emph{graded} `Lie algebra' of \emph{supersymmetry generators} that
+commute with the S-matrix. If one denotes the fermionic generators
+by $Q$, then $U^{-1}(\Lambda)Q U(\Lambda)$ will also be of the
+same type when $U(\Lambda)$ is the quantum operator corresponding
+to arbitrary, homogeneous Lorentz transformations $\Lambda^{\mu
+_\nu}$~. Such a group of generators provide therefore a
+representation of the homogeneous Lorentz group of transformations
+$ \mathbb{L}$~. The irreducible representation of the homogeneous
+Lorentz group of transformations provides therefore a
+classification of such individual generators.
+
+\subsubsection{Graded `Lie Algebras'/Superalgebras.}
+
+A set of quantum operators $Q^{AB}_{jk}$ form an $\mathbf A,
+\mathbf B$ representation of the group $\mathbf L$ defined above
+which satisfy the commutation relations:
+
+\begin{equation}
+[\mathbf{A},Q^{AB}_{jk}] = -[\Sigma _j' J^A _{j j'}, Q^{AB}_{j'k}]
+~,
+\end{equation}
+and
+
+\begin{equation}
+[\mathbf{B},Q^{AB}_{jk}] = -[\Sigma _{j'} J^A _{k k'},
+Q^{AB}_{jk'}] ~,
+\end{equation}
+with the generators $\mathbf{A}$ and $\mathbf{B}$ defined by
+$\mathbf{A}\equiv (1/2)(\mathbf{J} \pm i\mathbf{K})$ and
+$\mathbf{B} \equiv (1/2)(\mathbf{J }- i\mathbf{K})$, with
+$\mathbf{J}$ and $\mathbf{K}$ being the Hermitian generators of
+rotations and `boosts', respectively.
+
+\med
+In the case of the two-component Weyl-spinors $Q _{jr}$ the
+Haag--Lopuszanski--Sohnius (HLS) theorem applies, and thus the
+fermions form a \emph{supersymmetry algebra} defined by the
+anti-commutation relations:
+\begin{equation}
+\begin{aligned}
+~[Q _{jr}, Q _{ks}^*] &= 2\delta _{rs} \sigma^\mu _{jk} P _\mu ~,
+\\ [Q _{jr}, Q _{ks}] &= e _{jk} Z _{rs} ~,
+\end{aligned}
+\end{equation}
+where $P _\mu$ is the 4--momentum operator, $Z_{rs} = -Z _{s r}$
+are the bosonic symmetry generators, and $\sigma _\mu$ and
+$\mathbf{e}$ are the usual $2 \times 2$ Pauli matrices.
+Furthermore, the fermionic generators commute with both energy and
+momentum operators:
+\begin{equation}
+[P _\mu,Q _{jr}] = [P _\mu, Q^* _{jr}] = 0 ~.
+\end{equation}
+The bosonic symmetry generators $Z _{ks}$ and $Z^* _{ks}$
+represent the set of \emph{central charges} of the supersymmetric
+algebra:
+\begin{equation}
+~[Z _{rs}, Z^* _{tn}] = [Z^* _{rs}, Q _{jt}]=  [Z^* _{rs}, Q^*
+_{jt}]= [Z^* _{rs}, Z^* _{tn}]=0 ~.
+\end{equation}
+From another direction, the Poincar\'e symmetry mechanism of
+special relativity can be extended to new algebraic systems
+(Tanas\u a, 2006). In Moultaka et al. (2005) in view of such
+extensions, consider invariant-free Lagrangians and bosonic
+multiplets  constituting a symmetry that interplays with (Abelian)
+$\U(1)$--gauge symmetry that may possibly be described in
+categorical terms, in particular, within the notion of a
+\emph{cubical site} (Grandis and Mauri, 2003).
+
+We shall proceed to introduce in the next section generalizations
+of the concepts of Lie algebras and graded Lie algebras to the
+corresponding Lie \emph{algebroids} that may also be regarded as
+C*--convolution representations of \emph{quantum gravity
+groupoids} and superfield (or supergravity) supersymmetries. This
+is therefore a novel approach to the proper representation of the
+\emph{non-commutative geometry of quantum spacetimes}--that are
+\emph{curved} (or `deformed') by the presence of \emph{intense}
+gravitational fields--in the framework of \emph{non-Abelian,
+graded Lie algebroids}. Their correspondingly \emph{deformed
+quantum gravity groupoids} (QGG) should, therefore, adequately
+represent supersymmetries modified by the presence of such intense
+gravitational fields on the Planck scale. Quantum fluctuations
+that give rise to quantum `foams' at the Planck scale may be then
+represented by \emph{quantum homomorphisms} of such QGGs. If the
+corresponding graded Lie algebroids are also \emph{integrable},
+then one can reasonably expect to recover in the limit of $\hbar
+\rightarrow 0$ the Riemannian geometry of General Relativity and
+the \emph{globally hyperbolic spacetime} of Einstein's classical
+gravitation theory (GR), as a result of such an integration to the
+\emph{quantum gravity fundamental groupoid} (QGFG). The following
+subsection will define the precise mathematical concepts
+underlying our novel quantum supergravity and extended
+supersymmetry notions.
+
+\begin{thebibliography}{9}
+\bibitem{Weinberg2000}
+S. Weinberg.: \emph{The Quantum Theory of Fields}. Cambridge, New York and Madrid: 
+Cambridge University Press, Vols. 1 to 3, (1995--2000).
+
+\bibitem{Weinstein}
+A. Weinstein : Groupoids: unifying internal and external symmetry,
+\emph{Notices of the Amer. Math. Soc.} \textbf{43} (7): 744-752 (1996).
+
+\bibitem{WB83}
+J. Wess and J. Bagger: \emph{Supersymmetry and Supergravity},
+Princeton University Press, (1983).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

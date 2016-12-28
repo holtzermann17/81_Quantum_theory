@@ -1,0 +1,271 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TwodimensionalFourierTransforms}
+\pmcreated{2013-03-22 18:18:56}
+\pmmodified{2013-03-22 18:18:56}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{two-dimensional Fourier transforms}
+\pmrecord{57}{40940}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81V80}
+\pmclassification{msc}{81V55}
+\pmclassification{msc}{42B10}
+\pmsynonym{2D-FT imaging}{TwodimensionalFourierTransforms}
+%\pmkeywords{two-dimensional Fourier transforms}
+%\pmkeywords{2D-FT NMR and NIR Spectroscopies}
+\pmrelated{FourierStieltjesTransform}
+\pmrelated{FourierTransform}
+\pmrelated{TableOfGeneralizedFourierAndMeasuredGroupoidTransforms}
+\pmrelated{SpinNetworksAndSpinFoams}
+\pmrelated{FourierSineAndCosineSeries}
+\pmrelated{DiscreteFourierTransform}
+\pmdefines{2D-FT}
+\pmdefines{2D-FT NMRI}
+\pmdefines{MRI}
+\pmdefines{NMRI}
+\pmdefines{2D-FT NMR}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\section{Introduction}
+
+ A two-dimensional Fourier transform (2D-FT) is computed numerically, or carried out, in two stages that are both
+involving `standard', one-dimensional Fourier transforms. However, the second stage
+Fourier transform is \emph{not the inverse} Fourier transform (which would result in the original 
+function that was transformed at the first stage), but a Fourier transform in a second variable--
+which is `shifted' in value-- relative to that involved in the result of the first Fourier transform.
+Such 2D-FT analysis is a very powerful method for three-dimensional reconstruction
+of polymer and biopolymer structures by two-dimensional Nuclear Magnetic Resonance (2D-NMR, \cite{KurtWutrich86})
+of solutions for molecular weights ($M_w$) of the dissolved polymers up to about 50,000 $M_w$. 
+For larger biopolymers or polymers, more complex methods have been developed to obtain the desired
+resolution needed for the 3D-reconstruction of higher molecular structures, e.g. for $900,000 M_w$,
+methods that can also be utilized \emph{in vivo}. The 2D-FT method is also widely utilized in optical spectroscopy, such as \emph{2D-FT NIR hyperspectral imaging}, or in \emph{MRI imaging} for research and clinical, diagnostic applications in Medicine. 
+
+\section{Basic definition}
+  A more precise mathematical definition of the `double' Fourier transform involved is specified next. 
+
+\begin{definition}
+  A 2D-FT, or two-dimensional Fourier transform, is a standard Fourier transformation of a function
+of two variables, $f(x_1, x_2)$, carried first in the first variable $x_1$, followed by the Fourier transform
+in the second variable $x_2$ of the resulting function $F(s_1, x_2)$. (For further specific details and example
+for 2D-FT Imaging v. URLs provided in the following recent Bibliography).
+\end{definition}
+
+\subsection{Examples}
+ 
+ A 2D Fourier transformation and phase correction is applied to a set of 2D NMR (FID) signals $s(t_1, t_2)$ yielding a real 2D-FT NMR `spectrum' (collection of 1D FT-NMR spectra) represented by a matrix $S$ whose elements are 
+$$S(\nu_1,\nu_2) = \textbf{Re} \int \int cos(\nu_1 t_1)exp^{(-i\nu_2 t_2)} s(t_1, t_2)dt_1 dt_2$$
+where $\nu_1$ and $\nu_2$ denote the discrete indirect double-quantum and single-quantum(detection) axes, respectively,
+in the 2D NMR experiments. Next, the \emph{covariance matrix} is calculated in the frequency domain according
+to the following equation 
+$$ C(\nu_2', \nu_2) =  S^T S = \sum_{\nu^1}[S(\nu_1,\nu_2')S(\nu_1,\nu_2)],$$
+
+ with $\nu_2, \nu_2'$ taking all possible single-quantum frequency values and  with the summation carried out over all discrete, double quantum
+frequencies $\nu_1$.
+
+
+ \PMlinkexternal{2D-FT STEM Images (obtained at Cornell University) of electron distributions in a high-temperature
+cuprate superconductor `paracrystal'}{http://74.125.95.132/search?q=cache:x6OQWq_GVoYJ:www.physorg.com/multimedia/pix1815/+http://www.physorg.com/multimedia/pix1815/&hl=en&ct=clnk&cd=1&gl=uk} reveal both the domains (or `location') and the local symmetry of the ``pseudo-gap'' in the electron-pair correlation band responsible for the high--temperature superconductivity effect (a definite
+possibility for the next Nobel (?) iff the mathematical physics treatment is also developed to include also
+such results). 
+
+  So far there have been three Nobel prizes awarded for 2D-FT NMR/MRI during 1992-2003, and an additional,
+earlier Nobel prize for 2D-FT of X-ray data (`CAT scans'); recently the advanced possibilities
+of 2D-FT techniques in 
+\PMlinkexternal{Chemistry}{http://nobelprize.org/nobel_prizes/chemistry/laureates/1991/ernst-lecture.pdf}, Physiology and Medicine received very significant recognition.
+
+\begin{thebibliography}{9}
+
+\bibitem{KurtWutrich86}
+Kurt W\''{u}trich:  1986, \emph{NMR of Proteins and Nucleic Acids.}, J. Wiley and Sons:
+New York, Chichester, Brisbane, Toronto, Singapore. 
+\PMlinkexternal{(Nobel Laureate in 2002 for 2D-FT NMR Studies of Structure and Function of Biological Macromolecules)}{http://nobelprize.org/nobel_prizes/chemistry/laureates/2002/wutrich-lecture.pdf};
+\PMlinkexternal{2D-FT NMR Instrument Image Example: a JPG color image of a 2D-FT NMR Imaging `monster' Instrument}{http://upload.wikimedia.org/wikipedia/en/b/bf/HWB-NMRv900.jpg} 
+
+\bibitem{RICHARDRERNST1992}
+Richard R. Ernst. 1992. Nuclear Magnetic Resonance Fourier Transform (2D-FT) Spectroscopy.
+\PMlinkexternal{Nobel Lecture}{http://nobelprize.org/nobel_prizes/chemistry/laureates/1991/ernst-lecture.pdf}, on December 9, 1992.
+
+\bibitem{PM2k3}
+Peter Mansfield. 2003. \PMlinkexternal{Nobel Laureate in Physiology and Medicine for (2D and 3D) MRI.}{http://www.parteqinnovations.com/pdf-doc/fandr-Gaz1006.pdf}
+
+\bibitem{MRI-2DFT}
+D. Benett. 2007. \emph{PhD Thesis}. Worcester Polytechnic Institute. ({\em lots of 2D-FT images of mathematical, brain scans}.)
+\PMlinkexternal{PDF of 2D-FT Imaging Applications to MRI in Medical Research}{http://www.wpi.edu/Pubs/ETD/Available/etd-081707-080430/unrestricted/dbennett.pdf}. 
+
+\bibitem{PL2k3}
+Paul Lauterbur. 2003. 
+\PMlinkexternal{Nobel Laureate in Physiology and Medicine for (2D and 3D) MRI.}{http://nobelprize.org/nobel_prizes/medicine/laureates/2003/}
+
+\bibitem{JeanJeneer1971}
+Jean Jeener. 1971. Two-dimensional Fourier Transform NMR, presented at an Amp\`ere International Summer School, Basko Polje, \emph{unpublished}. A verbatim quote follows from Richard R. Ernst's Nobel Laureate Lecture
+delivered on December 2nd, 1992, ``A new approach to measure two-dimensional (2D) spectra has been
+proposed by Jean Jeener at an Ampere Summer School in Basko Polje, Yugoslavia, 1971 (\cite{JeanJeneer1971}). He suggested a 2D Fourier transform experiment consisting of two $\pi/2$ pulses with a variable time $t_1$ between the pulses and the time variable $t_2$ measuring the time elapsed after the second pulse as shown in Fig. 6 that expands the principles of Fig. 1. Measuring the response $s(t_1,t_2)$ of the two-pulse sequence and Fourier-transformation with
+respect to both time variables produces a two-dimensional spectrum $S(O_1,O_2)$ of the desired form (62,63). This two-pulse experiment by Jean Jeener is the forefather of a whole class of $2D$ experiments (8,63) 
+that can also easily be expanded to multidimensional spectroscopy.''
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

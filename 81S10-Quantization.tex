@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Quantization}
+\pmcreated{2013-03-22 15:36:59}
+\pmmodified{2013-03-22 15:36:59}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{quantization}
+\pmrecord{27}{37540}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81S10}
+\pmclassification{msc}{53D50}
+\pmclassification{msc}{46L65}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{81R15}
+\pmsynonym{quantisation}{Quantization}
+\pmsynonym{canonical quantization}{Quantization}
+\pmsynonym{Weyl-quantization}{Quantization}
+%\pmkeywords{quantization}
+%\pmkeywords{symplectic}
+%\pmkeywords{Poisson}
+%\pmkeywords{Hamiltonian operator}
+%\pmkeywords{Lie algebra}
+%\pmkeywords{Clifford algebra}
+\pmrelated{CCliffordAlgebra}
+\pmrelated{AsymptoticMorphismsAndWignerWeylMoyalQuantizationProcedures}
+\pmrelated{HamiltonianEquations}
+\pmrelated{PoissonBracket}
+\pmrelated{SchrodingersWaveEquation}
+\pmrelated{CanonicalQuantization}
+\pmrelated{HamiltonianOperatorOfAQuantumSystem}
+\pmrelated{QuantumSpaceTimes}
+\pmrelated{QFTOrQuantumFieldTheories}
+\pmrelated{QEDInTh}
+\pmdefines{classical system}
+\pmdefines{classical state}
+\pmdefines{classical observable}
+\pmdefines{quantum system}
+\pmdefines{quantum state}
+\pmdefines{quantum observable}
+
+\usepackage{amssymb, amsmath, amsthm}
+%%%\usepackage{xypic}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition} 
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition} 
+\newtheorem{dfn}[thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\newtheorem{ex}{Example}
+
+\newcommand{\lie}{\mathcal{L}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\grad}{\nabla}
+\begin{document}
+\subsection{Introduction}
+Quantization is understood as the process of defining a \emph{formal} correspondence between a quantum system operator (such as the quantum Hamiltonian operator) or quantum algebra and a classical system operator (such as the Hamiltonian) or a classical algebra, such as the Poisson algebra.  Theoretical quantum physicists often proceed in two `stages', so that both first and second quantization procedures were reported in QFT, for example. Generalized quantization procedures involve \emph{asymptotic morphisms and Wigner--Weyl--Moyal quantization procedures} or noncommutative `deformations' of \PMlinkname{C*-algebras}{CAlgebra3} associated with quantum operators on Hilbert spaces (as in noncommutative geometry). The \emph{non-commutative} algebra of quantum observable operators is a 
+\PMlinkname{Clifford algebra}{CliffordAlgebra}, and the associated 
+\PMlinkname{$C^*$-Clifford algebra}{CCliffordAlgebra} is a fundamental concept of modern mathematical treatments of quantum theories. Note, however, that classical systems, including Einstein's general relativity are commutative (or Abelian) theories, whereas quantum theories are intrinsically non-commutative (or non-Abelian), most likely as a consequnece of the non-comutativity of quantum logics and the Heisenberg uncertainty principle of quantum mechanics. 
+
+This definition is quite broad, and as a result there are many approaches to quantization, employing a variety of techniques.  It should be emphasized the result of quantization is not unique; in fact, methods of quantization usually possess inherent ambiguities, in the sense that, while performing quantization, one usually must make choices at certain points of the process.
+
+\subsection*{Classical systems}
+
+\begin{dfn}A \emph{classical system} is a triplet $(M, \omega, H)$, where $(M, \omega)$ (the \emph{phase space}) is a symplectic manifold and $H$ (the \emph{Hamiltonian}) is a smooth function on $M$.
+\end{dfn}
+
+In most physical examples the phase space $M$ is the cotangent bundle $T^*X$ of a manifold $X$.  In this case, $X$ is called the \emph{configuration space}.  
+
+\begin{dfn}
+\begin{enumerate}
+\item A \emph{classical state} is a point $x$ in $M$.
+\item A \emph{classical observable} is a function $f$ on $M$.
+\end{enumerate}
+\end{dfn}
+
+In classical mechanics, one studies the time-evolution of a classical system.  The time-evolution of an observable is described the equation
+\begin{equation}\label{ham}
+\frac{df}{dt} = -\{H,f\},
+\end{equation}
+where $\{\cdot, \cdot\}$ is the Poisson bracket.  Equation (\ref{ham}) is equivalent to the Hamilton equations.
+
+\begin{rmk}
+A classical system is sometimes defined more generally as a triplet $(M, \pi, H)$, where $\pi$ is a Poisson structure on $M$.  
+\end{rmk}
+
+\subsection*{Quantum systems}
+
+\begin{dfn}A \emph{quantum system} is a pair $(\mathcal{H}, \hat{H})$, where $\mathcal{H}$ is a Hilbert space and $\hat{H}$ is a self-adjoint linear operator on $\mathcal{H}$.
+\end{dfn}
+
+If $(\mathcal{H}, \hat{H})$ is a quantum system, $\mathcal{H}$ is referred to as the (quantum) phase space and $\hat{H}$ is referred to as the \emph{Hamiltonian operator}.
+
+\begin{dfn}
+\begin{enumerate}
+\item A \emph{quantum state} is a vector $\Psi$ in $\mathcal{H}$.
+\item A \emph{quantum observable} is a self-adjoint linear operator $A$ on $\mathcal{H}$.
+\end{enumerate}
+\end{dfn}
+
+The space of quantum observables is denoted $\mathcal{O}(\mathcal{H})$.  If $A$ and $B$ are in $\mathcal{O}(\mathcal{H})$, then 
+\begin{equation}\label{salie}
+(i\hbar)^{-1}[A,B] := (i\hbar)^{-1}(AB - BA)
+\end{equation}
+is in $\mathcal{O}(\mathcal{H})$ (Planck's constant $\hbar$ appears as a scaling factor arising from physical considerations).  The operation $(i\hbar)^{-1}[\cdot,\cdot]$ thus gives $\mathcal{O}(\mathcal{H})$ the structure of a Lie algebra.
+
+The time evolution of a quantum observable is described by the equation
+\begin{equation}\label{schro}
+\frac{dA}{dt} =  \frac{i}{\hbar} [\hat{H}, A].
+\end{equation}
+Equation (\ref{schro}) is equivalent to the \emph{time-dependent} Schr\"{o}dinger's equation
+\begin{equation}
+i \hbar \frac{d\Psi}{dt} = \hat{H} \Psi.
+\end{equation}
+
+\subsection*{The problem of quantization}
+
+The problem of quantization is to find a correspondence between a quantum system and a classical system; this is clearly not always possible. Thus, specific methods of quantization describe several ways of constructing a pair $(\mathcal{H}, \hat{H})$ from a triplet $(M, \omega, H)$.  Furthermore, in order to give physical meaning to the observables in the quantum system, there should be a map
+\begin{equation}
+q\colon C^\infty(M) \to \mathcal{O}(\mathcal{H}),
+\end{equation}
+satisfying the following conditions:
+\begin{enumerate}
+\item $q$ is a Lie algebra homomorphism,
+\item $q(H) = \hat{H}$.
+\end{enumerate}
+
+\begin{rmk} Note that $q$ is not an algebra homomorphism.  Much of the complexity of quantization lies in the fact that, while $C^\infty(M)$ is a commutative algebra, its image in $\mathcal{O}(\mathcal{H})$ necessarily does not commute.
+\end{rmk}
+
+The following is a list of some well-known methods of quantization:
+\begin{itemize}
+\item Canonical quantization
+\item Geometric quantization
+\item Deformation quantization
+\item Path-integral quantization
+\end{itemize}
+
+A detailed example of geometric quantization on quantum Riemannian spaces can be found in 
+ref. \cite{AL2k5}.
+
+\begin{thebibliography}{9}
+\bibitem{AL2k5}
+Abhay Ashtekar and Jerzy Lewandowski. 2005. Quantum Geometry and Its Applications.
+\PMlinkexternal{Available PDF download}{http://cgpg.gravity.psu.edu/people/Ashtekar/articles/qgfinal.pdf}.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

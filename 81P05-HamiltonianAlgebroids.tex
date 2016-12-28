@@ -1,0 +1,231 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HamiltonianAlgebroids}
+\pmcreated{2013-03-22 18:13:44}
+\pmmodified{2013-03-22 18:13:44}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Hamiltonian algebroids}
+\pmrecord{42}{40815}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81P05}
+\pmclassification{msc}{81R15}
+\pmclassification{msc}{81R10}
+\pmclassification{msc}{81R05}
+\pmclassification{msc}{81R50}
+\pmsynonym{quantum algebroid}{HamiltonianAlgebroids}
+%\pmkeywords{extended quantum algebroid symmetry}
+%\pmkeywords{Hamiltonian algebroid of a quantum system}
+%\pmkeywords{generalizations of Lie algebras of canonical transformations}
+%\pmkeywords{Poisson sigma model phase space}
+%\pmkeywords{Relativistic Quantum Gravity}
+\pmrelated{HamiltonianOperatorOfAQuantumSystem}
+\pmrelated{JordanBanachAndJordanLieAlgebras}
+\pmrelated{LieBracket}
+\pmrelated{LieAlgebroids}
+\pmrelated{QuantumGravityTheories}
+\pmrelated{Algebroids}
+\pmrelated{RCategory}
+\pmrelated{RAlgebroid}
+\pmdefines{Hamiltonian algebroid}
+\pmdefines{Jordan algebra}
+\pmdefines{Poisson algebra}
+
+% this is the default PlanetMath preamble. 
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in %%ps format
+%\hoffset=-1.0in %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}  
+\begin{document}
+\subsection{Introduction}
+
+\emph{Hamiltonian algebroids} are generalizations of the Lie algebras of canonical transformations, but cannot be considered just a special case of Lie algebroids. They are instead a special case of a \PMlinkexternal{quantum algebroid}{http://planetphysics.org/encyclopedia/QuantumAlgebroid.html}.
+
+\begin{definition}
+  Let $X$ and $Y$ be two vector fields on a smooth manifold $M$, represented here as operators acting on functions.
+Their commutator, or Lie bracket, $L$, is :
+\begin{align*}
+[X,Y](f)=X(Y(f))-Y(X(f)).
+\end {align*}
+
+ 
+  Moreover, consider the classical configuration space $Q = \bR^3$ of a classical, mechanical system, or particle whose phase space is the cotangent bundle $T^* \bR^3 \cong \bR^6$, for which the space of (classical) 
+observables is taken to be the real vector space of smooth functions on $M$, and with T being an element
+of a \PMlinkname{Jordan-Lie (Poisson) algebra}{JordanBanachAndJordanLieAlgebras} whose definition is also recalled next. Thus, one defines as in classical dynamics the \emph{Poisson algebra} as a Jordan algebra in which $\circ$ is associative. We recall that one needs to consider first a specific algebra (defined as a vector space $E$ over a ground field (typically $\bR$ or $\bC$)) equipped with a bilinear and distributive multiplication $\circ$~. Then one defines a \emph{Jordan algebra} (over $\bR$), as a a specific algebra over $\bR$ for which:
+
+\bigbreak
+
+ $ \begin{aligned} S \circ T &= T \circ S~, \\ S \circ (T \circ S^2) &= (S \circ T) \circ S^2 , 
+\end{aligned},$
+
+for all elements $S, T$ of this algebra.
+
+ Then, the usual algebraic types of morphisms automorphism, isomorphism, etc.) apply to a
+\PMlinkname{Jordan-Lie (Poisson) algebra}{JordanBanachAndJordanLieAlgebras} defined as a real vector space $U_{\bR}$  together with a \emph{Jordan product} $\circ$ and \emph{Poisson bracket}
+\bigbreak
+$\{~,~\}$, satisfying~:
+
+\begin{itemize}
+\item[1.] for all $S, T \in U_{\bR},$
+
+$\begin{aligned} S \circ T & = T \circ S \\ \{S, T \} &= - \{T,
+S\} \end{aligned}$
+
+\item[2.] the \emph{Leibniz rule} holds
+
+$$ \{S, T \circ W \} = \{S, T\} \circ W + T \circ \{S, W\}$$
+for all $S, T, W \in U_{\bR}$, along with
+
+\item[3.] the \emph{Jacobi identity}~:
+
+ $$ \{S, \{T, W \}\} = \{\{S,T \}, W\} + \{T, \{S, W \}\}$$
+
+\item[4.] for some $\hslash^2 \in \bR$, there is the \emph{associator identity} ~:
+$$(S \circ T) \circ W - S \circ (T \circ W) = \frac{1}{4} \hslash^2 \{\{S, W \}, T \}~.$$
+\end{itemize}
+ 
+ Thus, the canonical transformations of the Poisson sigma model phase space specified by the \PMlinkname{Jordan-Lie (Poisson) algebra}{JordanBanachAndJordanLieAlgebras} (also Poisson algebra), which is determined by both the Poisson bracket and the \emph{Jordan product} $\circ$,  define a \emph{Hamiltonian algebroid} with the Lie brackets $L$ related to such a Poisson structure on the target space. 
+\end{definition}
+%%%%%
+%%%%%
+\end{document}

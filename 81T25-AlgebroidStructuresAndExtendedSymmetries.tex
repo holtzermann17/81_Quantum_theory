@@ -1,0 +1,262 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebroidStructuresAndExtendedSymmetries}
+\pmcreated{2013-03-22 18:13:55}
+\pmmodified{2013-03-22 18:13:55}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{algebroid structures and extended symmetries}
+\pmrecord{50}{40819}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81T25}
+\pmclassification{msc}{81T18}
+\pmclassification{msc}{81T13}
+\pmclassification{msc}{81T10}
+\pmclassification{msc}{81T05}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{55U35}
+\pmsynonym{extensions of quantum operator algebras}{AlgebroidStructuresAndExtendedSymmetries}
+%\pmkeywords{algebroids}
+%\pmkeywords{QFT}
+%\pmkeywords{symmetry sectors}
+%\pmkeywords{groupoids}
+%\pmkeywords{continuous function with compact support}
+%\pmkeywords{convolution product}
+%\pmkeywords{extensions of  quantum operator algebras}
+%\pmkeywords{extended algebroid symmetries}
+%\pmkeywords{double algebras}
+%\pmkeywords{double algebroids}
+\pmrelated{HamiltonianAlgebroids}
+\pmrelated{QFTOrQuantumFieldTheories}
+\pmrelated{LieAlgebroids}
+\pmrelated{RCategory}
+\pmrelated{RAlgebroid}
+\pmrelated{AxiomsOfMetacategoriesAndSupercategories}
+\pmrelated{MonoidalCategory}
+\pmrelated{Groupoids}
+\pmrelated{ETAS}
+\pmdefines{algebroid structure}
+\pmdefines{convolution product}
+\pmdefines{pre-algebroid}
+\pmdefines{algebroid extended symmetries}
+\pmdefines{set of functions with finite support}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathsf{G}(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\newcommand{\<}{{\langle}}
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+\def\baselinestretch{1.1}
+\hyphenation{prod-ucts}
+
+%\geometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\quadr}[4]{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+\subsection{Algebroid Structures and Algebroid Extended Symmetries}
+ 
+\begin{definition}
+An \emph{algebroid structure} $A$ will be specifically defined to mean
+either a ring, or more generally, any of the specifically defined algebras, but \emph{with several
+objects} instead of a single object, in the sense specified by Mitchell
+(1965). Thus, an {\em algebroid}  has been defined (Mosa, 1986a; Brown and Mosa 1986b, 2008)
+as follows.  An \textit{$R$-algebroid } $A$ on a set of ``objects" $A_0$
+is a directed graph over $A_0$ such that for each $x,y \in A_0,\;
+A(x,y)$ has an $R$-module structure and there is an $R$-bilinear
+function $$ \circ : A(x,y) \times A(y,z) \to  A(x,z)$$ $(a , b)
+\mapsto  a\circ b$ called ``composition" and satisfying the
+associativity condition, and the existence of identities. 
+\end{definition}
+
+
+\begin{definition}
+A {\em pre-algebroid} has the same structure as an algebroid and the same
+axioms except for the fact that the existence of identities  $1_x \in A(x,x)$
+is not assumed. For example, if $A_0$ has exactly one object, then
+an $R$-algebroid $A$ over $A_0$ is just an $R$-algebra. An ideal
+in $A$ is then an example of a pre-algebroid. 
+\end{definition}
+
+%%\cite{M1,M2,A}
+ Let $R$ be a commutative ring. An \textit{$R$-category }$\A$ is a category equipped with an $R$-module structure on each \textit{hom} set such that the composition is $R$-bilinear. More precisely, let us assume for instance that we are given a commutative ring $R$ with identity. Then a small $R$-category--or equivalently an \emph{$R$-algebroid}-- will be defined as a category enriched in the monoidal category of $R$-modules, with respect to the
+monoidal structure of tensor product. This means simply that for all objects $b,c$ of $\A$, the set $\A(b,c)$ is given the structure of an $R$-module, and composition $\A(b,c) \times \A(c,d) \lra
+\A(b,d)$ is $R$--bilinear, or is a morphism of $R$-modules $\A(b,c) \otimes_R \A(c,d) \lra \A(b,d)$.
+
+ If $\mathsf{G}$ is a \PMlinkname{groupoid}{Groupoids} (or, more generally, a category)
+then we can construct an \emph{$R$-algebroid} $R\mathsf{G}$ as
+follows. The object set of $R\mathsf{G}$ is the same as that of
+$\mathsf{G}$ and $R\mathsf{G}(b,c)$ is the free $R$-module on the
+set $\mathsf{G}(b,c)$, with composition given by the usual
+bilinear rule, extending the composition of $\mathsf{G}$.
+
+ Alternatively, one can define $\bar{R}\mathsf{G}(b,c)$ to be the
+set of functions $\mathsf{G}(b,c)\lra R$ with finite support, and
+then we define the \emph{convolution product} as follows:
+
+\begin{equation}
+(f*g)(z)= \sum \{(fx)(gy)\mid z=x\circ y \} ~.
+\end{equation}
+
+As it is very well known, only the second construction is natural
+for the topological case, when one needs to replace `function' by
+\PMlinkname{`continuous function with compact support'}{SmoothFunctionsWithCompactSupport} (or \emph{locally
+compact support} for the \PMlinkname{QFT}{QFTOrQuantumFieldTheories} extended 
+\PMlinkexternal{symmetry sectors}{http://planetmath.org/?op=getobj&from=books&id=153}), and in
+this case $R \cong \mathbb{C}$~. The point made here is
+that to carry out the usual construction and end up with only an algebra
+rather than an algebroid, is a procedure analogous to replacing a
+\PMlinkname{groupoid}{Groupoids} $\mathsf{G}$ by a semigroup $G'=G\cup \{0\}$ in which the
+compositions not defined in $G$ are defined to be $0$ in $G'$. We
+argue that this construction removes the main advantage of
+\PMlinkname{groupoids}{Groupoids}, namely the spatial component given by the set of
+objects.
+
+\textbf{Remarks:}
+One can also define categories of algebroids, $R$-algebroids, double algebroids , and so on.
+A `category' of $R$-categories is however a \PMlinkname{super-category}{Supercategory} $\mathbb{S}$, or it can also be viewed as a specific example of a \PMlinkname{metacategory}{AxiomsOfMetacategoriesAndSupercategories} (or 
+$R$-supercategory, in the more general case of multiple operations--categorical `composition laws'-- being defined within the same structure, for the same class, $C$).  
+
+
+\begin{thebibliography}{9}
+\bibitem{BBG2009}
+I. C. Baianu , James F. Glazebrook, and Ronald Brown. 2009. Algebraic Topology Foundations of Supersymmetry and Symmetry Breaking in Quantum Field Theory and Quantum Gravity: A Review. \emph{SIGMA} 5 (2009), 051, 70 pages.      $arXiv:0904.3644$, $doi:10.3842/SIGMA.2009.051$, 
+\PMlinkexternal{Symmetry, Integrability and Geometry: Methods and Applications (SIGMA)}{http://www.emis.de/journals/SIGMA/2009/051/}
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

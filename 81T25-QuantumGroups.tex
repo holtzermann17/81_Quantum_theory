@@ -1,0 +1,318 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuantumGroups}
+\pmcreated{2013-03-22 18:12:22}
+\pmmodified{2013-03-22 18:12:22}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{quantum groups}
+\pmrecord{38}{40786}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81T25}
+\pmclassification{msc}{81T18}
+\pmclassification{msc}{81T13}
+\pmclassification{msc}{81T10}
+\pmclassification{msc}{81T05}
+\pmclassification{msc}{81R50}
+\pmsynonym{Hopf algebras}{QuantumGroups}
+\pmsynonym{locally compact groupoids with Haar measure}{QuantumGroups}
+%\pmkeywords{quantum groups}
+%\pmkeywords{quantum symmetries}
+%\pmkeywords{locally compact groupoids with Haar measure}
+%\pmkeywords{von Neumann algebras}
+%\pmkeywords{paragroups}
+%\pmkeywords{Quantum Groupoids}
+%\pmkeywords{Hopf algebras}
+%\pmkeywords{locally compact groupoids with Haar measure}
+\pmrelated{HopfAlgebra}
+\pmrelated{HaarMeasure}
+\pmrelated{LocallyCompactQuantumGroup}
+\pmrelated{CompactQuantumGroup}
+\pmrelated{GroupoidAndGroupRepresentationsRelatedToQuantumSymmetries}
+\pmrelated{QuantumGroupoids2}
+\pmrelated{Groupoids}
+\pmrelated{QuantumSpaceTimes}
+\pmrelated{QuantumCategory}
+\pmrelated{LocallyCompactQuantumGroupsUniformContinuity2}
+\pmrelated{UniformCon}
+\pmdefines{quantum group}
+\pmdefines{local quantum symmetry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+%\newcommand{\>}{{\rangle}}
+
+
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+\begin{document}
+\subsection{Introduction}
+\begin{definition}
+A \emph{quantum group} is often defined as the dual of a Hopf algebra or coalgebra. Actually, quantum groups are constructed by employing certain Hopf algebras as ``building blocks'', and in the case of finite groups they are obtained from the latter by Fourier transformation of the group elements.
+\end{definition}
+
+Let us consider next, alternative definitions of quantum groups that indeed possess extended quantum symmetries and algebraic properties distinct from those of Hopf algebras.
+
+\subsection{Quantum Groups, Quantum Operator Algebras and Related Symmetries}
+
+\begin{definition}
+{\em Quantum groups} are defined as locally compact topological groups endowed with a left Haar measure system, and also with at least one internal quantum symmetry, such as the intrinsic spin symmetry represented by either Pauli matrices or the Dirac algebra of observable spin operators.
+\end{definition}
+
+For additional examples of quantum groups the reader is referred to the last six publications listed in the bibliography.
+
+
+\begin{remark}
+One can also consider quantum groups as a particular case of quantum groupoids in the limiting
+case where there is only one symmetry type present in the quantum groupoid.
+\end{remark}
+
+\subsection{Quantum Groups, Paragroups and Operator Algebras in Quantum Theories}
+
+Quantum theories adopted a new lease of life post 1955 when von Neumann beautifully re-formulated Quantum Mechanics (QM) in the mathematically rigorous context of Hilbert spaces and operator algebras. From a current physics perspective, von Neumann's approach to quantum mechanics has done however much more: it has not only paved the way to expanding the role of symmetry in
+physics, as for example with the Wigner-Eckhart theorem and its
+applications, but also revealed the fundamental importance in
+quantum physics of the state space geometry of (quantum) operator
+algebras. Subsequent developments of the quantum operator algebra were aimed at identifying more general quantum symmetries than those defined for example by symmetry groups, groups of unitary operators and Lie groups. Several fruitful quantum algebraic concepts were developed, such as: the Ocneanu \textit{paragroups}-later found to be represented by Kac--Moody algebras, quantum `groups' represented either as Hopf algebras or locally compact groups with Haar measure, `quantum' groupoids represented as weak Hopf algebras, and so on. The Ocneanu {\em paragroups} case is particularly interesting as it can be considered as an extension through quantization of certain finite group symmetries to infinitely-dimensional von Neumann type $II_1$ factors (subalgebras), and are, in effect, \textit{`quantized groups'} that can be nicely constructed as Kac algebras; in fact, it was recently shown that a paragroup can be constructed from a crossed product by an outer action of a Kac algebra. This suggests a relation to categorical aspects of paragroups (rigid monoidal tensor categories previously reported in the literature). The strict symmetry of the group of (quantum) unitary operators is thus naturally extended through paragroups to the symmetry of the latter structure's unitary representations; furthermore, if a subfactor of the von Neumann algebra arises as a crossed product by a finite group action, the paragroup for this subfactor contains a very similar group structure to that of the original finite group, and also has a unitary representation theory similar to that of the original finite group. Last-but-not least, a paragroup yields a \emph{complete invariant} for irreducible inclusions of AFD von Neumannn type $II_1$ factors with finite index and finite depth (Theorem 2.6. of Sato, 2001). This can be considered as a kind of internal, `hidden' quantum symmetry of von Neumann algebras.
+
+On the other hand, unlike paragroups, (quantum) locally compact groups are not readily constructed as either Kac or Hopf C*-algebras. In recent years the techniques of Hopf symmetry and those of weak Hopf C*-algebras, sometimes called \emph{quantum groupoids} (cf B\"ohm et al.,1999),
+provide important tools--in addition to the paragroups-- for studying the broader relationships of the Wigner fusion rules algebra, $6j$--symmetry (Rehren, 1997), as well as the study of the noncommutative
+symmetries of subfactors within the Jones tower constructed from finite index depth 2 inclusion of factors, also recently considered from the viewpoint of related Galois correspondences (Nikshych and Vainerman, 2000).
+
+\begin{remark}
+ \PMlinkname{Compact quantum groups (CQGs)}{CompactQuantumGroup} are of great interest in physical mathematics
+especially in relation to \PMlinkname{locally compact quantum groups (L-CQGs)}{LocallyCompactQuantumGroup}.
+\end{remark}
+
+\begin{thebibliography}{9}
+
+\bibitem{Chaician}
+M. Chaician and A. Demichev: \emph{Introduction to Quantum Groups}, World Scientific (1996).
+
+\bibitem{Drinfeld}
+V. G. Drinfel'd: Quantum groups, In \emph{Proc. Intl. Congress of
+Mathematicians, Berkeley 1986}, (ed. A. Gleason), Berkeley, 798-820 (1987).
+
+
+\bibitem{Etingof1}
+P.. I. Etingof and A. N. Varchenko, Solutions of the Quantum Dynamical Yang-Baxter Equation and Dynamical Quantum Groups, \emph{Comm.Math.Phys.}, \textbf{196}: 591-640 (1998).
+
+\bibitem{Etingof2}
+P. I. Etingof and A. N. Varchenko: Exchange dynamical quantum groups, \emph{Commun. Math. Phys.} \textbf{205} (1): 19-52 (1999)
+
+\bibitem{Etingof3}
+P. I. Etingof and O. Schiffmann: Lectures on the dynamical Yang--Baxter equations, in \emph{Quantum Groups and Lie Theory (Durham, 1999)}, pp. 89-129, Cambridge University Press, Cambridge, 2001.
+
+\bibitem{Fell}
+J. M. G. Fell.: The Dual Spaces of C*--Algebras., \emph{Transactions of the American
+Mathematical Society}, \textbf{94}: 365--403 (1960).
+
+\bibitem{Hahn1}
+P. Hahn: Haar measure for measure groupoids., \textit{Trans. Amer. Math. Soc}. \textbf{242}: 1--33(1978).
+
+\bibitem{Hahn2}
+P. Hahn: The regular representations of measure groupoids., \textit{Trans. Amer. Math. Soc}. \textbf{242}:34--72(1978).
+
+\bibitem{HLS2k8}
+C. Heunen, N. P. Landsman, B. Spitters.: A topos for algebraic quantum theory, (2008) \\
+arXiv:0709.4364v2 [quant--ph]
+
+\bibitem{Majid}
+S. Majid. Quantum groups, \PMlinkexternal{on line}{http://www.ams.org/notices/200601/what-is.pdf}
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalgebraHomomorphismsAreContinuous}
+\pmcreated{2013-03-22 17:40:06}
+\pmmodified{2013-03-22 17:40:06}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{$C^*$-algebra homomorphisms are continuous}
+\pmrecord{14}{40105}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81R15}
+\pmclassification{msc}{46L05}
+\pmsynonym{automatic continuity of $C^*$-homomorphisms}{CalgebraHomomorphismsAreContinuous}
+\pmsynonym{homomorphisms of $C^*$-algebras are continuous}{CalgebraHomomorphismsAreContinuous}
+%\pmkeywords{continuous linear mapping}
+%\pmkeywords{$C^*$-algebra homomorphisms}
+%\pmkeywords{$C_c (G) $}
+%\pmkeywords{mapping continuity}
+%\pmkeywords{C*-algebras and quantum compact groupoids}
+\pmrelated{ContinuousLinearMapping}
+\pmrelated{OperatorNorm}
+\pmrelated{C_cG}
+\pmrelated{UniformContinuityOverLocallyCompactQuantumGroupoids}
+\pmrelated{CAlgebra}
+\pmrelated{CAlgebra3}
+\pmrelated{NormAndSpectralRadiusInCAlgebras}
+\pmrelated{EquivalenceOfDefinitionsOfCAlgebra}
+\pmrelated{GroupoidCConvolutionAlgebra}
+\pmdefines{automatically continuous homomorphism of $C^*$--algebras}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $\mathcal{A}, \mathcal{B}$ be \PMlinkname{$C^*$-algebras}{CAlgebra} and $f:\mathcal{A} \longrightarrow \mathcal{B}$ a *-homomorphism. Then $f$ is \PMlinkname{bounded}{ContinuousLinearMapping} and $\|f\| \leq 1$ (where $\|f\|$ is the \PMlinkname{norm}{OperatorNorm} of $f$ seen as a linear operator between the spaces $\mathcal{A}$ and $\mathcal{B}$).
+
+For this reason it is often said that homomorphisms between $C^*$-algebras are \PMlinkname{automatically continuous}{ContinuousLinearMapping}.
+
+{\bf Corollary -} A *-isomorphism between $C^*$-algebras is an \PMlinkname{isometric isomorphism}{IsometricIsomorphism}.\\
+$\;$
+
+{\bf \emph{Proof of Theorem :}} Let us first suppose that $\mathcal{A}$ and $\mathcal{B}$ have identity elements, both denoted by $e$.
+
+We denote by $\sigma(x)$ and $R_{\sigma}(x)$ the spectrum and the spectral radius of an element $x \in \mathcal{A}$ or $\mathcal{B}$.
+
+Let $a \in \mathcal{A}$ and $\lambda \in \mathbb{C}$. If $a- \lambda e$ is invertible in $\mathcal{A}$, then $f(a- \lambda e)$ is invertible in $\mathcal{B}$.  Thus,
+\begin{displaymath}
+\sigma(f(a)) \subseteq \sigma(a)\,.
+\end{displaymath}
+Hence $R_{\sigma}(f(a)) \leq R_{\sigma}(a)$ for every $a \in \mathcal{A}$. Therefore, by the result from \PMlinkname{this entry}{NormAndSpectralRadiusInCAlgebras},
+\begin{displaymath}
+\|f(a)\| = \sqrt{R_{\sigma}(f(a)^*f(a))} = \sqrt{R_{\sigma}(f(a^*a))} \leq \sqrt{R_{\sigma}(a^*a)}= \|a\|\,.
+\end{displaymath}
+
+We conclude that $f$ is \PMlinkescapetext{bounded} and $\|f\| \leq 1$.
+
+If $\mathcal{A}$ or $\mathcal{B}$ do not have identity elements, we can consider their minimal unitizations, and the result follows from the above \PMlinkescapetext{argument}. $\square$
+
+{\bf \emph{Proof of Corollary :}} This follows from the fact that $f^{-1}$ is also a *-homomorphism and therefore $\|f^{-1}(b)\|\leq \|b\|$ for every $b \in \mathcal{B}$. $\square$
+%%%%%
+%%%%%
+\end{document}

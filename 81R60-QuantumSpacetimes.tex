@@ -1,0 +1,214 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuantumSpacetimes}
+\pmcreated{2013-03-22 18:15:56}
+\pmmodified{2013-03-22 18:15:56}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{quantum space-times}
+\pmrecord{28}{40866}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81R60}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{81P10}
+\pmclassification{msc}{83C47}
+\pmclassification{msc}{83C75}
+\pmclassification{msc}{83C45}
+\pmclassification{msc}{81P05}
+\pmsynonym{QST}{QuantumSpacetimes}
+\pmsynonym{quantum state spaces}{QuantumSpacetimes}
+\pmsynonym{quantum spaces}{QuantumSpacetimes}
+%\pmkeywords{quantum state spaces}
+%\pmkeywords{quantum spaces}
+%\pmkeywords{quantum system}
+%\pmkeywords{the fundamental concept of quantum theories}
+%\pmkeywords{QuantumFundamentalGroupoid}
+%\pmkeywords{QuantumGroupoids}
+%\pmkeywords{QuantumGroups}
+%\pmkeywords{QuantumSystem}
+%\pmkeywords{Quantum Electrodynamics}
+%\pmkeywords{Hamiltonian Operator}
+%\pmkeywords{QCD or QuantumChromodynamics}
+\pmrelated{QuantumFundamentalGroupoids}
+\pmrelated{QuantumGroupoids2}
+\pmrelated{QuantumGroups}
+\pmrelated{QuantumSystem}
+\pmrelated{QEDInTheoreticalAndMathematicalPhysics}
+\pmrelated{HamiltonianOperatorOfAQuantumSystem}
+\pmrelated{QuantumChromodynamicsQCD}
+\pmrelated{QuantumAutomataAndQuantumComputation2}
+\pmrelated{Quantization}
+\pmrelated{QEDInTheoreticalAndMathema}
+\pmdefines{quantum space-time structure}
+\pmdefines{QST}
+
+% this is the default PlanetMath preamble.  as your 
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+This is a contributed topic on quantum space-times viewed from general relativistic and quantum gravity standpoints, 
+and includes, for example, quantum geometry fundamental notions.  
+\section{Quantum Space-times (QST)}
+The concept of \emph{quantum space-times (QST)} is fundamental to the development of relativistic quantum theories and at this point it can only be broadly defined as a \emph{class of mathematical spaces that allow the construction of quantum physical theories in a manner consistent with both relativistic principles and quantum gravity}.
+There is no universal agreement amongst either theoretical physicists or mathematicians who
+work on Physical Mathematics about either a specific definition of such quantum space-times or 
+how to develop a valid classification theory of quantum space-times. However, several specific
+definitions or models were proposed and a list of such examples is presented next.  
+
+
+\subsection{Specific Definitions for Models of Quantum Space-Times (QSTs) and Quantum Geometry}
+\begin{itemize}
+\item QSTs represented by posets or causal sets
+\item QSTs represented by so-called quantum topoi (QTs) with Heyting logic algebra as a subobject classifier
+\item QSTs represented by Topological Quantum Field Theories (TQFTs) or Homotopy QFTs
+\item QSTs represented as
+\PMlinkname{spin foams of spin networks}{SpinNetworksAndSpinFoams}
+\item QSTs represented as a noncommutative, algebraic-- and/or ``geometrical''--quantized space as in noncommutative geometry models for SUSY
+\item QSTs represented as generalized Riemannian manifolds with quantum tangent spaces
+\item QSTs represented as presheaves of local nets of quantum operators in Algebraic QFT
+\item QSTs represented as quantum fields (QF) on a (physical) lattice of geometric points
+\item QSTs represented as consisting of quantum loops 
+\item QSTs represented as fractal dimension spaces
+\item QST represented as a quantum category of locally compact grpoupoids
+\item QSTs represented as categories or spaces of quantized strings as in string theories
+\item Twistor representations in quantum gravity (QG) (introduced by Sir Roger Penrose). 
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

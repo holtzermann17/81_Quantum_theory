@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetricMonoidalCategory}
+\pmcreated{2013-03-22 18:30:22}
+\pmmodified{2013-03-22 18:30:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{symmetric monoidal category}
+\pmrecord{6}{41190}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81-00}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{18D10}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all]{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A monoidal category $\mathcal{C}$ with tensor product $\otimes$ is said to be \emph{symmetric} if for every pair $A,B$ of objects in $\mathcal{C}$, there is an isomorphism $$s_{AB}:A\otimes B\cong B\otimes A$$ that is natural in both $A$ and $B$ such that the following diagrams are commutative
+\begin{enumerate}
+\item (\emph{unit coherence for $s$}):
+$$\xymatrix@+=2cm{A\otimes I \ar[rr]^{s_{AI}} \ar[dr]_{r_A} & & I\otimes A \ar[dl]^{l_A} \\ & A &}$$
+\item (\emph{associativity coherence for $s$}):
+$$\xymatrix@+=2cm{ (A\otimes B)\otimes C \ar[rr]^{s_{AB}\otimes 1_C} \ar[d]_{a_{ABC}} & & (B\otimes A)\otimes C \ar[d]^{a_{BAC}} \\ A\otimes (B\otimes C) \ar[d]_{s_{A,B\otimes C}} & & B\otimes (A\otimes C) \ar[d]^{1_B\otimes s_{AC}} \\ (B\otimes C)\otimes A \ar[rr]_{a_{BCA}} & & B\otimes(C\otimes A)
+}$$
+\item (inverse law):
+$$\xymatrix@+=2cm{& B\otimes A \ar[dr]^{s_{BA}} & \\ A\otimes B \ar[ur]^{s_{AB}} \ar@{=}[rr]_{1_{A\otimes B}} && A\otimes B }$$
+\end{enumerate}
+In the diagrams above, $a,l,r$ are the associativity isomorphism, the left unit isomorphism, and the right unit isomorphism respectively.
+
+Some examples and non-examples of symmetric monoidal categories:
+\begin{itemize}
+\item The category of sets.  The tensor product is the set theoretic cartesian product, and any singleton can be fixed as the unit object.
+\item The category of groups.  Like before, the tensor product is just the cartesian product of groups, and the trivial group is the unit object.
+\item More generally, a category with finite products is symmetric monoidal.  The tensor product is the direct product of objects, and any terminal object (empty product) is the unit object.
+\item The category of bimodules over a ring $R$ is monoidal.  However, this category is only symmetric monoidal if $R$ is commutative.
+\end{itemize}
+
+\textbf{Remark}.  A symmetric monoidal category is a braided monoidal category such that the inverse law: $s_{BA}\circ s_{AB}=1_{A\otimes B}$ holds.
+%%%%%
+%%%%%
+\end{document}

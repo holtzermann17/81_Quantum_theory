@@ -1,0 +1,232 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyCompactQuantumGroup}
+\pmcreated{2013-03-22 18:21:24}
+\pmmodified{2013-03-22 18:21:24}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{locally compact quantum group}
+\pmrecord{18}{40994}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{46M20}
+\pmclassification{msc}{18B40}
+\pmclassification{msc}{22A22}
+\pmclassification{msc}{17B37}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{22D25}
+\pmsynonym{Hopf algebras}{LocallyCompactQuantumGroup}
+\pmsynonym{ring groups}{LocallyCompactQuantumGroup}
+%\pmkeywords{quantum group}
+%\pmkeywords{local quantum symmetry}
+%\pmkeywords{C*-algebra}
+%\pmkeywords{$W^*$-algebra}
+%\pmkeywords{Hopf algebras}
+%\pmkeywords{ring groups}
+%\pmkeywords{quadruple}
+%\pmkeywords{coassociative multiplication}
+%\pmkeywords{locally compact quantum groups}
+%\pmkeywords{quantum groupoids}
+%\pmkeywords{discrete quantum groups}
+%\pmkeywords{algebraic quantum groups}
+%\pmkeywords{monoidal category}
+\pmrelated{CompactQuantumGroup}
+\pmrelated{LocallyCompactQuantumGroupsUniformContinuity2}
+\pmrelated{RepresentationsOfLocallyCompactGroupoids}
+\pmrelated{VonNeumannAlgebra}
+\pmrelated{WeakHopfCAlgebra2}
+\pmrelated{LocallyCompactHausdorffSpace}
+\pmrelated{QuantumGroups}
+\pmdefines{quantum group}
+\pmdefines{local quantum symmetry}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\begin{definition}
+A {\em locally compact quantum group} defined as in ref. \cite{LV2k3} is a \emph{quadruple $\G = (A, \Delta, \mu, \nu)$}, where $A$ is either a $C^*$-- or a 
+\PMlinkname{\em $W^*$-- algebra equipped with a co-associative comultiplication}{WeakHopfCAlgebra2} 
+$\Delta: A \to A \otimes A$ and two faithful semi-finite normal weights, $\mu$ and $\nu$ --{\em right and -left Haar measures}. 
+\end{definition}
+
+
+
+\subsubsection{Examples}
+
+\begin{enumerate}
+\item An ordinary unimodular group $G$ with Haar measure $ \mu$. 
+$A := L^{\infty}(G, \mu), \Delta: f(g) \mapsto f(gh)$, 
+$S: f(g) \mapsto f(g^{}-1), \phi(f) = \int_G f(g)d\mu (g)$, where  $g, h \in G, f \in L^{\infty}(G, \mu)$.
+
+\item A:= \L (G) is the von Neumann algebra generated by left-translations $L_g$ or by left convolutions 
+$L_f :={ \int}_G f(g)L_g d \mu (g)$ with continuous functions $f(.) \in L^1(G,\mu) \Delta: \mapsto L_g \otimes L_g \mapsto L_g^{-1}, \phi(f) = f(e) $, where $g \in G$, and e is the unit of G.
+\end{enumerate}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{LV2k3}
+Leonid Vainerman. 2003. 
+\PMlinkexternal{Locally Compact Quantum Groups and Groupoids: Proceedings of the Meeting of Theoretical Physicists and Mathematicians, Strasbourg, February 21-23, 2002.}{http://planetmath.org/?op=getobj&from=papers&id=471}, 
+{\em Series in Mathematics and Theoretical Physics}, {\bf 2}, Series ed. V. Turaev., Walter de Gruyter Gmbh \& Co: Berlin.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

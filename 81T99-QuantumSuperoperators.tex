@@ -1,0 +1,267 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuantumSuperoperators}
+\pmcreated{2013-03-22 18:12:50}
+\pmmodified{2013-03-22 18:12:50}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{quantum super-operators}
+\pmrecord{16}{40795}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81T99}
+\pmclassification{msc}{81T10}
+\pmclassification{msc}{81T05}
+\pmsynonym{extension of quantum operator algebras}{QuantumSuperoperators}
+%\pmkeywords{super-operators in extended quantum theories}
+%\pmkeywords{quantum super-operators}
+\pmrelated{QuantumOperatorAlgebrasInQuantumFieldTheories}
+\pmdefines{super-operators in extended quantum theory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym,color,enumerate}
+%%\usepackage{xypic}
+\xyoption{curve}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{7in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{10.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+%the next gives two direction arrows at the top of a 2 x 2 matrix
+
+\newcommand{\directs}[2]{\def\objectstyle{\scriptstyle}  \objectmargin={0pt}
+\xy
+(0,4)*+{}="a",(0,-2)*+{\rule{0em}{1.5ex}#2}="b",(7,4)*+{\;#1}="c"
+\ar@{->} "a";"b" \ar @{->}"a";"c" \endxy }
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+
+\theoremstyle{plain}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\Ce}{\mathsf{C}}
+\newcommand{\Q}{\mathsf{Q}}
+\newcommand{\grp}{\mathsf{G}}
+\newcommand{\dgrp}{\mathsf{D}}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{\operatorname{Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+
+\newcommand{\hdgb}{\boldsymbol{\rho}^\square}
+\newcommand{\hdg}{\rho^\square_2}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\renewcommand{\leq}{{\leqslant}}
+\renewcommand{\geq}{{\geqslant}}
+
+\def\red{\textcolor{red}}
+\def\magenta{\textcolor{magenta}}
+\def\blue{\textcolor{blue}}
+\def\<{\langle}
+\def\>{\rangle}
+\begin{document}
+This is a contributed topic on quantum super-operators (or superoperators).
+
+
+\subsection{Time and Microentropy: Irreversibility in Open Systems}
+
+ A significant part of the scientific and philosophical work of Ilya
+Prigogine has been devoted to the dynamical meaning of phenomenal/physical irreversibility
+expressed in terms of the second law of thermodynamics and quantum statistical mechanics. 
+For systems with strong enough instability of motion the concept of phase space trajectories is
+no longer meaningful and the dynamical description has to be
+replaced by the motion of distribution functions on the phase
+space. The viewpoint is that quantum theory produces a more
+coherent type of motion than in the classical setting and the
+quantum effects induce correlations between neighbouring classical
+trajectories in phase space. 
+
+\subsection{Quantum Super-operators}
+
+ Prigogine's idea (1980) is to associate a macroscopic entropy (or Lyapounov function) 
+with a microscopic entropy (quantum) super--operator $M$. Here the time--parametrized distribution
+functions $\rho_t$ are regarded as densities in phase space such
+that the inner product $\langle \rho_t, M \rho_t\rangle$ varies
+monotonously with $t$ as the functions $\rho_t$ evolve in
+accordance with Liouville's equation (Prigogine, 1980; Misra et al, 1979). 
+For well defined systems for which the super-operators $M$ exist, a time super-operator $T$ (age or internal time) can also be introduced.  (For the precise details, the reader
+is referred to Misra et al. 1979). Furthermore, the equations of motion with randomness at the microscopic level then emerge as irreversibility on the macroscopic level. However, unlike the usual quantum operators representing observables, the $M$ super-operators are non-Hermitian operators, (that is, they are not self-adjoint, $M$ $\neq $M* ).  One notes that Einstein would have discarded such notions along with
+the standard quantum mechanics formulation it is interesting that no imaginary experiments have been 
+designed so far to test the reality of quantum super-operators. 
+
+ However, there are certain provisions that have to be made in terms of the spectrum of the Hamiltonian $H$ for M to be properly defined: if $H$ has a pure point spectrum, then $M$ does not exist, and likewise, if $H$ has a continuous but bounded spectrum then $M$ cannot exist. Thus, the super-operator $M$ cannot exist in the case of only finitely extended systems containing only a finite number of particles. Furthermore, the super-operator $M$ cannot preserve the class of pure states since it is non-factorizable. The distinction between pure states (represented by vectors in a Hilbert space) and mixed states (represented by density operators) is thus lost in the process of measurement. In other words, the distinction between pure and mixed states is lost in a quantum system for which the algebra of observables can be extended to include a new dynamical variable representing the non-equilibrium entropy. In this way, one may formulate the second law of thermodynamics in terms of $M$ for quantum mechanical systems. Let us mention that the time operator $T$ represents internal time and the usual, secondary time in quantum dynamics is regarded as an average over $T$. When $T$ reduces to a trivial operator the usual
+concept of time is recovered $T \rho(x,v,t) = t \rho(x,v,t)$, and
+thus time in the usual sense is conceived as an average of the
+individual times as registered by the observer. Given the latter's
+ability to distinguish between between future and past, a
+self-consistent scheme may be summarized in the following diagram
+(Prigogine, 1980):
+\begin{equation}
+\def\labelstyle{\textstyle}
+ \xymatrix@M=0.1pc @=5pc{& {\text{Observer}} \ar[r] &
+ {\text{Dynamics}} \ar[d]
+\\ &{\text{Broken time symmetry}} \ar[u] &
+\text{Dissipative structures} \ar[l] }
+\end{equation}
+
+for which irreversibility occurs as the intermediary in the following sequence: $$
+\text{Dynamics} \Longrightarrow \text{Irreversibility}
+\Longrightarrow \text{Dissipative structures} $$
+
+(Note however that certain quantum theorists, as well as Einstein, regarded the irreversibility of time as an ``illusion'' caused by statistical averaging. Others-- operating with minimal representations in quantum logic for finite quantum systems-- go further still by denying that there is any need for real time to appear in the formulation of quantum theory.)
+
+The importance of the above diagram will become fully apparent in the context of Section 4 , where we discuss living organisms in terms of open systems that by definition are irreversible, and also have highly complex (generic) dynamics supported by dissipative structures which may have come into existence through spontaneous symmetry breaking, as explained in further detail by Baianu and Poli, 2008, in this volume, and also briefly in the next subsection. This diagram sketches four major pieces from the puzzle of the emergence/origin of life on earth, without however coming very close to completing this puzzle; thus, Prigogine's subtle concepts of  microscopic time and micro--entropy super--operators may allow us to understand how life originated on earth several billion years ago, and also how organisms function and survive today.  They also provide a partial answer to subtle quantum genetics and fundamental evolutionary dynamics questions asked by Schr\"{o}dinger-- one of the great founders of quantum `wave mechanics'-- in his widely read book ``What is Life?" Other key answers to the latter's question were recently provided by Robert Rosen (2000) in his popular book ``Essays on Life Itself.'', unfortunately without any possibility of continuation or of reaching soon the ultimate, or complete, answer. Schr\"{o}dinger's suggestion that living organisms ``feed on negative entropy, or negentropy'' was at least in part formalized by Prigogine's super-operators, such as $M$. This theory is in great need of further developments that he could not complete during his lifespan; such developments may also include several of Rosen 's (2000) suggestions and will apparently require a categorical and Higher Dimensional Algebraic, non--Abelian theory of irreversible thermodynamics, as well as a quantum--mechanical statistics of open systems that are capable of autopoiesis, e.g. living organisms.    
+
+
+\begin{thebibliography}{9}
+\bibitem{Prigogine}
+Prigogine, I.: 1980, \emph{From Being to Becoming-- Time and Complexity in the Physical Sciences}, W. H. Freeman and Co.:  San Francisco.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

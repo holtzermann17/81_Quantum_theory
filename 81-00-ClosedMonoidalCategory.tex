@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosedMonoidalCategory}
+\pmcreated{2013-03-22 18:30:25}
+\pmmodified{2013-03-22 18:30:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{closed monoidal category}
+\pmrecord{6}{41191}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81-00}
+\pmclassification{msc}{18-00}
+\pmclassification{msc}{18D10}
+\pmrelated{IndexOfCategories}
+\pmdefines{left closed}
+\pmdefines{right closed}
+\pmdefines{biclosed}
+\pmdefines{symmetric monoidal closed}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{closed}
+
+Let $\mathcal{C}$ be a monoidal category, with tensor product $\otimes$.  Then we say that 
+
+\begin{itemize}
+\item $\mathcal{C}$ is \emph{closed}, or \emph{left closed}, if the functor $A\otimes -$ on $\mathcal{C}$ has a right adjoint $[A,-]_l$
+\item $\mathcal{C}$ is \emph{right closed} if the functor $-\otimes B$ on $\mathcal{C}$ has a right adjoint $[B,-]_r$
+\item $\mathcal{C}$ is \emph{biclosed} if it is both left closed and right closed.
+\end{itemize}
+
+A biclosed symmetric monoidal category is also known as a \emph{symmetric monoidal closed category}.  In a symmetric monoidal closed category, $A\otimes B\cong B\otimes A$, so $[A, B]_l \cong [A,B]_r$.  In this case, we denote the right adjoint by $[A,B]$.
+
+Some examples:
+\begin{itemize}
+\item Any cartesian closed category is symmetric monoidal closed.  
+\item In particular, as a category with finite products is symmetric monoidal, it is biclosed iff it is cartesian closed.  
+\item An example of a biclosed monoidal category that is not symmetric monoidal is the category of bimodules over a non-commutative ring.  The right adjoint of $A\times -$ is $[A,-]_l$, where $[A,B]_l$ is the collection of all left $R$-linear bimodule homomorphisms from $A$ to $B$, while the right adjoint of $-\times A$ is $[A,-]_r$, where $[A,B]_r$ is the collection of all right $R$-linear bimodule homomorphisms from $A$ to $B$.  Unless $R$ is commutative, $[A,B]_l \ne [A,B]_r$ in general.
+\end{itemize}
+
+more to come...
+%%%%%
+%%%%%
+\end{document}

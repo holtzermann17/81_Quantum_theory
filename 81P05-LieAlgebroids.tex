@@ -1,0 +1,276 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LieAlgebroids}
+\pmcreated{2013-03-22 18:13:47}
+\pmmodified{2013-03-22 18:13:47}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Lie algebroids}
+\pmrecord{25}{40816}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81P05}
+\pmclassification{msc}{81R15}
+\pmclassification{msc}{81R10}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{81R05}
+\pmsynonym{extended quantum symmetry structures}{LieAlgebroids}
+\pmsynonym{generalized double algebras}{LieAlgebroids}
+%\pmkeywords{double algebras}
+%\pmkeywords{extensions of Lie algebras}
+%\pmkeywords{Lie groupoids}
+%\pmkeywords{'Weinstein' groupoids}
+%\pmkeywords{extended quantum symmetry structures}
+\pmrelated{HamiltonianAlgebroids}
+\pmrelated{TangentBundle}
+\pmrelated{HamiltonianOperatorOfAQuantumSystem}
+\pmrelated{Algebroids}
+\pmrelated{LieSuperalgebra3}
+\pmdefines{Lie algebroid}
+\pmdefines{anchor}
+\pmdefines{bundle map}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\grpL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\SL}{{\rm Sl}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\Symb}{{\rm Symb}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+%\newcommand{\grp}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{\mathcal G}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\grpeod}{{\rm Geod}}
+%\newcommand{\grpeod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\grphomotop}{{\rho_2^{\square}}}
+\newcommand{\grpcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\grplob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\grpa}{\grpamma}
+%\newcommand{\grpa}{\grpamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\newcommand{\<}{{\langle}}
+
+%\newcommand{\>}{{\rangle}}
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%%%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\grpeometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+\newcommand{\midsqn}[1]{\ar@{}[dr]|{#1}}
+\newcommand{\quadr}[4]
+{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+
+\begin{document}
+\subsection{Topic on Lie algebroids}
+ This is a topic entry on Lie algebroids that focuses on their quantum applications and extensions of current algebraic theories. 
+
+\emph{Lie algebroids} generalize \emph{Lie algebras}, and in certain quantum systems they represent \emph{extended quantum (algebroid) symmetries}. One can think of a \emph{Lie algebroid} as generalizing the idea of a tangent bundle where the tangent space at a point is effectively the equivalence class of curves meeting at that point (thus
+suggesting a groupoid approach), as well as serving as a site on which to study infinitesimal geometry (see, for example, ref. \cite{Mackenzie2005}). The formal definition of a \emph{Lie algebroid} is presented next. \\
+
+\textbf{Definition 0.1}
+Let $M$ be a manifold and let $\mathfrak X(M)$ denote the set of vector fields on $M$. Then, a 
+\emph{Lie algebroid} over $M$ consists of a \emph{vector bundle $E \lra M$,
+equipped with a Lie bracket $[~,~]$ on the space of sections $\gamma(E)$, 
+and a bundle map $\Upsilon : E \lra TM$}, usually called the \emph{anchor}. 
+Furthermore, there is an induced map $\Upsilon : \gamma (E) \lra \mathfrak X(M)$, 
+which is required to be a map of Lie algebras, such that given sections $\a, \beta \in
+\gamma(E)$ and a differentiable function $f$, the following
+Leibniz rule is satisfied~:
+
+\begin{equation}
+[ \a, f \beta] = f [\a, \beta] + (\Upsilon (\a)) \beta~.
+\end{equation}
+
+
+\begin{example}  
+A typical example of a Lie algebroid is obtained when $M$ is a Poisson
+manifold and $E=T^*M$, that is $E$ is the cotangent bundle of $M$.
+\end{example}
+
+Now suppose we have a Lie groupoid $\mathsf{G}$:
+\begin{equation}
+r,s~:~ \xymatrix{ \mathsf{G} \ar@<1ex>[r]^r \ar[r]_s & \mathsf{G}^{(0)}}=M~.
+\end{equation}
+There is an associated Lie algebroid $\A = \A( \mathsf{G})$, which in the
+guise of a vector bundle, it is the restriction to $M$ of the
+bundle of tangent vectors along the fibers of $s$ (ie. the
+$s$--vertical vector fields). Also, the space of sections $\gamma
+(\A)$ can be identified with the space of $s$--vertical,
+right--invariant vector fields $\mathfrak X^s_{inv} (\mathsf{G})$ which
+can be seen to be closed under $[~,~]$, and the latter induces a
+bracket operation on $\gamma (A)$ thus turning $\A$ into a Lie
+algebroid. Subsequently, a Lie algebroid $\A$ is integrable if
+there exists a Lie groupoid $\mathsf{G}$ inducing $\A$~.
+
+\begin{remark}
+Unlike Lie algebras that can be integrated to corresponding Lie groups, not all {\em Lie algebroids} are `smoothly integrable' to Lie groupoids; the subset of Lie groupoids that have corresponding Lie algebroids are sometimes called {\em `Weinstein groupoids'}.
+\end{remark}
+
+Note also the relation of the Lie algebroids to  Hamiltonian algebroids, also concerning recent developments in  (relativistic) quantum gravity theories.
+
+\begin{thebibliography}{9}
+\bibitem{Mackenzie2005}
+K. C. H. Mackenzie: \emph{General Theory of Lie Groupoids and Lie
+Algebroids}, London Math. Soc. Lecture Notes Series, \textbf{213},
+Cambridge University Press: Cambridge,UK (2005).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

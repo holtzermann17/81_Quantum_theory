@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PathIntegral}
+\pmcreated{2013-03-22 12:16:14}
+\pmmodified{2013-03-22 12:16:14}
+\pmowner{slider142}{78}
+\pmmodifier{slider142}{78}
+\pmtitle{path integral}
+\pmrecord{19}{31700}
+\pmprivacy{1}
+\pmauthor{slider142}{78}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81S40}
+\pmclassification{msc}{46T12}
+\pmsynonym{line integral}{PathIntegral}
+%\pmkeywords{integral of a vector field}
+%\pmkeywords{integral over a vector field}
+\pmrelated{ComplexIntegral}
+\pmrelated{ContourIntegral}
+\pmrelated{RealAndImaginaryPartsOfContourIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{properties} \PMlinkescapeword{path}
+
+The \emph{path integral} is a generalization of the integral that is very useful in theoretical and applied physics. Consider a vector field $\vec{F}\!:\mathbb{R}^n\rightarrow\mathbb{R}^m$ and a \PMlinkname{path}{PathConnected} $\gamma\subset\mathbb{R}^n$. The path integral of $\vec{F}$ along the path $\gamma$ is defined as a definite integral. It can be constructed to be the Riemann sum of the values of $\vec{F}$ along the curve $\gamma$. Thusly, it is defined in terms of the parametrization of $\gamma$, mapped into the domain $\mathbb{R}^n$ of $\vec{F}$. Analytically,
+$$\int_\gamma \vec{F}\cdot d\vec{x} = \int_a^b \vec{F}(\vec{\gamma}(t))\cdot d\vec{x}$$
+where $\vec{\gamma}(a), \vec{\gamma}(b)$ are elements of $\mathbb{R}^n$, and\, $d\vec{x}=\langle\frac{dx_1}{dt},\cdots,\frac{dx_n}{dt}\rangle dt$\, where each $x_i$ is parametrized into a function of $t$.\\
+
+\textbf{Proof and existence of path integral:}\\
+Assume we have a parametrized curve $\vec{\gamma}(t)$ with $t\in[a,b]$. We want to construct a sum of $\vec{F}$ over this interval on the curve $\gamma$. Split the interval $[a,\,b]$ into $n$ subintervals of size $\Delta t=(b-a)/n$. Note that the arc lengths need not be of equal length, though the intervals are of equal size. Let $t_i$ be an element of the $i$th subinterval. The quantity $|\vec{\gamma}'(t_i)|$ gives the average magnitude of the vector tangent to the curve at a point in the interval $\Delta t$. $|\vec{\gamma}'(t_i)|\Delta t$ is then the approximate arc length of the curve segment produced by the subinterval $\Delta t$. Since we want to sum $\vec{F}$ over our curve $\vec{\gamma}$, we let the range of our curve equal the domain of $\vec{F}$. We can then dot this vector with our tangent vector to get the approximation to $\vec{F}$ at the point $\vec{\gamma}(t_i)$. Thus, to get the sum we want, we can take the limit as $\Delta t$ approaches 0.
+$$\lim_{\Delta t\rightarrow 0}\sum_a^b \vec{F}(\vec{\gamma}(t_i))\cdot\vec{\gamma}'(t_i)\Delta t$$
+This is a Riemann sum, and thus we can write it in integral form. This integral is known as a path or line integral (the older name).
+$$\int_\gamma \vec{F}\cdot d\vec{x} = \int_a^b \vec{F}(\vec{\gamma}(t))\cdot\vec{\gamma}'(t)dt$$
+Note that the path integral only exists if the definite integral exists on the interval $[a,\,b]$.\\
+
+\textbf{Properties:}\\
+A path integral that begins and ends at the same point is called a closed path integral, and is denoted with the summa symbol with a centered circle: $\oint$. These types of path integrals can also be evaluated using Green's theorem.\\
+Another property of path integrals is that the directed path integral on a path $\Gamma$ in a vector field is equal to the negative of the path integral in the opposite direction along the same path. A directed path integral on a closed path is denoted by summa and a circle with an arrow denoting direction.\\
+
+\textbf{Visualization Aids:}
+\begin{center}
+\includegraphics[width=3.65in,height=3.65in]{pintegral}
+\end{center}
+This is an image of a path $\gamma$ superimposed on a vector field $\vec{F}$.
+\begin{center}
+\includegraphics[width=4in,height=3in]{bootleg}
+\end{center}
+This is a visualization of what we are doing when we take the integral under the curve $S:P\rightarrow\vec{F}$.
+%%%%%
+%%%%%
+\end{document}

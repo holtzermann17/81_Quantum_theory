@@ -1,0 +1,512 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompactQuantumGroupoidsRelatedToCalgebras}
+\pmcreated{2013-03-22 18:13:34}
+\pmmodified{2013-03-22 18:13:34}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{compact quantum groupoids related to C*-algebras}
+\pmrecord{125}{40812}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81R40}
+\pmclassification{msc}{81R60}
+\pmclassification{msc}{81Q60}
+\pmclassification{msc}{81R50}
+\pmclassification{msc}{81R15}
+\pmclassification{msc}{46L05}
+\pmsynonym{quantum compact groupoids}{CompactQuantumGroupoidsRelatedToCalgebras}
+\pmsynonym{weak Hopf algebras}{CompactQuantumGroupoidsRelatedToCalgebras}
+\pmsynonym{quantized locally compact groupoids with left Haar measure}{CompactQuantumGroupoidsRelatedToCalgebras}
+%\pmkeywords{algebra of quantum operators}
+%\pmkeywords{morphism of C*-algebras}
+%\pmkeywords{C*-algebra}
+%\pmkeywords{$C^*$-algebra groupoid and group representations related to quantum symmetries}
+%\pmkeywords{C*-algebra definition}
+%\pmkeywords{von Neumann Algebras}
+%\pmkeywords{Grassman-Hopf algebra}
+%\pmkeywords{coalgebra and tangled G-H algebras}
+\pmrelated{GroupoidCDynamicalSystem}
+\pmrelated{GroupoidAndGroupRepresentationsRelatedToQuantumSymmetries}
+\pmrelated{QuantumAlgebraicTopology}
+\pmrelated{GrassmanHopfAlgebrasAndTheirDualCoAlgebras}
+\pmrelated{NoncommutativeGeometry}
+\pmrelated{GroupoidCConvolutionAlgebra}
+\pmrelated{JordanBanachAndJordanLieAlgebras}
+\pmrelated{ClassesOfAlgebr}
+\pmdefines{commutative C*-algebra}
+\pmdefines{QOA}
+\pmdefines{alternative definition of C*-algebra}
+\pmdefines{C*-norm}
+\pmdefines{morphism between C*-algebras}
+\pmdefines{category of C*-algebras}
+\pmdefines{quantum compact groupoid}
+
+% this is the default PlanetMath preamble. 
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+% define commands here
+\usepackage{mathrsfs}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbo{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\section{Compact quantum groupoids (CGQs) and C*-algebras}
+
+\subsection{Introduction: von Neumann and C*-algebras. Quantum operator algebras in quantum theories}
+
+ C*-algebra has evolved as a key concept in quantum operator algebra (QOA) after the introduction of the 
+von Neumann algebra for the mathematical foundation of quantum mechanics. The von Neumann algebra classification is simpler and studied in greater depth than that of general C*-algebra classification theory. The importance of 
+C*-algebras for understanding the geometry of quantum state spaces (viz. Alfsen and Schultz, 2003 \cite{AS2k3}) cannot be overestimated. Moreover, the introduction of non-commutative C*-algebras in noncommutative geometry has already played important roles in expanding the Hilbert space perspective of quantum mechanics developed by von Neumann. Furthermore, extended quantum symmetries are currently being approached in terms of groupoid C*- convolution algebra and their representations; the latter also enter into the construction of compact quantum groupoids as developed in the Bibliography cited, and also briefly outlined here in the third section. The fundamental connections that exist between categories of $C^*$-algebras and those of von Neumann and other quantum operator algebras, such as JB- or JBL- algebras are yet to be completed and are the subject
+of in depth studies \cite{AS2k3}.
+
+\subsection{Basic definitions}
+ 
+ Let us recall first the basic definitions of C*-algebra and involution on a complex algebra.
+Further details can be found in a separate entry focused on \PMlinkname{$C^*$-algebras}{CAlgebra}.  
+
+ A \emph{C*-algebra} is simultaneously a *--algebra and a Banach space -with additional conditions- as defined next.
+
+Let us consider first the definition of an \emph{involution} on a complex algebra $\mathfrak A$.
+
+\begin{definition}
+An \emph{involution} on a complex algebra $\mathfrak A$ is a \emph{real--linear map} $T \mapsto T^*$ 
+such that for all $S, T \in \mathfrak A$ and $\lambda \in \bC$, we have $ T^{**} = T~,~ (ST)^* = T^* S^*~,~ (\lambda T)^* = \bar{\lambda} T^*~. $ 
+\end{definition}
+
+A \emph{*-algebra} is said to be a complex associative algebra together with an involution $*$~.
+
+\begin{definition}
+A \emph{C*-algebra} is simultaneously a *-algebra and a Banach space $\mathfrak A$, 
+satisfying for all $S, T \in \mathfrak A$~ the following conditions:
+
+
+$ \begin{aligned} \Vert S \circ T \Vert &\leq \Vert S \Vert ~ \Vert T \Vert~, \\ \Vert T^* T \Vert^2 & = \Vert T\Vert^2 ~. \end{aligned}$
+
+\end{definition}
+
+ One can easily verify that $\Vert A^* \Vert = \Vert A \Vert$~. 
+
+
+
+ By the above axioms a C*--algebra is a special case of a Banach algebra where the latter requires the above C*-norm property, but not the involution ($*$) property. 
+
+ Given Banach spaces $E, F$ the space $\mathcal L(E, F)$ of (bounded) linear operators from $E$ to $F$ forms a Banach space, where for $E=F$, the space $\mathcal L(E) = \mathcal L(E, E)$ is a Banach algebra with respect to the norm 
+
+$\Vert T \Vert := \sup\{ \Vert Tu \Vert : u \in E~,~ \Vert u \Vert= 1 \}~. $
+
+ 
+ In quantum field theory one may start with a Hilbert space $H$, and consider the Banach 
+algebra of bounded linear operators $\mathcal L(H)$ which given to be closed under the usual 
+algebraic operations and taking adjoints, forms a $*$--algebra of bounded operators, where the 
+adjoint operation functions as the involution, and for $T \in \mathcal L(H)$ we have~: 
+
+
+$ \Vert T \Vert := \sup\{ ( Tu , Tu): u \in H~,~ (u,u) = 1 \}~,$ and $ \Vert Tu \Vert^2 = (Tu, 
+Tu) = (u, T^*Tu) \leq \Vert T^* T \Vert~ \Vert u \Vert^2~.$
+
+
+ By a \emph{morphism between C*-algebras} $\mathfrak A,\mathfrak B$ we mean a linear map $\phi : 
+\mathfrak A \lra \mathfrak B$, such that for all $S, T \in \mathfrak A$, the following hold~: 
+
+$\phi(ST) = \phi(S) \phi(T)~,~ \phi(T^*) = \phi(T)^*~, $ 
+
+where a bijective morphism  is said to be an isomorphism (in which case it is then an
+isometry). A fundamental relation is that any norm-closed $*$-algebra $\mathcal A$ in 
+$\mathcal L(H)$ is a \PMlinkname{C*-algebra}{CAlgebra3}, and conversely, any \PMlinkname{C*-algebra}{CAlgebra3} is isomorphic to a norm--closed $*$-algebra in $\mathcal L(H)$ for some Hilbert space $H$~.
+One can thus also define \emph{the category $\mathcal{C}^*$ of C*-algebras  and morphisms between C*-algebras}. 
+
+
+ For a \PMlinkname{C*-algebra}{CAlgebra3} $\mathfrak A$, we say that $T \in \mathfrak A$ is \emph{self--adjoint} if $T 
+= T^*$~. Accordingly, the self--adjoint part $\mathfrak A^{sa}$ of $\mathfrak A$ is a real 
+vector space since we can decompose $T \in \mathfrak A^{sa}$ as ~:
+
+$ T = T' + T^{''} := \frac{1}{2} (T + T^*) + \iota (\frac{-\iota}{2})(T - T^*)~.$
+
+ A \emph{commutative} C* -algebra is one for which the associative multiplication is 
+commutative. Given a commutative C* -algebra $\mathfrak A$, we have $\mathfrak A \cong C(Y)$, 
+the algebra of continuous functions on a compact Hausdorff space $Y~$.
+
+ The classification of {\em $C^*$ -algebras} is far more complex than that of von Neumann algebras that provide
+the fundamental algebraic content of quantum state and operator spaces in quantum theories. 
+
+\subsection{Quantum groupoids and the groupoid C*-algebra}
+
+ Quantum groupoid (or their dual, weak Hopf coalgebras) and algebroid symmetries figure prominently both in the theory of dynamical deformations of quantum groups (or their dual Hopf algebras) and the quantum Yang--Baxter equations (Etingof et al., 1999, 2001; \cite{E99,E2k}). On the other hand, one can also consider the natural
+extension of locally compact (quantum) groups to locally compact
+(proper) \emph{groupoids} equipped with a Haar measure and a corresponding groupoid representation theory 
+(Buneci, 2003,\cite{MB2k3}) as a major, potentially interesting source for locally compact (but
+generally \emph{non-Abelian}) quantum groupoids. The corresponding quantum groupoid representations on bundles of
+Hilbert spaces extend quantum symmetries well beyond those of quantum groups and their dual Hopf algebras, and also beyond the simpler operator algebra representations, and are also consistent with the locally compact quantum group representations. The latter quantum groups are neither Hopf algebras, nor are they equivalent to Hopf algebras or their dual coalgebras. As pointed out in the previous section, quantum groupoid representations are, however, the next important step towards unifying quantum field theories with General Relativity in a locally covariant and quantized form. Such representations need not however be restricted to weak Hopf algebra representations, as the latter have no known connection to any type of GR theory and also appear to be inconsistent with GR.
+
+  Quantum groupoids were recently considered as weak C* -Hopf algebras, and were studied in relationship to the non- commutative symmetries of depth 2 von Neumann subfactors. If
+\begin{equation}
+A \subset B \subset B_1 \subset B_2 \subset \ldots
+\end{equation}
+is the Jones extension induced by a finite index depth $2$
+inclusion $A \subset B$ of $II_1$ factors, then $Q= A' \cap B_2$
+admits a quantum groupoid structure and acts on $B_1$, so that $B
+= B_1^{Q}$ and $B_2 = B_1 \rtimes Q$~. Similarly, `paragroups' derived from weak C* -Hopf algebras comprise (quantum) groupoids of equivalence classes such as those associated with $6j$-symmetry groups (relative to a fusion rules algebra). They correspond to type $II$ von Neumann algebras in quantum mechanics, and arise as symmetries where the local subfactors (in the sense of containment of quantum observables within fields) have depth 2 in the
+Jones extension. A related question is how a von Neumann algebra $W^*$, such as
+of finite index depth 2, sits inside a weak Hopf algebra formed as the crossed product 
+$W^* \rtimes A$.
+
+\subsection{Quantum compact groupoids}
+
+Compact quantum groupoids were introduced in Landsman (1998; ref. \cite{L98}) as a
+simultaneous generalization of a compact groupoid and a quantum group. Since this construction is relevant to the definition of locally compact quantum groupoids and their representations investigated here, its  exposition is required before we can step up to the next level of generality. Firstly, let $\mathfrak A$ and $\mathfrak B$ denote C*--algebras equipped with a *--homomorphism $\eta_s : \mathfrak B \lra \mathfrak A$, and a *--antihomomorphism $\eta_t : \mathfrak B \lra \mathfrak A$ whose images in $\mathfrak A$
+commute. A non--commutative Haar measure is defined as a completely
+positive map $P: \mathfrak A \lra \mathfrak B$ which satisfies
+$P(A \eta_s (B)) = P(A) B$~. Alternatively, the composition $\E = \eta_s \circ P : \mathfrak A \lra \eta_s (B) \subset \mathfrak A$ is a faithful conditional expectation.
+
+Next consider $\mathsf{G}$ to be a (topological) groupoid, and let us denote by $C_c(\mathsf{G})$ the space of smooth complex--valued functions with compact support on $\mathsf{G}$~. In particular, for all $f,g \in C_c(\mathsf{G})$, the
+function defined via convolution
+
+\begin{equation} (f ~*~g)(\gamma)
+= \int_{\gamma_1 \circ \gamma_2 = \gamma} f(\gamma_1) g
+(\gamma_2)~,
+\end{equation}
+
+is again an element of $C_c(\mathsf{G})$, where the convolution product defines the composition law on $C_c(\mathsf{G})$~. We can turn $C_c(\mathsf{G})$ into a $*$ -algebra once we have defined the involution
+$*$, and this is done by specifying $f^*(\gamma) = \overline{f(\gamma^{-1})}$~. 
+
+ We recall that following Landsman (1998) a \emph{representation} of a groupoid $\grp$, consists of a
+family (or field) of Hilbert spaces $\{\mathcal H_x \}_{x \in X}$
+indexed by $X = \ob~ \grp$, along with a collection of maps $\{
+U(\gamma)\}_{\gamma \in \grp}$, satisfying:
+\begin{itemize}
+\item[1.]
+$U(\gamma) : \mathcal H_{s(\gamma)} \lra  \mathcal H_{r(\gamma)}$,
+is unitary.
+\item[2.]
+$U(\gamma_1 \gamma_2) = U(\gamma_1) U( \gamma_2)$, whenever
+$(\gamma_1, \gamma_2) \in \grp^{(2)}$~ (the set of arrows).
+\item[3.]
+$U(\gamma^{-1}) = U(\gamma)^*$, for all $\gamma \in \grp$~.
+\end{itemize}
+
+ Suppose now $\mathsf{G}_{lc}$ is a Lie groupoid. Then the isotropy group
+$\mathsf{G}_x$ is a Lie group, and for a (left or right) Haar
+measure $\mu_x$ on $\mathsf{G}_x$, we can consider the Hilbert
+spaces $\mathcal H_x = L^2(\mathsf{G}_x, \mu_x)$ as exemplifying the
+above sense of a representation. Putting aside some technical
+details which can be found in Connes (1994) and Landsman (2006), the
+overall idea is to define an operator of Hilbert spaces
+\begin{equation}\pi_x(f) : L^2(\mathsf{G_x},\mu_x) \lra L^2(\mathsf{G}_x, \mu_x)~,
+\end{equation}
+given by
+\begin{equation}
+(\pi_x(f) \xi)(\gamma) = \int f(\gamma_1) \xi (\gamma_1^{-1}
+\gamma)~ d\mu_x~,
+\end{equation}
+for all $\gamma \in \mathsf{G}_x$, and
+$\xi \in \mathcal H_x$~. For each $x \in X =\ob ~\mathsf{G}$, $\pi_x$
+defines an involutive representation $\pi_x : C_c(\mathsf{G}) \lra
+\mathcal H_x$~. We can define a norm on $C_c(\mathsf{G})$ given by
+\begin{equation}
+\Vert f \Vert = \sup_{x \in X} \Vert \pi_x(f) \Vert~,
+\end{equation}
+whereby the completion of $C_c(\mathsf{G})$ in this norm, defines
+\emph{the reduced C*--algebra $C^*_r(\mathsf{G})$ of $\mathsf{G}_{lc}$}. It is
+perhaps the most commonly used C*--algebra for Lie groupoids
+(groups) in noncommutative geometry.
+
+The next step requires a little familiarity with the theory of
+Hilbert modules. We define a left
+$\mathfrak B$--action $\lambda$ and a right $\mathfrak B$--action
+$\rho$ on $\mathfrak A$ by $\lambda(B)A = A \eta_t (B)$ and
+$\rho(B)A = A \eta_s(B)$~. For the sake of localization of the
+intended Hilbert module, we implant a $\mathfrak B$--valued inner
+product on $\mathfrak A$ given by $\langle A, C \rangle_{\mathfrak
+B} = P(A^* C)$ ~. Let us recall that $P$ is defined as a \emph{completely positive map}.
+Since $P$ is faithful, we fit a new norm on $\mathfrak A$ given by $\Vert A \Vert^2 = \Vert P(A^* A)
+\Vert_{\mathfrak B}$~. The completion of $\mathfrak A$ in this new
+norm is denoted by $\mathfrak A^{-}$ leading then to a Hilbert
+module over $\mathfrak B$~.
+
+The tensor product $\mathfrak A^{-} \otimes_{\mathfrak B}\mathfrak
+A^{-}$ can be shown to be a Hilbert bimodule over $\mathfrak B$,
+which for $i=1,2$, leads to *--homorphisms $\vp^{i} : \mathfrak A
+\lra \mathcal L_{\mathfrak B}(\mathfrak A^{-} \otimes \mathfrak
+A^{-})$~. Next is to define the (unital) C*--algebra $\mathfrak A
+\otimes_{\mathfrak B} \mathfrak A$ as the C*--algebra contained in
+$ \mathcal L_{\mathfrak B}(\mathfrak A^{-} \otimes \mathfrak
+A^{-})$ that is generated by $\vp^1(\mathfrak A)$ and
+$\vp^2(\mathfrak A)$~. The last stage of the recipe for defining a
+compact quantum groupoid entails considering a certain coproduct
+operation $\Delta : \mathfrak A \lra \mathfrak A
+\otimes_{\mathfrak B} \mathfrak A$, together with a coinverse $Q :
+\mathfrak A \lra \mathfrak A$ that it is both an algebra and
+bimodule antihomomorphism. Finally, the following axiomatic
+relationships are observed~:
+\begin{equation}
+\begin{aligned}
+(\ID \otimes_{\mathfrak B} \Delta) \circ \Delta &= (\Delta
+\otimes_{\mathfrak B} \ID) \circ \Delta \\ (\ID \otimes_{\mathfrak
+B} P) \circ \Delta &= P \\ \tau \circ (\Delta \otimes_{\mathfrak
+B} Q) \circ \Delta &= \Delta \circ Q
+\end{aligned}
+\end{equation}
+where $\tau$ is a flip map : $\tau(a \otimes b) = (b \otimes a)$~. 
+
+There is a natural extension of the above definition of quantum compact groupoids
+to \textit{locally compact} quantum groupoids by taking $\mathsf{G}_{lc}$ to be a locally compact groupoid (instead of a compact groupoid), and then following the steps in the above construction with the topological groupoid $\mathsf{G}$ being replaced by $\mathsf{G}_{lc}$.  Additional integrability and Haar measure system conditions need however be also satisfied as in the general case of locally compact groupoid \textit{representations} (for further details, see for example the monograph by Buneci (2003).
+
+\subsubsection{Reduced C*--algebra}
+Consider $\mathsf{G}$ to be a topological groupoid. We denote by $C_c(\mathsf{G})$ the space of smooth complex--valued functions with compact support on $\mathsf{G}$~. In particular, for all $f,g \in C_c(\mathsf{G})$, the
+function defined via convolution
+
+\begin{equation} (f ~*~g)(\gamma)
+= \int_{\gamma_1 \circ \gamma_2 = \gamma} f(\gamma_1) g
+(\gamma_2)~,
+\end{equation}
+
+is again an element of $C_c(\mathsf{G})$, where the convolution product
+defines the composition law on $C_c(\mathsf{G})$~. We can turn
+$C_c(\mathsf{G})$ into a *--algebra once we have defined the involution
+$*$, and this is done by specifying $f^*(\gamma) = \overline{f(\gamma^{-1})}$~.
+
+We recall that following Landsman (1998) a \emph{representation} of a groupoid $\grp$, consists of a
+family (or field) of Hilbert spaces $\{\mathcal H_x \}_{x \in X}$
+indexed by $X = \ob~ \grp$, along with a collection of maps $\{
+U(\gamma)\}_{\gamma \in \grp}$, satisfying:
+\begin{itemize}
+\item[1.]
+$U(\gamma) : \mathcal H_{s(\gamma)} \lra \mathcal H_{r(\gamma)}$,
+is unitary.
+\item[2.]
+$U(\gamma_1 \gamma_2) = U(\gamma_1) U( \gamma_2)$, whenever
+$(\gamma_1, \gamma_2) \in \grp^{(2)}$~ (the set of arrows).
+
+
+\item[3.]
+$U(\gamma^{-1}) = U(\gamma)^*$, for all $\gamma \in \grp$~.
+\end{itemize}
+
+Suppose now $\mathsf{G}_{lc}$ is a Lie groupoid. Then the isotropy group
+$\mathsf{G}_x$ is a Lie group, and for a (left or right) Haar
+measure $\mu_x$ on $\mathsf{G}_x$, we can consider the Hilbert
+spaces $\mathcal H_x = L^2(\mathsf{G}_x, \mu_x)$ as exemplifying the
+above sense of a representation. Putting aside some technical
+details which can be found in Connes (1994) and Landsman (2006), the
+overall idea is to define an operator of Hilbert spaces
+\begin{equation}\pi_x(f) : L^2(\mathsf{G_x},\mu_x) \lra L^2(\mathsf{G}_x, \mu_x)~,
+\end{equation}
+given by
+\begin{equation}
+(\pi_x(f) \xi)(\gamma) = \int f(\gamma_1) \xi (\gamma_1^{-1}
+\gamma)~ d\mu_x~,
+\end{equation}
+for all $\gamma \in \mathsf{G}_x$, and
+$\xi \in \mathcal H_x$~. For each $x \in X =\ob ~\mathsf{G}$, $\pi_x$
+defines an involutive representation $\pi_x : C_c(\mathsf{G}) \lra
+\mathcal H_x$~. We can define a norm on $C_c(\mathsf{G})$ given by
+\begin{equation}
+\Vert f \Vert = \sup_{x \in X} \Vert \pi_x(f) \Vert~,
+\end{equation}
+whereby the completion of $C_c(\mathsf{G})$ in this norm, defines
+\emph{the reduced C*--algebra $C^*_r(\mathsf{G})$ of $\mathsf{G}_{lc}$}.
+
+It is perhaps the most commonly used C*--algebra for Lie groupoids
+(groups) in noncommutative geometry.
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{AS2k3}
+E. M. Alfsen and F. W. Schultz: \emph{Geometry of State Spaces of Operator Algebras}, Birkh\"auser, Boston--Basel--Berlin (2003).
+
+\bibitem{ICB71}
+I. Baianu : Categories, Functors and Automata Theory: A Novel Approach to Quantum Automata through Algebraic--Topological Quantum Computations., \textit{Proceed. 4th Intl. Congress LMPS}, (August-Sept. 1971).
+
+\bibitem{BGB07}
+I. C. Baianu, J. F. Glazebrook and R. Brown.: A Non--Abelian, Categorical Ontology of Spacetimes and Quantum Gravity., \emph{Axiomathes} \textbf{17},(3-4): 353-408(2007).
+
+\bibitem{BSS}
+F.A. Bais, B. J. Schroers and J. K. Slingerland: Broken quantum symmetry and confinement phases in planar physics, \emph{Phys. Rev. Lett.} \textbf{89} No. 18 (1--4): 181--201 (2002).
+
+\bibitem{BM2k3}
+M. R. Buneci.: \emph{Groupoid Representations}, Ed. Mirton: Timishoara (2003). 
+
+\bibitem{Chaician}
+M. Chaician and A. Demichev: \emph{Introduction to Quantum Groups}, World Scientific (1996).
+
+\bibitem{CF}
+L. Crane and I.B. Frenkel. Four-dimensional topological quantum field theory, Hopf categories, and the canonical bases. Topology and physics. \textit{J. Math. Phys}. \textbf{35} (no. 10): 5136--5154 (1994).
+
+\bibitem{DT96}
+W. Drechsler and P. A. Tuckey:  On quantum and parallel transport in a Hilbert bundle over spacetime., \emph{Classical and Quantum Gravity}, \textbf{13}:611-632 (1996). doi: 10.1088/0264--9381/13/4/004
+
+\bibitem{Drinfeld}
+V. G. Drinfel'd: Quantum groups, In \emph{Proc. Intl. Congress of Mathematicians, Berkeley 1986}, (ed. A. Gleason), Berkeley, 798-820 (1987).
+
+\bibitem{Ellis}
+G. J. Ellis: Higher dimensional crossed modules of algebras,
+\emph{J. of Pure Appl. Algebra} \textbf{52} (1988), 277-282.
+
+\bibitem{Etingof1}
+P.. I. Etingof and A. N. Varchenko, Solutions of the Quantum Dynamical Yang-Baxter Equation and Dynamical Quantum Groups, \emph{Comm.Math.Phys.}, \textbf{196}: 591-640 (1998).
+
+\bibitem{E99}
+P. I. Etingof and A. N. Varchenko: Exchange dynamical quantum groups, \emph{Commun. Math. Phys.} \textbf{205} (1): 19-52 (1999)
+
+\bibitem{Etingof3}
+P. I. Etingof and O. Schiffmann: Lectures on the dynamical Yang--Baxter equations, in \emph{Quantum Groups and Lie Theory (Durham, 1999)}, pp. 89-129, Cambridge University Press, Cambridge, 2001.
+
+\bibitem{Fauser2002}
+B. Fauser: \emph{A treatise on quantum Clifford Algebras}. Konstanz,
+Habilitationsschrift. (arXiv.math.QA/0202059). (2002).
+
+\bibitem{Fauser2004}
+B. Fauser: Grade Free product Formulae from Grassman--Hopf Gebras.
+Ch. 18 in R. Ablamowicz, Ed., \emph{Clifford Algebras: Applications to Mathematics, Physics and Engineering}, Birkh\"{a}user: Boston, Basel and Berlin, (2004).
+
+\bibitem{Fell}
+J. M. G. Fell.: The Dual Spaces of  C*--Algebras., \emph{Transactions of the American
+Mathematical Society}, \textbf{94}: 365--403 (1960).
+
+\bibitem{FernCastro}
+F.M. Fernandez and E. A. Castro.:  \emph{(Lie) Algebraic Methods in Quantum Chemistry and Physics.}, Boca Raton: CRC Press, Inc  (1996).
+
+\bibitem{frohlich:nonab}
+A.~Fr{\"o}hlich: Non--Abelian Homological Algebra. {I}.
+{D}erived functors and satellites, \emph{Proc. London Math. Soc.}, \textbf{11}(3): 239--252 (1961).
+
+\bibitem{GR02}
+R. Gilmore: \emph{Lie Groups, Lie Algebras and Some of Their Applications.},
+Dover Publs., Inc.: Mineola and New York, 2005.
+
+\bibitem{Hahn1}
+P. Hahn: Haar measure for measure groupoids, \textit{Trans. Amer. Math. Soc}. \textbf{242}: 1--33(1978).
+
+\bibitem{Hahn2}
+P. Hahn: The regular representations of measure groupoids., \textit{Trans. Amer. Math. Soc}. \textbf{242}:34--72(1978).
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

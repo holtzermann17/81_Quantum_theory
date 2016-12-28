@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchrodingersWaveEquation}
+\pmcreated{2013-03-22 15:02:31}
+\pmmodified{2013-03-22 15:02:31}
+\pmowner{Cosmin}{8605}
+\pmmodifier{Cosmin}{8605}
+\pmtitle{Schr\"odinger's wave equation}
+\pmrecord{28}{36756}
+\pmprivacy{1}
+\pmauthor{Cosmin}{8605}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81Q05}
+\pmclassification{msc}{35Q40}
+\pmsynonym{Schr\"odinger's equation}{SchrodingersWaveEquation}
+\pmsynonym{time-independent Schr\"odinger wave equation}{SchrodingersWaveEquation}
+%\pmkeywords{quantum mechanics}
+%\pmkeywords{wave equation}
+%\pmkeywords{partial differential equation}
+\pmrelated{SchrodingerOperator}
+\pmrelated{HamiltonianOperatorOfAQuantumSystem}
+\pmrelated{Quantization}
+\pmrelated{DiracEquation}
+\pmrelated{KleinGordonEquation}
+\pmrelated{PauliMatrices}
+\pmrelated{DAlembertAndDBernoulliSolutionsOfWaveEquation}
+\pmdefines{wave function}
+
+% This is Cosmin's preamble version 1.01 (planetmath.org version)
+ 
+% Packages
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{amsfonts}
+  \usepackage{amsthm}
+  \usepackage{mathrsfs}
+  %\usepackage[]{graphicx}
+  %%%\usepackage{xypic}
+  %\usepackage[]{babel}
+
+% Theorem Environments
+  \newtheorem*{thm}{Theorem}
+  \newtheorem{thmn}{Theorem}
+  \newtheorem*{lem}{Lemma}
+  \newtheorem{lemn}{Lemma}
+  \newtheorem*{cor}{Corollary}
+  \newtheorem{corn}{Corollary}
+  \newtheorem*{prop}{Proposition}
+  \newtheorem{propn}{Proposition}
+
+% New Commands
+  % Other Commands
+    \renewcommand{\geq}{\geqslant}
+    \renewcommand{\leq}{\leqslant}
+    \newcommand{\vect}[1]{\boldsymbol{#1}}
+    \renewcommand{\div}{\!\mid\!}
+  % Local
+    %\DeclareMathOperator{}{}
+
+\begin{document}
+\PMlinkescapeword{mass}
+\PMlinkescapeword{fixed}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{state}
+\PMlinkescapeword{states}
+\PMlinkescapeword{field}
+\PMlinkescapeword{function}
+\PMlinkescapeword{calculate}
+\PMlinkescapeword{levels}
+\PMlinkescapephrase{wave equation}
+\PMlinkescapeword{order}
+\PMlinkescapeword{density}
+\PMlinkescapeword{information}
+\PMlinkescapeword{function's}
+\PMlinkescapeword{potential}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{right}
+\PMlinkescapeword{side}
+\PMlinkescapeword{hamiltonian}
+\PMlinkescapeword{sum}
+
+The \emph{Schr$\"o$dinger wave equation} is considered to be the most basic equation of non-relativistic quantum mechanics. In three spatial dimensions (that is, in $\mathbb{R}^3$) and for a single particle of mass $m$, moving in a field of potential energy $V$, the equation is
+\[ i \hbar\, \frac{\partial}{\partial t}\,\Psi(\vect r, t) = - \frac{\hbar^2}{2m}\cdot \triangle\, \Psi(\vect r, t) + V(\vect r, t)\, \Psi(\vect r, t), \]
+where $\vect r := (x,y,z)$ is the position vector, $\hbar=h(2\pi)^{-1}$, $h$ is Planck's constant, $\triangle$ denotes the Laplacian and $V(\vect r, t)$ is the value of the potential energy at point $\vect r$ and time $t$.
+This equation is a second order homogeneous partial differential equation which is used to determine $\Psi$, the so-called \emph{time-dependent wave function}, a complex function which describes the state of a physical system at a certain point $\vect r$ and a time $t$ ($\Psi$ is thus a function of 4 variables: $x,y,z$ and $t$). The right hand side of the equation represents in fact the \PMlinkname{Hamiltonian operator}{HamiltonianOperatorOfAQuantumSystem} (or energy operator) $H\Psi(\vect r, t)$, which is represented here as the sum of the kinetic energy and potential energy operators. Informally, a wave function encodes all the information that can be known about a certain quantum mechanical system (such as a particle). The function's main interpretation is that of a \emph{position probability density} for the particle\footnote{This is in fact a little imprecise since the wave function is, in a way, a statistical tool: it describes a large number of identical and identically prepared systems. We speak of the wave function of one particle for convenience.} (or system) it describes, that is, if $P(\vect r, t)$ is the probability that the particle is at position $\vect r$ at time $t,$ then an important postulate of M. Born states that $P(\vect r, t) = |\Psi(\vect r, t)|^2$. %(which induces, in particular, the well-known condition that, for any wave function $\Psi,$ we must have $\displaystyle \int_{\mathbb{R}^3}|\Psi(\vect r, t)|^2\,d\vect r = 1$.)
+
+An example of a (relatively simple) solution of the equation is given by the wave function of an arbitrary (non-relativistic) free\footnote{By free particle, we imply that the field of potential energy $V$ is everywhere $0.$} particle (described by a \emph{wave packet} which is obtained by superposition of fixed momentum solutions of the equation). This wave function is given by: 
+\[ \Psi(\vect r, t) = \int_{\mathcal{K}} A(\vect k) e^{i(\vect k\cdot \vect r - \hbar\vect{k}^2(2m)^{-1}\,t)}\,d\vect k,\] where $\vect k$ is the \emph{wave vector} and $\mathcal{K}$ is the set of all values taken by $\vect k.$
+For a free particle, the equation becomes
+\[ i \hbar\, \frac{\partial}{\partial t}\,\Psi(\vect r, t) = - \frac{\hbar^2}{2m}\cdot \triangle\, \Psi(\vect r, t)\]
+and it is easy to check that the aforementioned wave function is a solution.
+
+An important special case is that when the energy $E$ of the system {\em does not depend on time}, i.e. $H\Psi = E\Psi$, which gives rise to the \emph{time-independent Schr\"odinger equation}: 
+
+\[ E\Psi(\vect r) = - \frac{\hbar^2}{2m}\cdot \triangle\, \Psi(\vect r) + V(\vect r)\, \Psi(\vect r). \]
+
+There are a number of generalizations of the Schr\"odinger equation, mostly in order to take into account special relativity, such as the \emph{Dirac equation} (which describes a spin-$\frac{1}{2}$ particle with mass) or the \emph{Klein-Gordon equation} (describing spin-$0$ particles).
+
+%%%%%
+%%%%%
+\end{document}

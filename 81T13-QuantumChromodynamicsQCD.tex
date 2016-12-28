@@ -1,0 +1,342 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuantumChromodynamicsQCD}
+\pmcreated{2013-03-22 18:29:51}
+\pmmodified{2013-03-22 18:29:51}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{quantum chromodynamics (QCD)}
+\pmrecord{19}{41183}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81T13}
+\pmclassification{msc}{81T05}
+\pmclassification{msc}{55U99}
+\pmclassification{msc}{81T05}
+\pmsynonym{QCD}{QuantumChromodynamicsQCD}
+\pmsynonym{nuclear mathematical}{QuantumChromodynamicsQCD}
+\pmsynonym{or theoretical physics}{QuantumChromodynamicsQCD}
+%\pmkeywords{quark and gluon interactions}
+%\pmkeywords{quark symmetries}
+%\pmkeywords{nuclear mathematical}
+%\pmkeywords{or theoretical physics}
+\pmrelated{QED}
+\pmrelated{QEDInTheoreticalAndMathematicalPhysics}
+\pmrelated{QuantumSpaceTimes}
+\pmrelated{QFTOrQuantumFieldTheories}
+\pmrelated{QuantumOperatorAlgebrasInQuantumFieldTheories}
+\pmdefines{QCD}
+\pmdefines{quark and gluon interactions}
+
+% this is the default PlanetMath preamble.  as your .
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\section{Quantum Chromodynamics (QCD)} 
+
+\subsection{Introduction}
+ \emph{QCD} is a theory of the strong force, or nuclear interactions, such as those among quarks and gluons, partons, Yukawa mesons, and so on, with an intrinsic threefold symmetry for RGB quarks, or the eightfold-way diagrams resulting from representations of the quantum group first reported by the US Nobel Laureate Gell-Mann and others. This is not only a physical theory, but also a very highly formalized, mathematical one that affords major simplifications by postulating intrinsic symmetries of magnetic-like ``color'', ``flavor'', ``strangeness'' and top/down quark (as well as anti-quark) intrinsic properties, each time involving three possible color charge values. However, single quarks have never been observed, with the proton and neutron being made of three such quarks with a resulting `white' charge color, or colorless proton and neutron, as well as stable `white' nuclei made of the latter two quantum particles, dynamically confined by the very short range, nuclear strong interactions. The quark interactions are mediated by gluons-as well as their exchange- and the latter also carry (magnetic-like) color charge property-but unlike the photons that mediate the electromagnetic interactions in QED- gluons have multiple interactions with each other leading to major computational difficulties in QCD, that are not encountered in QED. Major obstacles in QCD computations of observable nuclear (quantum) eigenvalues are therefore encountered in attempting approximate, perturbative approaches that work extremely well for electromagentic interactions (governed by the charge  symmetry group), for example with Richard Feynman's approach in QED. Electro-weak (QEW) interactions were successfully approached in QED-like fashion but with quantum field carriers that are-unlike the photon-massive, and therefore the electro-weak interactions have limited range, unlike the photons of zero mass at rest. Thus, QCD and QED are more than just `one pole apart', as they involve very different group symmetries. This makes obvious the need for more fundamental, or extended quantum symmetries, such as those afforded by either several larger groups, such as products pf special unitary groups, or by spontaneously broken, multiple (or localized) symmetries that are of a less restrictive kind present in quantum groupoids; an example of the latter is provided by representations of the dual of a weak Hopf algebra. Other examples are provided by representations of locally compact groupoids, unitary representations, higher dimensional (quantum) symmetries of quantum double groupoids, quantum double algebroids, quantum categories, quantum supercategories, quantum supersymmetry superalgebras (or graded superalgebras, as for example in the QFT books by Weinberg \cite{WS2k3}) or superalgebroids in quantum gravity--as in QCD theories of the extremely hot 
+\PMlinkexternal{physical Universe}{http://planetphysics.org/?op=getobj&from=objects&name=Universe} that was extremely close to the time of the `Big Bang'.
+
+\subsection{Flavor Quantum Numbers}
+In order to explain the phenomenology of strong and weak interactions, particle physicists assigned quantum numbers to the known baryons and mesons. The first such quantum number is known as the {\em isospin}, related to the symmetry properties determined by the Lie group $SU(2)$. This was introduced by Werner Heisenberg in 1932 to represent the remarkable similarity between the properties of the protons and neutrons other than their electric charge value, and the presence of three types of pions. The z-component, commonly denoted $I_z$, is related to the electric charge $Q$ and the baryon number ($+1$ for baryons, $0$ for mesons) of these particles.
+ 
+ An additional quantum number, strangeness ($S$, which is not to be confused with the spin), was introduced in 1954 to explain the unexpectedly long lifetimes of particles such as $K$ mesons and $\xi$ baryons. This new, (strangeness) quantum number was unchanged by strong interactions, but not by the weak ones, which would explains the anomalously long life-times of the particles in question that can be pair-produced by the strong force, but can  only decay {\em via} the electro-weak interactions. The formula chosen for the new hypercharge $Y$ was then : 
+
+$$Y = B + S,$$
+where $B$ is the baryon number and $S$ is the strangeness value.
+
+ This equation is known as the (original) Gell--Mann--Nishijima formula. The connection with group theory become clear only in 1961 when Gell-Mann and Ne'emann showed that all the proposed quantum numbers could be explained by relating the fundamental $SU(3)$ triplet to the three lightest quarks: the up, down and strange quarks. Further advances through both theory and high energy physics experiments has led to the introduction of a three flavor quantum numbers, charmness (C), bottomness (B') and topness (T), corresponding the charm, bottom and top quark respectively.  An enlarged flavor symmetry group, $SU(6)$, and also unified $SU(5)$, or $SU(3) \times SU(2) \times U(1)$
+groups are being considered to provide a unified `symmetry' for electromagnetic, electroweak and strong interactions. The modified 
+Gell--Man--Nishijima formula generalizes the equation for all of the flavor quantum numbers and the electrical charge, with the modified hypercharge formula being 
+$$Y = B + S + C + B' + T,$$ 
+that includes also the charm, the `truth and beauty' numbers, with the following notations:
+$J = spin $, $B = baryon$ number, $Q= $ electric charge, $I_z = isospin$, 
+$S = strangeness$, $C =~ charmness$, $B' = ~ bottomness$, and 
+$T = ~ topness$.
+
+\subsection{Quark Spin and Spin Parton Distributions}
+
+ The {\em spin} is a intrinsic \emph{symmetry} property, or quantum observable of all quantum particles, and its orientation is an important degree of freedom. Roughly speaking, the spin of a particle is a contribution to its angular momentum that is not due to its motion but whose correct calculation requires relativistic quantum field theory. Unlike the classical momentum of rotation of a sphere, the spin of a particle takes only discrete values as a result of momentum quantization in quantum physics, and its observation requires the presence of an external field gradient such as magnetic or gravitational that `raises the degeneration of the spin levels', thus splitting quantum particle beams according to their spin values. Spin group representations are known as Pauli matrices and are being extensively used for
+computations of spin Hamiltonians and any other interactions or phenomena that involve the spin property of quantum particles; a widely known, and also very useful example, is that of the Nuclear Magnetic Resonance (NMR) phenomenon with wide applications in Chemistry, Physics, agriculture and medical imaging (MRI and 2D-FT). 
+
+Spin is measured in units of $h/(2 \pi)$, where $h$ is the Planck constant. This unit is often denoted by $\bar{h}$ (``h-bar''), called the ``reduced Planck constant''. The result of a measurement of the component of the spin of a quark along any axis- always in the presence of an external field gradient- is always either $\bar{h}/2$ or $- \bar{h}/2$; for this reason quarks are classified as spin-$1/2$ particles, called fermions. The component of spin along any given axis-- which is by convention the $z$-axis--is denoted by an upward-pointing arrow $\uparrow$ for the value $+1/2$ and down arrow pointing arrow  $\downarrow$ for $-1/2$; the symbol also follows the up and down values for the flavor, although one must note that the flavor is `not determined' by the spin, or related to the latter. For example, an $up$ quark with a spin of $+1/2$ along the z-axis is denoted by $u \uparrow$.
+
+ The quark's spin value contributes to the overall spin of the parent hadron, much as quark's electrical charge does to the overall charge of the hadron. Varying combinations of quark spins result in the total spin value that can be assigned to the hadron. However, because of the vacuum polarization in QCD and the presence of valence and sea quarks, the spin distribution (or the spin fine structure) of nuclei involves spin distributions that are not simple additions of spin values for the individual nucleonic spin constituent quarks. 
+
+
+
+\begin{thebibliography}{99}
+\bibitem{WS2k3}
+Weinberg, Steven. 2003. \emph{Quantum Field Theory}., vol.3, Cambridge University Press: Cambridge, UK. 
+
+\bibitem{BR2k0}
+The ``Quark (subatomic particle)''. in {\em Encyclopedia Britannica}($http://www.britannica.com/EBchecked/topic/486323/quark$)
+
+\bibitem{RNk9}
+R.Nave. ``Confinement of Quarks''. HyperPhysics.
+($http://hyperphysics.phy-astr.gsu.edu/hbase/Particles/quark.html$)., Georgia State University, Department of Physics and Astronomy.
+
+\bibitem{RN2k9}
+R.Nave. ``Quarks''. HyperPhysics.
+($http://hyperphysics.phy-astr.gsu.edu/hbase/Particles/quark.html$).
+
+\bibitem{BC-PG2k9}
+B. Carithers, P. Grannis. ``Discovery of the Top Quark'' (PDF). Beam Line(SLAC).($http://www.slac.stanford.edu/pubs/beamline/25/3/25-3-carithers.pdf$).
+
+\bibitem{BED69}
+E.D. Bloom (1969).``High-Energy Inelastic e--p Scattering at 6 and 10 deg.''. {\em Physical Review Letters} 23 (16): 930--934. $doi:10.1103/PhysRevLett.23.930.$
+
+\bibitem{BR69}
+R. Breidenbach(1969). ``Observed Behavior of Highly Inelastic Electron-Proton Scattering''. {\em Physical Review Letters} 23 (16): 935--939.
+$doi:10.1103/PhysRevLett.23.935.$
+
+\bibitem{KH--PXY98}
+Ho--Kim, X.--Y. Pham (1998). Elementary Particles and Their Interactions: Concepts and Phenomena. Springer. $ISBN 3540636676$.
+
+\bibitem{BJ97}
+J. Barrow (1997). ``The Singularity and Other Problems. The Origin of the Universe'' (Reprint ed.). Basic Books. $ISBN 978-0465053148$.
+
+\bibitem{WSM98}
+S.S.M. Wong (1998). {\em Introductory Nuclear Physics} (2nd ed.). Wiley Interscience. $ISBN 0-471-23973-9$.
+
+\bibitem{MGN64}
+M. Gell--Mann (1964). ``A Schematic of Baryons and Mesons''. {\em Physics Letters} 8 (3): 214--215. $doi:10.1016/S0031-9163(64)92001-3$.
+
+\bibitem{ZG64a}
+G. Zweig (1964a). ``An SU(3) Model for Strong Interaction Symmetry and its Breaking''. CERN Report $No.8181/Th 8419$.
+
+\bibitem{ZG64b}
+G. Zweig (1964b). ``An SU(3) Model for Strong Interaction Symmetry and its Breaking: II''. CERN Report $No.8419/Th 8412$.
+
+\bibitem{SKW2k4}
+K.W. Staley (2004). The Evidence for the Top Quark. Cambridge University Press. $ISBN 0521827108$.
+
+\bibitem{PA84}
+A. Pickering (1984). Constructing Quarks. University of Chicago Press.
+
+\bibitem{BJB-GSL64}
+B.J. Bjorken, S.L. Glashow (1964). ``Elementary Particles and SU(4)''. Physics Letters 11 (3): 255. $doi:10.1016/0031-9163(64)90433-0$.
+
+\bibitem{FJI2k9}
+J.I. Friedman. ``The Road to the Nobel Prize''. Hue University.($http://www.hueuni.edu.vn/hueuni/en/news_detail.php?NewsID=1606\&PHPSESSID=909807ffc5b9c0288cc8d137ff063c72$)
+
+\bibitem{FPR69}
+R.P. Feynman (1969).``Very High-Energy Collisions of Hadrons''. Physical Review Letters 23 (24): 1415--1417.$http://prola.aps.org/abstract/PRL/v23/i24/p1415-1$.
+
+\bibitem{KSetal2k4}
+S. Kretzer et al. (2004). ``CTEQ6 Parton Distributions with Heavy Quark Mass Effects''. Physical Review D69 (11): 114005. $arXiv:0307022v1$.
+
+\bibitem{GDJ87}
+D.J. Griffiths (1987). Introduction to Elementary Particles. John Wiley and Sons. $ISBN 0-471-60386-4$.
+
+\bibitem{GSLetal70}
+S.L. Glashow, J. Iliopoulos, L. Maiani (1970).``Weak Interactions with
+Lepton--Hadron Symmetry''. Physical Review.D,2(7):1285--1292.($http://prola.aps.org/abstract/PRD/v2/i7/p1285_1$).
+
+\bibitem{MKTM73}
+M. Kobayashi, T. Maskawa (1973). ``CP--Violation in the Renormalizable Theory of Weak Interaction''. Progress of Theoretical Physics 49(2): pp.652--657.($http://ptp.ipap.jp/link?PTP/49/652/pdf$).
+
+\bibitem{BNL}
+``New Precision Measurement of Top Quark Mass''. BNL News. ($http://www.bnl.gov/bnlweb/pubaf/pr/PR_display.asp?prID=04-66$).
+
+\bibitem{JJ39}
+J. Joyce (1982) [1939]. Finnegans Wake. Penguin Books. p. 383. $LCCN 59-354. ISBN 0-14-00-6286-6$.
+
+\bibitem{MGM95}
+M. Gell--Mann (1995). The Quark and the Jaguar: Adventures in the Simple and the Complex. Owl Books.
+
+\bibitem{ACetal2k8}
+C. Amsler et al. (2008). ``Review of Particle Physics: New Charmonium-like States''. Physics Letters (Particle Data Group) B667 (1): 1--1340.
+($http://pdg.lbl.gov/2008/reviews/rpp2008-rev-new-charmonium-like-states.pdf$).
+
+\bibitem{SEV2k4}
+E.V. Shuryak (2004). The QCD Vacuum, Hadrons and Superdense Matter. World Scientific.
+
+\bibitem{PBetal2k2}
+B. Povh et al. (2004). Particles and Nuclei. Springer. $ISBN 3540201688. OCLC 53001447$.
+
+\bibitem{DW2k2}
+W. Demtr\"{o}der (2002). Atoms, Molecules and Photons: An Introduction to Atomic--Molecular--and Quantum Physics (1st ed.). Springer. pp. 39--42. ISBN 3540206310.
+
+\bibitem{MP2k8}
+``Weak Interactions'' --Written at Menlo Park (CA). Virtual Visitor Center. Stanford Linear Accelerator Center. 2008.($http://www2.slac.stanford.edu/vvc/theory/weakinteract.html$)
+
+\bibitem{BG-MG2k7}
+C. Burgess, G. Moore (2007). The Standard Model. A Primer. Cambridge University Press. $ISBN 0-521-86036-9$.
+
+\bibitem{WA2k4}
+A. Watson (2004). The Quantum Quark. Cambridge University Press. $ISBN 0521829070$.
+
+\bibitem{ACetal2k8}
+C. Amsler et al. (2008). ``Review of Particle Physics: Quarks''.
+Physics Letters (Particle Data Group) B667 (1): 1-1340. ($http://pdg.lbl.gov/2008/tables/rpp2008-sum-quarks.pdf$).
+
+\bibitem{CF2k3}
+F. Canelli. ``The Top Quark: Worth its Weight in Gold''. University of Rochester. ($http://conferences.fnal.gov/lp2003/forthepublic/topquark/index.html$)
+
+\bibitem{HW32}
+W. Heisenberg (1932). ``\"{U}ber den Bau der Atomkerne I, II, III. Zeitschrift f\"ur Physik 77: 1--11; 78: 156--164; 80: 587--596 (in German)
+
+\bibitem{Wu-HP91}
+T. Wu, W.--Y. Pauchy Hwang (1991). Relativistic quantum mechanics and quantum fields. World Science. $ISBN 9810206089$.
+
+\bibitem{GFk8}
+F. Garberson (2008). ``Top Quark Mass and Cross Section Results from the Tevatron''. $arXiv: 0808.0273v1$.
+
+\bibitem{RP88}
+P. Renton (1988). Electroweak Interactions. Cambridge University Press. p. 332. ISBN 0521366925.
+
+\bibitem{FRP85}
+R.P. Feynman (1985). QED: The Strange Theory of Light and Matter (1st ed.). Princeton University Press.
+
+\bibitem{WCY94}
+C.--Y. Wong (1994). Introduction to High--energy Heavy--ion Collisions. World Scientific. p. 149. $ISBN 9810202636$.
+
+\bibitem{PDH2k}
+D.H. Perkins (2000). Introduction to High Energy Physics. Cambridge University Press. $ISBN 0521621968$.
+
+\bibitem{MKk8}
+2008 Physics Nobel Prize lecture by Makoto Kobayashi
+\bibitem{TMk8}
+2008 Physics Nobel Prize lecture by Toshihide Maskawa
+\bibitem{SCCT76}
+1976 Physics Nobel Prize lecture by Samuel C.C. Ting
+\bibitem{BR76}
+1976 Physics Nobel Prize lecture by Burton Richter
+\bibitem{MGM69}
+1969 Physics Nobel Prize lecture by Murray Gell--Mann
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,282 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ETASInterpretation}
+\pmcreated{2013-03-22 18:16:04}
+\pmmodified{2013-03-22 18:16:04}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{ETAS interpretation}
+\pmrecord{80}{40870}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81-00}
+\pmclassification{msc}{92B05}
+\pmclassification{msc}{03G30}
+\pmclassification{msc}{18-00}
+\pmsynonym{elementary theory of abstract supercategories}{ETASInterpretation}
+\pmsynonym{ETAS}{ETASInterpretation}
+%\pmkeywords{elementary theory of abstract supercategories}
+%\pmkeywords{axiomatic theory of abstract supercategories}
+\pmrelated{Category}
+\pmrelated{CategoryTheory}
+\pmrelated{ETAS}
+\pmrelated{CategoricalOntologyABibliographyOfCategoryTheory}
+\pmrelated{AlgebraicComputation}
+\pmrelated{CategoricalOntology}
+\pmrelated{QuantumLogic}
+\pmrelated{CategoryOfQuantumAutomata}
+\pmrelated{FunctorCategory2}
+\pmrelated{QuantumAutomataAndQuantumComputation2}
+\pmrelated{SupercategoryOfVariableMolecularSets}
+\pmrelated{ETA}
+\pmdefines{axioms of metacategories and supercategories}
+\pmdefines{examples of supercategories and metacategories}
+\pmdefines{ETAS interpretation}
+\pmdefines{ETAS axiom}
+\pmdefines{ETAS}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bS}{\mathbb{S}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\subsection{Introduction}
+ 
+  \emph{ETAS} is the acronym for the {\em ``Elementary Theory of Abstract Supercategories''}
+as defined by the {\em axioms of metacategories and supercategories}.
+
+
+  The following are simple examples of supercategories that are essentially interpretations
+of the eight {\em ETAC} axioms reported by W. F. Lawvere (1968), with one or several \emph{ETAS} axioms added as indicated in the examples listed. A family, or class, of a specific level (or 'order') $(n+1)$ of a
+supercategory $\mathbb{S}_{n+1}$ (with $n$ being an integer) is defined by the specific ETAS axioms added to the eight ETAC axioms; thus, for $n=0$, there are no additional ETAS axioms and the supercategory $\mathbb{S}_1$ is the limiting, lower type, currently defined as a category with only one composition law and any standard interpretation of the eight ETAC axioms. Thus, the first level of 'proper' supercategory  $\mathbb{S}_2$ is defined as an interpretation of ETAS axioms \textbf{S1} and \textbf{S2}; for $n=3$, the supercategory $\mathbb{S}_4$ is defined as an interpretation of the eight ETAC axioms plus the additional three ETAS axioms: \textbf{S2}, \textbf{S3} and \textbf{S4}. Any (proper) recursive formula or 'function' can be utilized to generate supercategories at levels $n$ higher than $\mathbb{S}_4$ by adding composition or consistency laws to the ETAS axioms \textbf{S1} to \textbf{S4}, thus allowing a digital computer algorithm to generate any finite level supercategory $\mathbb{S}_n$ syntax, to which one needs then to add semantic interpretations (which are complementary to the computer generated syntax). 
+ 
+
+\subsection{Simple examples of ETAS interpretation in supercategories}
+
+\begin{enumerate}
+
+\item {\em Functor categories} subject only to the eight {\em ETAC} axioms;
+\item {\em Functor supercategories}, $\mathsf{\F_S}: \mathcal{A} \to \mathcal{B}$,
+      with both $\mathcal{A}$ and $\mathcal{B}$ being 'large' categories (i.e., 
+      $\mathcal{A}$ does not need to be small as in the case of {\em functor categories});
+\item A \emph{topological groupoid category} is an example of a particular supercategory
+      with all invertible morphisms endowed with both a topological and an agebraic
+      structure, still subject to all ETAC axioms;
+\item \emph{Supergroupoids} (also definable as crossed complexes of groupoids), and \emph{supergroups} --also definable as crossed modules of groups-- seem to be of great interest to mathematicians currently involved in `categorified' mathematical physics or physical mathematics.) 
+\item A \emph{double groupoid category} is a `simple' example of a higher dimensional supercategory which is useful in higher dimensional homotopy theory, especially in non-Abelian algebraic topology;
+this concept is subject to all eight ETAC axioms, plus additional axioms related to the definition of the double groupoid (generally non-Abelian) structures;
+
+\item 
+An example of `standard' supercategories was recently introduced in mathematical (or more specifically `categorified') physics, on the web's \PMlinkexternal{n-Category caf\'e's web site}{http://golem.ph.utexas.edu/category/2007/07/supercategories.html} under \textit{``Supercategories''}. This is a rather `simple' example of supercategories, albeit in a much more restricted sense as it still involves only the standard categorical homo-morphisms, homo-functors, and so on; it begins with a somewhat standard definiton of super-categories, or `super categories' from category theory, but then it becomes more interesting as it is being tailored to supersymmetry and extensions of `Lie' superalgebras, or superalgebroids, which are sometimes called graded `Lie' algebras that are thought to be relevant to quantum gravity (\cite{BGB2} and references cited therein). The following is an almost exact quote from the above n-Category cafe' s website posted mainly by Dr. Urs Schreiber:  
+A \textit{supercategory} is a \textit{diagram} of the form: 
+ $$\diamond  \diamond Id_C \diamond \textbf{C} \diamond \diamond s $$ 
+in \textbf{Cat}--the category of categories and (homo-) functors between categories-- such that: 
+ $$\diamond  \diamond \textsl{Id} \diamond \diamond Id_C \diamond \textbf{C} \diamond \textbf{C}\diamond \diamond s \diamond \diamond s = \diamond  \diamond Id_C \diamond Id_C  \diamond  \diamond \textsl{Id},$$
+(where the `diamond' symbol should be replaced by the symbol `square', as in the original Dr. Urs Schreiber's postings.) 
+
+ This specific instance is that of a supercategory which has only \textbf{one object}-- the above quoted superdiagram of diamonds, an arbitrary abstract category \textbf{C} (subject to all ETAC axioms), and the standard category identity (homo-) functor; it can be further specialized to the previously introduced concepts of \textit{supergroupoids} (also definable as crossed complexes of groupoids), and \textit{supergroups} (also definable as crossed modules of groups), which seem to be of great interest to mathematicians involved in `Categorified' mathematical physics or physical mathematics.) This was then continued with the following interesting example. ``What, in this sense, is a \textit{braided monoidal supercategory ?}''. Dr. Urs Schreiber, suggested the following answer: ``like an ordinary braided monoidal catgeory is a 3-category which in lowest degrees looks like the trivial 2-group, a braided monoidal supercategory is a 3-category which in lowest degree looks like the strict 2-group that comes from 
+the crossed module $G(2)=(\diamond 2 \diamond \textsl{Id} \diamond 2)$''. Urs called this generalization of stabilization of n-categories, $G(2)$-\textit{stabilization}. Therefore, the claim would be that `braided monoidal supercategories come from $G(2)$-stabilized 3-categories, with $G(2)$ the above strict 2-group';
+
+\item An \emph{organismic set} of order $n$ can be regarded either as a category of algebraic 
+theories representing organismic sets of different orders $o \leq n$ or as a \emph{discrete topology} organismic supercategory of algebraic theories (or supercategory only with discrete topology, e.g. , a {\em class} of objects); 
+\item Any `standard' topos with a (commutative) Heyting logic algebra as a subobject classifier is an example of
+a commutative (and distributive) supercategory with the additional axioms to ETAC being those that
+define the Heyting logic algebra;
+\item The generalized $LM_n$ (\L ukasiewicz--Moisil) toposes are supercatgeories of 
+{\em non-commutative}, algebraic $n$-valued logic diagrams that are subject to the axioms of {\em $LM_n$ algebras of 
+$n$-valued logics};
+\item $n$-categories are supercategories restricted to interpretations of the ETAC axioms;
+\item An {\em organismic supercategory} is defined as a supercategory subject to the ETAC axioms
+and also subject to the ETAS axiom of complete self--reproduction involving
+$\pi$--entities ({\em viz}. L\"ofgren, 1968; \cite{Refs-13to26}); its objects are classes representing organisms
+in terms of morphism (super) diagrams or equivalently as heterofunctors of organismic classes 
+with variable topological structure;
+\end{enumerate}
+
+\begin{definition} 
+\emph{Organismic Supercategories (\cite{Refs-13to26})}
+An example of a class of supercategories interpreting such ETAS axioms as those stated above
+was previously defined for organismic structures with different levels of complexity (\cite{Refs-13to26}); {\em organismic supercategories} were thus defined as {\em superstructure interpretations of ETAS} (including ETAC, as appropriate) in terms of triplets $\textbf{K} = (\textit{C}, \Pi,\textit{N})$, where \textit{C} is an arbitrary category (interpretation of ETAC axioms, formulas, etc.), $\Pi$ is a category of complete self--reproducing entities, $\pi$, (\cite{LO68}) subject to the negation of the axiom of restriction (for elements of sets):
+$ \exists S: (S \neq \oslash) ~ and ~ \forall u: [u \in S) \Rightarrow \exists v: (v \in u)~ and ~( v \in S)]$, (which is known to be independent from the ordinary logico-mathematical and biological reasoning), 
+and $\textit{N}$ is a category of non-atomic expressions, defined as follows.  
+\end{definition} 
+
+\begin{definition}
+ 
+ An {\em atomically self--reproducing entity} is a unit class relation $u$ such that  $\pi \pi \left\langle \pi \right\rangle$, which means 
+``$\pi$ stands in the relation $\pi$ to $\pi$'', $\pi \pi \left\langle \pi , \pi \right\rangle$, etc. 
+
+ An expression that does not contain any such atomically self--reproducing entity is called a {\em non-atomic expression}.
+\end{definition} 
+
+
+\begin{thebibliography}{9}
+
+\bibitem{Refs-13to26}
+See references [13] to [26] in the \PMlinkname{Bibliography for Category Theory and Algebraic Topology}{CategoricalOntologyABibliographyOfCategoryTheory}
+
+\bibitem{LW1}
+W.F. Lawvere: 1963. Functorial Semantics of Algebraic Theories., \emph{Proc. Natl. Acad. Sci. USA}, \textbf{50}: 869--872.
+
+\bibitem{LW2}
+W. F. Lawvere: 1966. The Category of Categories as a Foundation for Mathematics. , In \emph{Proc. Conf. Categorical Algebra--La Jolla}, 1965, Eilenberg, S et al., eds. Springer --Verlag: Berlin, Heidelberg and New York, pp. 1--20.
+
+\bibitem{LO68}
+L. L\"ofgren: 1968. On Axiomatic Explanation of Complete Self--Reproduction. \emph{Bull. Math. Biophysics}, 
+\textbf{30}: 317--348. 
+
+\bibitem{BHS2}
+R. Brown R, P.J. Higgins, and R. Sivera.: \textit{``Non--Abelian Algebraic Topology''} (2008).
+\PMlinkexternal{PDF file}{http://www.bangor.ac.uk/mas010/nonab--t/partI010604.pdf} 
+ 
+\bibitem{BGB2}
+R. Brown, J. F. Glazebrook and I. C. Baianu: A categorical and higher dimensional algebra framework for complex systems and spacetime structures, \emph{Axiomathes} \textbf{17}:409--493.
+(2007).
+
+\bibitem{BM}
+R. Brown and G. H. Mosa: Double algebroids and crossed modules of algebroids, University of Wales--Bangor, Maths Preprint, 1986.
+
+\bibitem{BS}
+R. Brown  and C.B. Spencer: Double groupoids and crossed modules, \emph{Cahiers Top. G\'eom.Diff.} \textbf{17} (1976), 343--362.
+
+\bibitem{ICB04b}
+I.C. Baianu: \L ukasiewicz--Topos Models of Neural Networks, Cell Genome and Interactome Nonlinear Dynamics). CERN Preprint EXT-2004-059. \textit{Health Physics and Radiation Effects} (June 29, 2004). 
+
+\bibitem{BBGG1}
+I.C. Baianu, Brown R., J. F. Glazebrook, and Georgescu G.: 2006, Complex Nonlinear Biodynamics in 
+Categories, Higher Dimensional Algebra and \L ukasiewicz--Moisil Topos: Transformations of
+Neuronal, Genetic and Neoplastic networks, \emph{Axiomathes} \textbf{16} Nos. 1--2, 65--122.
+
+\bibitem{ICBm2}
+I.C. Baianu and M. Marinescu: 1974, A Functorial Construction of \emph{\textbf{(M,R)}}-- Systems. \emph{Revue Roumaine de Mathematiques Pures et Appliquees} \textbf{19}: 388--391.
+
+\bibitem{ICB6}
+I.C. Baianu: 1977, A Logical Model of Genetic Activities in \L ukasiewicz Algebras: The Non--linear Theory. \emph{Bulletin of Mathematical Biophysics}, \textbf{39}: 249--258.
+
+\bibitem{ICB2}
+I.C. Baianu: 1987a, Computer Models and Automata Theory in Biology and Medicine.,  in M. Witten (ed.), 
+\emph{Mathematical Models in Medicine}, vol. 7., Pergamon Press, New York, 1513--1577;
+\PMlinkexternal{CERN Preprint No. EXT-2004-072}{http://doc.cern.ch//archive/electronic/other/ext/ext-2004-072.pdf}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

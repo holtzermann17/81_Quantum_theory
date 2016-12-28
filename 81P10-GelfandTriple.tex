@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GelfandTriple}
+\pmcreated{2013-03-22 19:22:51}
+\pmmodified{2013-03-22 19:22:51}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Gel'fand triple}
+\pmrecord{9}{42335}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{81P10}
+\pmsynonym{rigged Hilbert space}{GelfandTriple}
+%\pmkeywords{Riesz theorem}
+%\pmkeywords{Gelfand triple}
+%\pmkeywords{banach space}
+%\pmkeywords{Hilbert space isomorphism}
+\pmdefines{$\cS$}
+\pmdefines{${\cS}^t$}
+\pmdefines{injective bounded operator}
+\pmdefines{$<m_x>$ operator}
+\pmdefines{TVS}
+\pmdefines{topological subvector space}
+\pmdefines{canonical isomorphism}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\def\im{\operatorname{im}}
+\def\ker{\operatorname{ker}}
+% there are many more packages, add them here as you need 
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\renewcommand{\H}{\mathcal H}
+
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\newcommand{\cok}{\operatorname{cok}}
+
+\begin{document}
+\section{Gel'fand (or Gelfand) triple}
+
+The basic idea is to equip a separable Hilbert space $\H$ with a dense \emph{Topological Subvector Space ($TVS$)} of test functions in such a manner that the dual of the subspace of test functions $T_f$ enhances the Hilbert space $\H$ through embedding into a larger topological subvector space $T^*$; the elements of $T^*$ represent generalized eigenvectors for the continuous spectrum of normal-and possibly unbounded-linear operators $L$.  
+
+One begins the Gelfand construction with a Banach space $B$, or the more general TVS considered above, and denote the dual TVS of $B$ as $B^*$ so that 
+$j: B \rightarrow \H$ is an \emph{injective bounded operator} with dense image. One then considers a canonical isomorphism $i_c: \H \cong \H^*$ determined by the inner product given by the {\em Riesz theorem}. The Banach transpose, or dual of $j$ is the operator $j^*: \H^* \to B^*$. 
+ 
+
+Then, one has a composition morphism $k: \H \rightarrow B^*$ as 
+$\H  \to \H^* \to B^*$ , so that  $k = j^* \circ i_c$ that can be employed to define the Gelfand triple as follows.
+
+\begin{definition}
+A {\em Gelfand triple} is defined by the operator sequence:
+
+$B \rightarrow \H \rightarrow B^*,$
+
+ where $k$ is the composition morphism $k: \H \to B^*$ defined by $j^* \circ i_c$ 
+
+\end{definition}
+
+\subsection{Example:}
+An interesting example of a Gel'fand triple which is preserved by the Fourier transform (FT) is obtained when $B = \cS (\R^n)$ --the Schwartz space, 
+$B^* = \cS^t$-the space of tempered Schwartz distributions and 
+$\H = L^2(\R^n)$.
+
+\subsection{Acknowledgement}
+
+The formalism utilized here followed the \PMlinkexternal{presentation by Urs Schreiber}{http://ncatlab.org/nlab/show/Gelfand+triple} of the Gel'fand triple at \PMlinkexternal{$nLab$- a `steered' wiki for Mathematics, Physical Mathematics and Philosophy}{http://ncatlab.org/nlab/show/HomePage}.
+
+\subsection{References}
+
+J.-P. Antoine. Dirac formalism and symmetry problems in quantum mechanics. I. General Dirac formalism. Journal of Mathematical Physics, 10(1):53--69, 1969.
+
+N.Bogoliubov, A.Logunov, and I.Todorov. Introduction to Axiomatic Quantum Field Theory, chapter 1 Some Basic Concepts of Functional Analysis 4 The Space of States, pages 12--43, 113--128. Benjamin, Reading, Massachusetts, 1975.
+
+R.de la Madrid. Quantum Mechanics in Rigged Hilbert Space Language. PhD thesis, Depertamento de Fisica Teorica Facultad de Ciencias. Universidad de Valladolid, 2001. (available here)
+
+M.Gadella and F.Gomez. A unified mathematical formalism for the dirac formulation of quantum mechanics. Foundations of Physics, 32:815--869, 2002. (available here)
+
+M.Gadella and F.Gomez. On the mathematical basis of the dirac formulation of quantum mechanics. International Journal of Theoretical Physics, 42:2225--2254, 2003.
+
+M.Gadella and F.Gomez. Dirac formulation of quantum mechanics: Recent and new results. Reports on Mathematical Physics, 59:127--143, 2007.
+
+I.M. Gel'fand and N.J. Vilenkin. Generalized Functions, vol. 4: Some Applications of Harmonic Analysis, volume4, chapter 2-4, pages 26--133. Academic Press, New York, 1964.
+
+I. M. Gel'fand, A. G. Kostyucenko, Expansion in eigenfunctions of differential and other operators) (Russian), Dokl. Akad. Nauk SSSR (N.S.) 103 (1955), 349--352, MR73136
+
+I. M. Gel'fand, N. Ja. Vilenkin, Generalized functions, vol. 4. Some applications of harmonic analysis. Equipped Hilbert spaces, Fizmatgiz, Moscow, 1961 MR146653, English transl. Acad. Press 1964 MR173945
+
+Ciprian Foiash, D\'ecompositions int\'egrales des familles spectrales et 
+semi--spectrales en op\'erateurs qui sortent de l'espace Hilbertien, Acta Sci. Math. Szeged 20, 1959, 117--155. MR115092
+
+John Roberts, The Dirac bra and ket formalism, J. Mathematical Phys. 7 (1966), 1097--1104, MR216836, Rigged Hilbert spaces in quantum mechanics , Comm. Math. Physics 3, n. 2 (1966), 98--119, MR228243, euclid
+
+J.E. Roberts. The Dirac bra and ket formalism. Journal of Mathematical Physics, 7(6):1097--1104, 1966.
+
+A.R. Marlow. Unified Dirac--Von Neumann formulation of quantum mechanics. I. Mathematical theory. Journal of Mathematical Physics, 6:919--927, 1965.
+
+E.Prugovecki. The bra and ket formalism in extended Hilbert space. J. Math. Phys., 14:1410--1422, 1973.
+
+J.E. Roberts. Rigged Hilbert spaces in quantum mechanics. Commun. math. Phys., 3:98--119, 1966. 
+
+Tjostheim. A note on the unified Dirac-Von Neumann formulation of quantum mechanics. Journal of Mathematical Physics, 16(4):766--767, 4 1975
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,447 @@
+<!DOCTYPE html><html>
+<head>
+<title>ETAS interpretation</title>
+<!--Generated on Sat Feb 10 13:04:41 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">ETAS interpretation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">ETAS</em> is the acronym for the <span class="ltx_text ltx_font_italic">“Elementary Theory of Abstract Supercategories”</span>
+as defined by the <span class="ltx_text ltx_font_italic">axioms of metacategories and supercategories</span>.</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">The following are simple examples of supercategories that are essentially interpretations
+of the eight <span class="ltx_text ltx_font_italic">ETAC</span> axioms reported by W. F. Lawvere (1968), with one or several <em class="ltx_emph ltx_font_italic">ETAS</em> axioms added as indicated in the examples listed. A family, or class, of a specific level (or ’order’) <math id="S0.SS1.p2.m1" class="ltx_Math" alttext="(n+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math> of a
+supercategory <math id="S0.SS1.p2.m2" class="ltx_Math" alttext="\mathbb{S}_{n+1}" display="inline"><msub><mi>𝕊</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math> (with <math id="S0.SS1.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> being an integer) is defined by the specific ETAS axioms added to the eight ETAC axioms; thus, for <math id="S0.SS1.p2.m4" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math>, there are no additional ETAS axioms and the supercategory <math id="S0.SS1.p2.m5" class="ltx_Math" alttext="\mathbb{S}_{1}" display="inline"><msub><mi>𝕊</mi><mn>1</mn></msub></math> is the limiting, lower type, currently defined as a category with only one composition law and any standard interpretation of the eight ETAC axioms. Thus, the first level of ’proper’ supercategory <math id="S0.SS1.p2.m6" class="ltx_Math" alttext="\mathbb{S}_{2}" display="inline"><msub><mi>𝕊</mi><mn>2</mn></msub></math> is defined as an interpretation of ETAS axioms <span class="ltx_text ltx_font_bold">S1</span> and <span class="ltx_text ltx_font_bold">S2</span>; for <math id="S0.SS1.p2.m7" class="ltx_Math" alttext="n=3" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math>, the supercategory <math id="S0.SS1.p2.m8" class="ltx_Math" alttext="\mathbb{S}_{4}" display="inline"><msub><mi>𝕊</mi><mn>4</mn></msub></math> is defined as an interpretation of the eight ETAC axioms plus the additional three ETAS axioms: <span class="ltx_text ltx_font_bold">S2</span>, <span class="ltx_text ltx_font_bold">S3</span> and <span class="ltx_text ltx_font_bold">S4</span>. Any (proper) recursive formula or ’function’ can be utilized to generate supercategories at levels <math id="S0.SS1.p2.m9" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> higher than <math id="S0.SS1.p2.m10" class="ltx_Math" alttext="\mathbb{S}_{4}" display="inline"><msub><mi>𝕊</mi><mn>4</mn></msub></math> by adding composition or consistency laws to the ETAS axioms <span class="ltx_text ltx_font_bold">S1</span> to <span class="ltx_text ltx_font_bold">S4</span>, thus allowing a digital computer algorithm to generate any finite level supercategory <math id="S0.SS1.p2.m11" class="ltx_Math" alttext="\mathbb{S}_{n}" display="inline"><msub><mi>𝕊</mi><mi>n</mi></msub></math> syntax, to which one needs then to add semantic interpretations (which are complementary to the computer generated syntax).</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Simple examples of ETAS interpretation in supercategories</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Functor categories</span> subject only to the eight <span class="ltx_text ltx_font_italic">ETAC</span> axioms;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Functor supercategories</span>, <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathsf{\mathcal{F}_{S}}:\mathcal{A}\to\mathcal{B}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>𝖲</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></mrow></math>,
+with both <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> and <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> being ’large’ categories (i.e.,
+<math id="I1.i2.p1.m4" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math> does not need to be small as in the case of <span class="ltx_text ltx_font_italic">functor categories</span>);</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">topological groupoid category</em> is an example of a particular supercategory
+with all invertible morphisms endowed with both a topological and an agebraic
+structure, still subject to all ETAC axioms;</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Supergroupoids</em> (also definable as crossed complexes of groupoids), and <em class="ltx_emph ltx_font_italic">supergroups</em> –also definable as crossed modules of groups– seem to be of great interest to mathematicians currently involved in ‘categorified’ mathematical physics or physical mathematics.)</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">double groupoid category</em> is a ‘simple’ example of a higher dimensional supercategory which is useful in higher dimensional homotopy theory, especially in non-Abelian algebraic topology;
+this concept is subject to all eight ETAC axioms, plus additional axioms related to the definition of the double groupoid (generally non-Abelian) structures;</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">6.</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">An example of ‘standard’ supercategories was recently introduced in mathematical (or more specifically ‘categorified’) physics, on the web’s <span class="ltx_text ltx_font_typewriter">http://golem.ph.utexas.edu/category/2007/07/supercategories.html</span>n-Category café’s web site under <span class="ltx_text ltx_font_italic">“Supercategories”</span>. This is a rather ‘simple’ example of supercategories, albeit in a much more restricted sense as it still involves only the standard categorical homo-morphisms, homo-functors, and so on; it begins with a somewhat standard definiton of super-categories, or ‘super categories’ from category theory, but then it becomes more interesting as it is being tailored to supersymmetry and extensions of ‘Lie’ superalgebras, or superalgebroids, which are sometimes called graded ‘Lie’ algebras that are thought to be relevant to quantum gravity (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite> and references cited therein). The following is an almost exact quote from the above n-Category cafe’ s website posted mainly by Dr. Urs Schreiber:
+A <span class="ltx_text ltx_font_italic">supercategory</span> is a <span class="ltx_text ltx_font_italic">diagram</span> of the form:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\diamond\diamond Id_{C}\diamond\textbf{C}\diamond\diamond s" display="block"><mrow><mo>⋄</mo><mo>⋄</mo><mi>I</mi><msub><mi>d</mi><mi>C</mi></msub><mo>⋄</mo><mtext>𝐂</mtext><mo>⋄</mo><mo>⋄</mo><mi>s</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in <span class="ltx_text ltx_font_bold">Cat</span>–the category of categories and (homo-) functors between categories– such that:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\diamond\diamond\textsl{Id}\diamond\diamond Id_{C}\diamond\textbf{C}\diamond%
+\textbf{C}\diamond\diamond s\diamond\diamond s=\diamond\diamond Id_{C}\diamond
+Id%
+_{C}\diamond\diamond\textsl{Id}," display="block"><mrow><mo>⋄</mo><mo>⋄</mo><mtext>𝐼𝑑</mtext><mo>⋄</mo><mo>⋄</mo><mi>I</mi><msub><mi>d</mi><mi>C</mi></msub><mo>⋄</mo><mtext>𝐂</mtext><mo>⋄</mo><mtext>𝐂</mtext><mo>⋄</mo><mo>⋄</mo><mi>s</mi><mo>⋄</mo><mo>⋄</mo><mi>s</mi><mo>=</mo><mo>⋄</mo><mo>⋄</mo><mi>I</mi><msub><mi>d</mi><mi>C</mi></msub><mo>⋄</mo><mi>I</mi><msub><mi>d</mi><mi>C</mi></msub><mo>⋄</mo><mo>⋄</mo><mtext>𝐼𝑑</mtext><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(where the ‘diamond’ symbol should be replaced by the symbol ‘square’, as in the original Dr. Urs Schreiber’s postings.)</p>
+</div>
+<div id="I1.i6.p2" class="ltx_para">
+<p class="ltx_p">This specific instance is that of a supercategory which has only <span class="ltx_text ltx_font_bold">one object</span>– the above quoted superdiagram of diamonds, an arbitrary abstract category <span class="ltx_text ltx_font_bold">C</span> (subject to all ETAC axioms), and the standard category identity (homo-) functor; it can be further specialized to the previously introduced concepts of <span class="ltx_text ltx_font_italic">supergroupoids</span> (also definable as crossed complexes of groupoids), and <span class="ltx_text ltx_font_italic">supergroups</span> (also definable as crossed modules of groups), which seem to be of great interest to mathematicians involved in ‘Categorified’ mathematical physics or physical mathematics.) This was then continued with the following interesting example. “What, in this sense, is a <span class="ltx_text ltx_font_italic">braided monoidal supercategory ?</span>”. Dr. Urs Schreiber, suggested the following answer: “like an ordinary braided monoidal catgeory is a 3-category which in lowest degrees looks like the trivial 2-group, a braided monoidal supercategory is a 3-category which in lowest degree looks like the strict 2-group that comes from
+the crossed module <math id="I1.i6.p2.m1" class="ltx_Math" alttext="G(2)=(\diamond 2\diamond\textsl{Id}\diamond 2)" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>⋄</mo><mn>2</mn></mrow><mo>⋄</mo><mtext>𝐼𝑑</mtext><mo>⋄</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>”. Urs called this generalization of stabilization of n-categories, <math id="I1.i6.p2.m2" class="ltx_Math" alttext="G(2)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>-<span class="ltx_text ltx_font_italic">stabilization</span>. Therefore, the claim would be that ‘braided monoidal supercategories come from <math id="I1.i6.p2.m3" class="ltx_Math" alttext="G(2)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>-stabilized 3-categories, with <math id="I1.i6.p2.m4" class="ltx_Math" alttext="G(2)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math> the above strict 2-group’;
+</p>
+</div>
+</li>
+<li id="I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">7.</span> 
+<div id="I1.i7.p1" class="ltx_para">
+<p class="ltx_p">An <em class="ltx_emph ltx_font_italic">organismic set</em> of order <math id="I1.i7.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> can be regarded either as a category of algebraic
+theories representing organismic sets of different orders <math id="I1.i7.p1.m2" class="ltx_Math" alttext="o\leq n" display="inline"><mrow><mi>o</mi><mo>≤</mo><mi>n</mi></mrow></math> or as a <em class="ltx_emph ltx_font_italic">discrete topology</em> organismic supercategory of algebraic theories (or supercategory only with discrete topology, e.g. , a <span class="ltx_text ltx_font_italic">class</span> of objects);</p>
+</div>
+</li>
+<li id="I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">8.</span> 
+<div id="I1.i8.p1" class="ltx_para">
+<p class="ltx_p">Any ‘standard’ topos with a (commutative) Heyting logic algebra as a subobject classifier is an example of
+a commutative (and distributive) supercategory with the additional axioms to ETAC being those that
+define the Heyting logic algebra;</p>
+</div>
+</li>
+<li id="I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">9.</span> 
+<div id="I1.i9.p1" class="ltx_para">
+<p class="ltx_p">The generalized <math id="I1.i9.p1.m1" class="ltx_Math" alttext="LM_{n}" display="inline"><mrow><mi>L</mi><mo>⁢</mo><msub><mi>M</mi><mi>n</mi></msub></mrow></math> (Łukasiewicz–Moisil) toposes are supercatgeories of
+<span class="ltx_text ltx_font_italic">non-commutative</span>, algebraic <math id="I1.i9.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-valued logic diagrams that are subject to the axioms of <math id="I1.i9.p1.m3" class="ltx_Math" alttext="LM_{n}" display="inline"><mrow><mi>L</mi><mo>⁢</mo><msub><mi>M</mi><mi>n</mi></msub></mrow></math><span class="ltx_text ltx_font_italic"> algebras of
+<math id="I1.i9.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-valued logics</span>;</p>
+</div>
+</li>
+<li id="I1.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">10.</span> 
+<div id="I1.i10.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i10.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-categories are supercategories restricted to interpretations of the ETAC axioms;</p>
+</div>
+</li>
+<li id="I1.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">11.</span> 
+<div id="I1.i11.p1" class="ltx_para">
+<p class="ltx_p">An <span class="ltx_text ltx_font_italic">organismic supercategory</span> is defined as a supercategory subject to the ETAC axioms
+and also subject to the ETAS axiom of complete self–reproduction involving
+<math id="I1.i11.p1.m1" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>–entities (<span class="ltx_text ltx_font_italic">viz</span>. Löfgren, 1968; <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>); its objects are classes representing organisms
+in terms of morphism (super) diagrams or equivalently as heterofunctors of organismic classes
+with variable topological structure;</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Organismic Supercategories (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>)</em>
+An example of a class of supercategories interpreting such ETAS axioms as those stated above
+was previously defined for organismic structures with different levels of complexity (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>); <span class="ltx_text ltx_font_italic">organismic supercategories</span> were thus defined as <span class="ltx_text ltx_font_italic">superstructure interpretations of ETAS</span> (including ETAC, as appropriate) in terms of triplets <math id="S0.Thmdefinition1.p1.m1" class="ltx_Math" alttext="\textbf{K}=(\textit{C},\Pi,\textit{N})" display="inline"><mrow><mtext>𝐊</mtext><mo>=</mo><mrow><mo stretchy="false">(</mo><mtext>𝐶</mtext><mo>,</mo><mi mathvariant="normal">Π</mi><mo>,</mo><mtext>𝑁</mtext><mo stretchy="false">)</mo></mrow></mrow></math>, where <span class="ltx_text ltx_font_italic">C</span> is an arbitrary category (interpretation of ETAC axioms, formulas, etc.), <math id="S0.Thmdefinition1.p1.m2" class="ltx_Math" alttext="\Pi" display="inline"><mi mathvariant="normal">Π</mi></math> is a category of complete self–reproducing entities, <math id="S0.Thmdefinition1.p1.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>, (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>]</cite>) subject to the negation of the axiom of restriction (for elements of sets):
+<math id="S0.Thmdefinition1.p1.m4" class="ltx_Math" alttext="\exists S:(S\neq\oslash)~{}and~{}\forall u:[u\in S)\Rightarrow\exists v:(v\in u%
+)~{}and~{}(v\in S)]" display="inline"><mrow><mo>∃</mo><mi>S</mi><mo>:</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>≠</mo><mo>⊘</mo><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mi>a</mi><mi>n</mi><mpadded width="+3.3pt"><mi>d</mi></mpadded><mo>∀</mo><mi>u</mi><mo>:</mo><mrow><mo stretchy="false">[</mo><mi>u</mi><mo>∈</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><mo>⇒</mo><mo>∃</mo><mi>v</mi><mo>:</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>∈</mo><mi>u</mi><mo rspace="5.8pt" stretchy="false">)</mo></mrow><mi>a</mi><mi>n</mi><mpadded width="+3.3pt"><mi>d</mi></mpadded><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>∈</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">]</mo></mrow></math>, (which is known to be independent from the ordinary logico-mathematical and biological reasoning),
+and <span class="ltx_text ltx_markedasmath ltx_font_italic">N</span> is a category of non-atomic expressions, defined as follows.</p>
+</div>
+</div>
+<div id="S0.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.2</span>.</h6>
+<div id="S0.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">An <span class="ltx_text ltx_font_italic">atomically self–reproducing entity</span> is a unit class relation <math id="S0.Thmdefinition2.p1.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> such that <math id="S0.Thmdefinition2.p1.m2" class="ltx_Math" alttext="\pi\pi\left\langle\pi\right\rangle" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo>⟨</mo><mi>π</mi><mo>⟩</mo></mrow></mrow></math>, which means
+“<math id="S0.Thmdefinition2.p1.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> stands in the relation <math id="S0.Thmdefinition2.p1.m4" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> to <math id="S0.Thmdefinition2.p1.m5" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>”, <math id="S0.Thmdefinition2.p1.m6" class="ltx_Math" alttext="\pi\pi\left\langle\pi,\pi\right\rangle" display="inline"><mrow><mi>π</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo>⟨</mo><mi>π</mi><mo>,</mo><mi>π</mi><mo>⟩</mo></mrow></mrow></math>, etc.</p>
+</div>
+<div id="S0.Thmdefinition2.p2" class="ltx_para">
+<p class="ltx_p">An expression that does not contain any such atomically self–reproducing entity is called a <span class="ltx_text ltx_font_italic">non-atomic expression</span>.</p>
+</div>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+See references [13] to [26] in the Bibliography for Category Theory and Algebraic Topology (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CategoricalOntologyABibliographyOfCategoryTheory</span>)
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+W.F. Lawvere: 1963. Functorial Semantics of Algebraic Theories., <em class="ltx_emph ltx_font_italic">Proc. Natl. Acad. Sci. USA</em>, <span class="ltx_text ltx_font_bold">50</span>: 869–872.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+W. F. Lawvere: 1966. The Category of Categories as a Foundation for Mathematics. , In <em class="ltx_emph ltx_font_italic">Proc. Conf. Categorical Algebra–La Jolla</em>, 1965, Eilenberg, S et al., eds. Springer –Verlag: Berlin, Heidelberg and New York, pp. 1–20.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+L. Löfgren: 1968. On Axiomatic Explanation of Complete Self–Reproduction. <em class="ltx_emph ltx_font_italic">Bull. Math. Biophysics</em>,
+<span class="ltx_text ltx_font_bold">30</span>: 317–348.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+R. Brown R, P.J. Higgins, and R. Sivera.: <span class="ltx_text ltx_font_italic">“Non–Abelian Algebraic Topology”</span> (2008).
+<span class="ltx_text ltx_font_typewriter">http://www.bangor.ac.uk/mas010/nonab--t/partI010604.pdf</span>PDF file
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">
+R. Brown, J. F. Glazebrook and I. C. Baianu: A categorical and higher dimensional algebra framework for complex systems and spacetime structures, <em class="ltx_emph ltx_font_italic">Axiomathes</em> <span class="ltx_text ltx_font_bold">17</span>:409–493.
+(2007).
+
+</span>
+      </li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">7</span>
+        
+<span class="ltx_bibblock">
+R. Brown and G. H. Mosa: Double algebroids and crossed modules of algebroids, University of Wales–Bangor, Maths Preprint, 1986.
+
+</span>
+      </li>
+      
+<li id="bib.bib8" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">8</span>
+        
+<span class="ltx_bibblock">
+R. Brown and C.B. Spencer: Double groupoids and crossed modules, <em class="ltx_emph ltx_font_italic">Cahiers Top. Géom.Diff.</em> <span class="ltx_text ltx_font_bold">17</span> (1976), 343–362.
+
+</span>
+      </li>
+      
+<li id="bib.bib9" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">9</span>
+        
+<span class="ltx_bibblock">
+I.C. Baianu: Łukasiewicz–Topos Models of Neural Networks, Cell Genome and Interactome Nonlinear Dynamics). CERN Preprint EXT-2004-059. <span class="ltx_text ltx_font_italic">Health Physics and Radiation Effects</span> (June 29, 2004).
+
+</span>
+      </li>
+      
+<li id="bib.bib10" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">10</span>
+        
+<span class="ltx_bibblock">
+I.C. Baianu, Brown R., J. F. Glazebrook, and Georgescu G.: 2006, Complex Nonlinear Biodynamics in
+Categories, Higher Dimensional Algebra and Łukasiewicz–Moisil Topos: Transformations of
+Neuronal, Genetic and Neoplastic networks, <em class="ltx_emph ltx_font_italic">Axiomathes</em> <span class="ltx_text ltx_font_bold">16</span> Nos. 1–2, 65–122.
+
+</span>
+      </li>
+      
+<li id="bib.bib11" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">11</span>
+        
+<span class="ltx_bibblock">
+I.C. Baianu and M. Marinescu: 1974, A Functorial Construction of <em class="ltx_emph ltx_font_bold">(M,R)</em>– Systems. <em class="ltx_emph ltx_font_italic">Revue Roumaine de Mathematiques Pures et Appliquees</em> <span class="ltx_text ltx_font_bold">19</span>: 388–391.
+
+</span>
+      </li>
+      
+<li id="bib.bib12" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">12</span>
+        
+<span class="ltx_bibblock">
+I.C. Baianu: 1977, A Logical Model of Genetic Activities in Łukasiewicz Algebras: The Non–linear Theory. <em class="ltx_emph ltx_font_italic">Bulletin of Mathematical Biophysics</em>, <span class="ltx_text ltx_font_bold">39</span>: 249–258.
+
+</span>
+      </li>
+      
+<li id="bib.bib13" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">13</span>
+        
+<span class="ltx_bibblock">
+I.C. Baianu: 1987a, Computer Models and Automata Theory in Biology and Medicine., in M. Witten (ed.),
+<em class="ltx_emph ltx_font_italic">Mathematical Models in Medicine</em>, vol. 7., Pergamon Press, New York, 1513–1577;
+<span class="ltx_text ltx_font_typewriter">http://doc.cern.ch//archive/electronic/other/ext/ext-2004-072.pdf</span>CERN Preprint No. EXT-2004-072.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">ETAS interpretation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ETASInterpretation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:16:04</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:16:04</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">80</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 92B05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03G30</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">elementary theory of abstract supercategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ETAS</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Category</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ETAS</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalOntologyABibliographyOfCategoryTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AlgebraicComputation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoricalOntology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumLogic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfQuantumAutomata</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FunctorCategory2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumAutomataAndQuantumComputation2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SupercategoryOfVariableMolecularSets</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ETA</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">axioms of metacategories and supercategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">examples of supercategories and metacategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ETAS interpretation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ETAS axiom</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ETAS</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:04:41 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

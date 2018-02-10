@@ -1,0 +1,247 @@
+<!DOCTYPE html><html>
+<head>
+<title>Hamiltonian algebroids</title>
+<!--Generated on Sat Feb 10 13:05:04 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Hamiltonian algebroids</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Hamiltonian algebroids</em> are generalizations of the Lie algebras of canonical transformations, but cannot be considered just a special case of Lie algebroids. They are instead a special case of a <span class="ltx_text ltx_font_typewriter">http://planetphysics.org/encyclopedia/QuantumAlgebroid.html</span>quantum algebroid.</p>
+</div>
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.Thmdefinition1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S0.Thmdefinition1.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> be two vector fields on a smooth manifold <math id="S0.Thmdefinition1.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, represented here as operators acting on functions.
+Their commutator, or Lie bracket, <math id="S0.Thmdefinition1.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>, is :</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle[X,Y](f)=X(Y(f))-Y(X(f))." display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.Thmdefinition1.p2" class="ltx_para">
+<p class="ltx_p">Moreover, consider the classical configuration space <math id="S0.Thmdefinition1.p2.m1" class="ltx_Math" alttext="Q=\mathbb{R}^{3}" display="inline"><mrow><mi>Q</mi><mo>=</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math> of a classical, mechanical system, or particle whose phase space is the cotangent bundle <math id="S0.Thmdefinition1.p2.m2" class="ltx_Math" alttext="T^{*}\mathbb{R}^{3}\cong\mathbb{R}^{6}" display="inline"><mrow><mrow><msup><mi>T</mi><mo>*</mo></msup><mo>⁢</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow><mo>≅</mo><msup><mi>ℝ</mi><mn>6</mn></msup></mrow></math>, for which the space of (classical)
+observables is taken to be the real vector space of smooth functions on <math id="S0.Thmdefinition1.p2.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, and with T being an element
+of a Jordan-Lie (Poisson) algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/JordanBanachAndJordanLieAlgebras</span>) whose definition is also recalled next. Thus, one defines as in classical dynamics the <em class="ltx_emph ltx_font_italic">Poisson algebra</em> as a Jordan algebra in which <math id="S0.Thmdefinition1.p2.m4" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> is associative. We recall that one needs to consider first a specific algebra (defined as a vector space <math id="S0.Thmdefinition1.p2.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> over a ground field (typically <math id="S0.Thmdefinition1.p2.m6" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> or <math id="S0.Thmdefinition1.p2.m7" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>)) equipped with a bilinear and distributive multiplication <math id="S0.Thmdefinition1.p2.m8" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> . Then one defines a <em class="ltx_emph ltx_font_italic">Jordan algebra</em> (over <math id="S0.Thmdefinition1.p2.m9" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>), as a a specific algebra over <math id="S0.Thmdefinition1.p2.m10" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> for which:</p>
+</div>
+<div id="S0.Thmdefinition1.p3" class="ltx_para">
+<p class="ltx_p"><math id="S0.Thmdefinition1.p3.m1" class="ltx_Math" alttext="\begin{aligned} \displaystyle S\circ T&amp;\displaystyle=T\circ S~{},\\
+\displaystyle S\circ(T\circ S^{2})&amp;\displaystyle=(S\circ T)\circ S^{2},\end{%
+aligned}," display="inline"><mrow><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mi>S</mi><mo>∘</mo><mi>T</mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>T</mi><mo>∘</mo><mpadded width="+3.3pt"><mi>S</mi></mpadded></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi>S</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>∘</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∘</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><msup><mi>S</mi><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable><mo>,</mo></mrow></math></p>
+</div>
+<div id="S0.Thmdefinition1.p4" class="ltx_para">
+<p class="ltx_p">for all elements <math id="S0.Thmdefinition1.p4.m1" class="ltx_Math" alttext="S,T" display="inline"><mrow><mi>S</mi><mo>,</mo><mi>T</mi></mrow></math> of this algebra.</p>
+</div>
+<div id="S0.Thmdefinition1.p5" class="ltx_para">
+<p class="ltx_p">Then, the usual algebraic types of morphisms automorphism, isomorphism, etc.) apply to a
+Jordan-Lie (Poisson) algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/JordanBanachAndJordanLieAlgebras</span>) defined as a real vector space <math id="S0.Thmdefinition1.p5.m1" class="ltx_Math" alttext="U_{\mathbb{R}}" display="inline"><msub><mi>U</mi><mi>ℝ</mi></msub></math> together with a <em class="ltx_emph ltx_font_italic">Jordan product</em> <math id="S0.Thmdefinition1.p5.m2" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> and <em class="ltx_emph ltx_font_italic">Poisson bracket</em></p>
+</div>
+<div id="S0.Thmdefinition1.p6" class="ltx_para">
+<p class="ltx_p"><math id="S0.Thmdefinition1.p6.m1" class="ltx_Math" alttext="\{~{},~{}\}" display="inline"><mrow><mo rspace="5.8pt" stretchy="false">{</mo><mo rspace="5.8pt">,</mo><mo stretchy="false">}</mo></mrow></math>, satisfying :</p>
+</div>
+<div id="S0.Thmdefinition1.p7" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">1.</span> 
+<div id="I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">for all <math id="I1.ix1.p1.m1" class="ltx_Math" alttext="S,T\in U_{\mathbb{R}}," display="inline"><mrow><mrow><mrow><mi>S</mi><mo>,</mo><mi>T</mi></mrow><mo>∈</mo><msub><mi>U</mi><mi>ℝ</mi></msub></mrow><mo>,</mo></mrow></math></p>
+</div>
+<div id="I1.ix1.p2" class="ltx_para">
+<p class="ltx_p"><math id="I1.ix1.p2.m1" class="ltx_Math" alttext="\begin{aligned} \displaystyle S\circ T&amp;\displaystyle=T\circ S\\
+\displaystyle\{S,T\}&amp;\displaystyle=-\{T,S\}\end{aligned}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mi>S</mi><mo>∘</mo><mi>T</mi></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mi>T</mi><mo>∘</mo><mi>S</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mo stretchy="false">{</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">}</mo></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>T</mi><mo>,</mo><mi>S</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></mtd></mtr></mtable></math></p>
+</div>
+</li>
+<li id="I1.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">2.</span> 
+<div id="I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">the <em class="ltx_emph ltx_font_italic">Leibniz rule</em> holds</p>
+</div>
+<div id="I1.ix2.p2" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\{S,T\circ W\}=\{S,T\}\circ W+T\circ\{S,W\}" display="block"><mrow><mrow><mo stretchy="false">{</mo><mi>S</mi><mo>,</mo><mrow><mi>T</mi><mo>∘</mo><mi>W</mi></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">}</mo></mrow><mo>∘</mo><mi>W</mi></mrow><mo>+</mo><mrow><mi>T</mi><mo>∘</mo><mrow><mo stretchy="false">{</mo><mi>S</mi><mo>,</mo><mi>W</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="I1.ix2.p2.m1" class="ltx_Math" alttext="S,T,W\in U_{\mathbb{R}}" display="inline"><mrow><mrow><mi>S</mi><mo>,</mo><mi>T</mi><mo>,</mo><mi>W</mi></mrow><mo>∈</mo><msub><mi>U</mi><mi>ℝ</mi></msub></mrow></math>, along with</p>
+</div>
+</li>
+<li id="I1.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">3.</span> 
+<div id="I1.ix3.p1" class="ltx_para">
+<p class="ltx_p">the <em class="ltx_emph ltx_font_italic">Jacobi identity</em> :</p>
+</div>
+<div id="I1.ix3.p2" class="ltx_para">
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\{S,\{T,W\}\}=\{\{S,T\},W\}+\{T,\{S,W\}\}" display="block"><mrow><mrow><mo stretchy="false">{</mo><mi>S</mi><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>T</mi><mo>,</mo><mi>W</mi><mo stretchy="false">}</mo></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">{</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mi>W</mi><mo stretchy="false">}</mo></mrow><mo>+</mo><mrow><mo stretchy="false">{</mo><mi>T</mi><mo>,</mo><mrow><mo stretchy="false">{</mo><mi>S</mi><mo>,</mo><mi>W</mi><mo stretchy="false">}</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">4.</span> 
+<div id="I1.ix4.p1" class="ltx_para">
+<p class="ltx_p">for some <math id="I1.ix4.p1.m1" class="ltx_Math" alttext="\hslash^{2}\in\mathbb{R}" display="inline"><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>∈</mo><mi>ℝ</mi></mrow></math>, there is the <em class="ltx_emph ltx_font_italic">associator identity</em>  :</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(S\circ T)\circ W-S\circ(T\circ W)=\frac{1}{4}\hslash^{2}\{\{S,W\},T\}~{}." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∘</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>W</mi></mrow><mo>-</mo><mrow><mi>S</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>∘</mo><mi>W</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">{</mo><mi>S</mi><mo>,</mo><mi>W</mi><mo stretchy="false">}</mo></mrow><mo>,</mo><mi>T</mi><mo rspace="5.8pt" stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.Thmdefinition1.p8" class="ltx_para">
+<p class="ltx_p">Thus, the canonical transformations of the Poisson sigma model phase space specified by the Jordan-Lie (Poisson) algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/JordanBanachAndJordanLieAlgebras</span>) (also Poisson algebra), which is determined by both the Poisson bracket and the <em class="ltx_emph ltx_font_italic">Jordan product</em> <math id="S0.Thmdefinition1.p8.m1" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math>, define a <em class="ltx_emph ltx_font_italic">Hamiltonian algebroid</em> with the Lie brackets <math id="S0.Thmdefinition1.p8.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> related to such a Poisson structure on the target space.</p>
+</div>
+</div>
+<div id="S0.SS1.p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hamiltonian algebroids</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HamiltonianAlgebroids</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:13:44</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:13:44</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81P05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81R15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81R10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81R05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81R50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantum algebroid</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HamiltonianOperatorOfAQuantumSystem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">JordanBanachAndJordanLieAlgebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LieBracket</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LieAlgebroids</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumGravityTheories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Algebroids</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RAlgebroid</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Hamiltonian algebroid</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Jordan algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Poisson algebra</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:05:04 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

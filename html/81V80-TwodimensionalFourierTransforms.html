@@ -1,0 +1,283 @@
+<!DOCTYPE html><html>
+<head>
+<title>two-dimensional Fourier transforms</title>
+<!--Generated on Sat Feb 10 13:07:20 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">two-dimensional Fourier transforms</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">A two-dimensional Fourier transform (2D-FT) is computed numerically, or carried out, in two stages that are both
+involving ‘standard’, one-dimensional Fourier transforms. However, the second stage
+Fourier transform is <em class="ltx_emph ltx_font_italic">not the inverse</em> Fourier transform (which would result in the original
+function that was transformed at the first stage), but a Fourier transform in a second variable–
+which is ‘shifted’ in value– relative to that involved in the result of the first Fourier transform.
+Such 2D-FT analysis is a very powerful method for three-dimensional reconstruction
+of polymer and biopolymer structures by two-dimensional Nuclear Magnetic Resonance (2D-NMR, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>)
+of solutions for molecular weights (<math id="S1.p1.m1" class="ltx_Math" alttext="M_{w}" display="inline"><msub><mi>M</mi><mi>w</mi></msub></math>) of the dissolved polymers up to about 50,000 <math id="S1.p1.m2" class="ltx_Math" alttext="M_{w}" display="inline"><msub><mi>M</mi><mi>w</mi></msub></math>.
+For larger biopolymers or polymers, more complex methods have been developed to obtain the desired
+resolution needed for the 3D-reconstruction of higher molecular structures, e.g. for <math id="S1.p1.m3" class="ltx_Math" alttext="900,000M_{w}" display="inline"><mrow><mn>900</mn><mo>,</mo><mrow><mn>000</mn><mo>⁢</mo><msub><mi>M</mi><mi>w</mi></msub></mrow></mrow></math>,
+methods that can also be utilized <em class="ltx_emph ltx_font_italic">in vivo</em>. The 2D-FT method is also widely utilized in optical spectroscopy, such as <em class="ltx_emph ltx_font_italic">2D-FT NIR hyperspectral imaging</em>, or in <em class="ltx_emph ltx_font_italic">MRI imaging</em> for research and clinical, diagnostic applications in Medicine.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Basic definition</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">A more precise mathematical definition of the ‘double’ Fourier transform involved is specified next.</p>
+</div>
+<div id="S2.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2.1</span>.</h6>
+<div id="S2.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">A 2D-FT, or two-dimensional Fourier transform, is a standard Fourier transformation of a function
+of two variables, <math id="S2.Thmdefinition1.p1.m1" class="ltx_Math" alttext="f(x_{1},x_{2})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>, carried first in the first variable <math id="S2.Thmdefinition1.p1.m2" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math>, followed by the Fourier transform
+in the second variable <math id="S2.Thmdefinition1.p1.m3" class="ltx_Math" alttext="x_{2}" display="inline"><msub><mi>x</mi><mn>2</mn></msub></math> of the resulting function <math id="S2.Thmdefinition1.p1.m4" class="ltx_Math" alttext="F(s_{1},x_{2})" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>. (For further specific details and example
+for 2D-FT Imaging v. URLs provided in the following recent Bibliography).</p>
+</div>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Examples</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">A 2D Fourier transformation and phase correction is applied to a set of 2D NMR (FID) signals <math id="S2.SS1.p1.m1" class="ltx_Math" alttext="s(t_{1},t_{2})" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> yielding a real 2D-FT NMR ‘spectrum’ (collection of 1D FT-NMR spectra) represented by a matrix <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> whose elements are</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="S(\nu_{1},\nu_{2})=\textbf{Re}\int\int cos(\nu_{1}t_{1})exp^{(-i\nu_{2}t_{2})}%
+s(t_{1},t_{2})dt_{1}dt_{2}" display="block"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ν</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ν</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mtext>𝐑𝐞</mtext><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ν</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>t</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><msup><mi>p</mi><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>ν</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>t</mi><mn>2</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mi>t</mi><mn>1</mn></msub></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mi>t</mi><mn>2</mn></msub></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.SS1.p1.m3" class="ltx_Math" alttext="\nu_{1}" display="inline"><msub><mi>ν</mi><mn>1</mn></msub></math> and <math id="S2.SS1.p1.m4" class="ltx_Math" alttext="\nu_{2}" display="inline"><msub><mi>ν</mi><mn>2</mn></msub></math> denote the discrete indirect double-quantum and single-quantum(detection) axes, respectively,
+in the 2D NMR experiments. Next, the <em class="ltx_emph ltx_font_italic">covariance matrix</em> is calculated in the frequency domain according
+to the following equation</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="C(\nu_{2}^{\prime},\nu_{2})=S^{T}S=\sum_{\nu^{1}}[S(\nu_{1},\nu_{2}^{\prime})S%
+(\nu_{1},\nu_{2})]," display="block"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>ν</mi><mn>2</mn><mo>′</mo></msubsup><mo>,</mo><msub><mi>ν</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>S</mi><mi>T</mi></msup><mo>⁢</mo><mi>S</mi></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><msup><mi>ν</mi><mn>1</mn></msup></munder><mrow><mo stretchy="false">[</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ν</mi><mn>1</mn></msub><mo>,</mo><msubsup><mi>ν</mi><mn>2</mn><mo>′</mo></msubsup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ν</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ν</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">with <math id="S2.SS1.p2.m1" class="ltx_Math" alttext="\nu_{2},\nu_{2}^{\prime}" display="inline"><mrow><msub><mi>ν</mi><mn>2</mn></msub><mo>,</mo><msubsup><mi>ν</mi><mn>2</mn><mo>′</mo></msubsup></mrow></math> taking all possible single-quantum frequency values and with the summation carried out over all discrete, double quantum
+frequencies <math id="S2.SS1.p2.m2" class="ltx_Math" alttext="\nu_{1}" display="inline"><msub><mi>ν</mi><mn>1</mn></msub></math>.</p>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">http://74.125.95.132/search?q=cache:x6OQWq_GVoYJ:www.physorg.com/multimedia/pix1815/+http://www.physorg.com/multimedia/pix1815/&amp;hl=en&amp;ct=clnk&amp;cd=1&amp;gl=uk</span>2D-FT STEM Images (obtained at Cornell University) of electron distributions in a high-temperature
+cuprate superconductor ‘paracrystal’ reveal both the domains (or ‘location’) and the local symmetry of the “pseudo-gap” in the electron-pair correlation band responsible for the high–temperature superconductivity effect (a definite
+possibility for the next Nobel (?) iff the mathematical physics treatment is also developed to include also
+such results).</p>
+</div>
+<div id="S2.SS1.p4" class="ltx_para">
+<p class="ltx_p">So far there have been three Nobel prizes awarded for 2D-FT NMR/MRI during 1992-2003, and an additional,
+earlier Nobel prize for 2D-FT of X-ray data (‘CAT scans’); recently the advanced possibilities
+of 2D-FT techniques in
+<span class="ltx_text ltx_font_typewriter">http://nobelprize.org/nobel_prizes/chemistry/laureates/1991/ernst-lecture.pdf</span>Chemistry, Physiology and Medicine received very significant recognition.</p>
+</div>
+</section>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Kurt W’́utrich: 1986, <em class="ltx_emph ltx_font_italic">NMR of Proteins and Nucleic Acids.</em>, J. Wiley and Sons:
+New York, Chichester, Brisbane, Toronto, Singapore.
+<span class="ltx_text ltx_font_typewriter">http://nobelprize.org/nobel_prizes/chemistry/laureates/2002/wutrich-lecture.pdf</span>(Nobel Laureate in 2002 for 2D-FT NMR Studies of Structure and Function of Biological Macromolecules);
+<span class="ltx_text ltx_font_typewriter">http://upload.wikimedia.org/wikipedia/en/b/bf/HWB-NMRv900.jpg</span>2D-FT NMR Instrument Image Example: a JPG color image of a 2D-FT NMR Imaging ‘monster’ Instrument
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Richard R. Ernst. 1992. Nuclear Magnetic Resonance Fourier Transform (2D-FT) Spectroscopy.
+<span class="ltx_text ltx_font_typewriter">http://nobelprize.org/nobel_prizes/chemistry/laureates/1991/ernst-lecture.pdf</span>Nobel Lecture, on December 9, 1992.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+Peter Mansfield. 2003. <span class="ltx_text ltx_font_typewriter">http://www.parteqinnovations.com/pdf-doc/fandr-Gaz1006.pdf</span>Nobel Laureate in Physiology and Medicine for (2D and 3D) MRI.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+D. Benett. 2007. <em class="ltx_emph ltx_font_italic">PhD Thesis</em>. Worcester Polytechnic Institute. (<span class="ltx_text ltx_font_italic">lots of 2D-FT images of mathematical, brain scans</span>.)
+<span class="ltx_text ltx_font_typewriter">http://www.wpi.edu/Pubs/ETD/Available/etd-081707-080430/unrestricted/dbennett.pdf</span>PDF of 2D-FT Imaging Applications to MRI in Medical Research.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+Paul Lauterbur. 2003.
+<span class="ltx_text ltx_font_typewriter">http://nobelprize.org/nobel_prizes/medicine/laureates/2003/</span>Nobel Laureate in Physiology and Medicine for (2D and 3D) MRI.
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">
+Jean Jeener. 1971. Two-dimensional Fourier Transform NMR, presented at an Ampère International Summer School, Basko Polje, <em class="ltx_emph ltx_font_italic">unpublished</em>. A verbatim quote follows from Richard R. Ernst’s Nobel Laureate Lecture
+delivered on December 2nd, 1992, “A new approach to measure two-dimensional (2D) spectra has been
+proposed by Jean Jeener at an Ampere Summer School in Basko Polje, Yugoslavia, 1971 (<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="" class="ltx_ref">6</a>]</cite>). He suggested a 2D Fourier transform experiment consisting of two <math id="bib.bib6.m1" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math> pulses with a variable time <math id="bib.bib6.m2" class="ltx_Math" alttext="t_{1}" display="inline"><msub><mi>t</mi><mn>1</mn></msub></math> between the pulses and the time variable <math id="bib.bib6.m3" class="ltx_Math" alttext="t_{2}" display="inline"><msub><mi>t</mi><mn>2</mn></msub></math> measuring the time elapsed after the second pulse as shown in Fig. 6 that expands the principles of Fig. 1. Measuring the response <math id="bib.bib6.m4" class="ltx_Math" alttext="s(t_{1},t_{2})" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> of the two-pulse sequence and Fourier-transformation with
+respect to both time variables produces a two-dimensional spectrum <math id="bib.bib6.m5" class="ltx_Math" alttext="S(O_{1},O_{2})" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>O</mi><mn>1</mn></msub><mo>,</mo><msub><mi>O</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> of the desired form (62,63). This two-pulse experiment by Jean Jeener is the forefather of a whole class of <math id="bib.bib6.m6" class="ltx_Math" alttext="2D" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>D</mi></mrow></math> experiments (8,63)
+that can also easily be expanded to multidimensional spectroscopy.”
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">two-dimensional Fourier transforms</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TwodimensionalFourierTransforms</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:18:56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:18:56</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">57</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81V80</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81V55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 42B10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2D-FT imaging</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FourierStieltjesTransform</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FourierTransform</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TableOfGeneralizedFourierAndMeasuredGroupoidTransforms</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SpinNetworksAndSpinFoams</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FourierSineAndCosineSeries</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DiscreteFourierTransform</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2D-FT</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2D-FT NMRI</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MRI</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NMRI</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">2D-FT NMR</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:07:20 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

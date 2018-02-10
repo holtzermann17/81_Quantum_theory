@@ -1,0 +1,392 @@
+<!DOCTYPE html><html>
+<head>
+<title>quantization</title>
+<!--Generated on Sat Feb 10 13:06:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">quantization</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Quantization is understood as the process of defining a <em class="ltx_emph ltx_font_italic">formal</em> correspondence between a quantum system operator (such as the quantum Hamiltonian operator) or quantum algebra and a classical system operator (such as the Hamiltonian) or a classical algebra, such as the Poisson algebra. Theoretical quantum physicists often proceed in two ‘stages’, so that both first and second quantization procedures were reported in QFT, for example. Generalized quantization procedures involve <em class="ltx_emph ltx_font_italic">asymptotic morphisms and Wigner–Weyl–Moyal quantization procedures</em> or noncommutative ‘deformations’ of C*-algebras (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CAlgebra3</span>) associated with quantum operators on Hilbert spaces (as in noncommutative geometry). The <em class="ltx_emph ltx_font_italic">non-commutative</em> algebra of quantum observable operators is a
+Clifford algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CliffordAlgebra</span>), and the associated
+<math id="S0.SS1.p1.m1" class="ltx_Math" alttext="C^{*}" display="inline"><msup><mi>C</mi><mo>*</mo></msup></math>-Clifford algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CCliffordAlgebra</span>) is a fundamental concept of modern mathematical treatments of quantum theories. Note, however, that classical systems, including Einstein’s general relativity are commutative (or Abelian) theories, whereas quantum theories are intrinsically non-commutative (or non-Abelian), most likely as a consequnece of the non-comutativity of quantum logics and the Heisenberg uncertainty principle of quantum mechanics.</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">This definition is quite broad, and as a result there are many approaches to quantization, employing a variety of techniques. It should be emphasized the result of quantization is not unique; in fact, methods of quantization usually possess inherent ambiguities, in the sense that, while performing quantization, one usually must make choices at certain points of the process.</p>
+</div>
+</section>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Classical systems</h2>
+
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_dfn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">classical system</em> is a triplet <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="(M,\omega,H)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo>,</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="(M,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></math> (the <em class="ltx_emph ltx_font_italic">phase space</em>) is a symplectic manifold and <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> (the <em class="ltx_emph ltx_font_italic">Hamiltonian</em>) is a smooth function on <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+</div>
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">In most physical examples the phase space <math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the cotangent bundle <math id="S0.SSx1.p1.m2" class="ltx_Math" alttext="T^{*}X" display="inline"><mrow><msup><mi>T</mi><mo>*</mo></msup><mo>⁢</mo><mi>X</mi></mrow></math> of a manifold <math id="S0.SSx1.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. In this case, <math id="S0.SSx1.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is called the <em class="ltx_emph ltx_font_italic">configuration space</em>.</p>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_dfn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">classical state</em> is a point <math id="I1.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in <math id="I1.i1.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">classical observable</em> is a function <math id="I1.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on <math id="I1.i2.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para">
+<p class="ltx_p">In classical mechanics, one studies the time-evolution of a classical system. The time-evolution of an observable is described the equation</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\frac{df}{dt}=-\{H,f\}," display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>f</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mrow><mo stretchy="false">{</mo><mi>H</mi><mo>,</mo><mi>f</mi><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SSx1.p2.m1" class="ltx_Math" alttext="\{\cdot,\cdot\}" display="inline"><mrow><mo stretchy="false">{</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">}</mo></mrow></math> is the Poisson bracket. Equation (<a href="#S0.E1" title="(1) ‣ Classical systems ‣ quantization" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is equivalent to the Hamilton equations.</p>
+</div>
+<div id="Thmrmkx1" class="ltx_theorem ltx_theorem_rmk">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark</span>.</h6>
+<div id="Thmrmkx1.p1" class="ltx_para">
+<p class="ltx_p">A classical system is sometimes defined more generally as a triplet <math id="Thmrmkx1.p1.m1" class="ltx_Math" alttext="(M,\pi,H)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>π</mi><mo>,</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="Thmrmkx1.p1.m2" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is a Poisson structure on <math id="Thmrmkx1.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+</div>
+</section>
+<section id="S0.SSx2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Quantum systems</h2>
+
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_dfn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">quantum system</em> is a pair <math id="Thmthm3.p1.m1" class="ltx_Math" alttext="(\mathcal{H},\hat{H})" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>,</mo><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow></math>, where <math id="Thmthm3.p1.m2" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> is a Hilbert space and <math id="Thmthm3.p1.m3" class="ltx_Math" alttext="\hat{H}" display="inline"><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover></math> is a self-adjoint linear operator on <math id="Thmthm3.p1.m4" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>.
+</p>
+</div>
+</div>
+<div id="S0.SSx2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S0.SSx2.p1.m1" class="ltx_Math" alttext="(\mathcal{H},\hat{H})" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>,</mo><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow></math> is a quantum system, <math id="S0.SSx2.p1.m2" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> is referred to as the (quantum) phase space and <math id="S0.SSx2.p1.m3" class="ltx_Math" alttext="\hat{H}" display="inline"><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover></math> is referred to as the <em class="ltx_emph ltx_font_italic">Hamiltonian operator</em>.</p>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_dfn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 4</span>.</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">quantum state</em> is a vector <math id="I2.i1.p1.m1" class="ltx_Math" alttext="\Psi" display="inline"><mi mathvariant="normal">Ψ</mi></math> in <math id="I2.i1.p1.m2" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">quantum observable</em> is a self-adjoint linear operator <math id="I2.i2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> on <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="S0.SSx2.p2" class="ltx_para">
+<p class="ltx_p">The space of quantum observables is denoted <math id="S0.SSx2.p2.m1" class="ltx_Math" alttext="\mathcal{O}(\mathcal{H})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo stretchy="false">)</mo></mrow></mrow></math>. If <math id="S0.SSx2.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S0.SSx2.p2.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are in <math id="S0.SSx2.p2.m4" class="ltx_Math" alttext="\mathcal{O}(\mathcal{H})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo stretchy="false">)</mo></mrow></mrow></math>, then</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="(i\hbar)^{-1}[A,B]:=(i\hbar)^{-1}(AB-BA)" display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">]</mo></mrow></mrow><mo>:=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">is in <math id="S0.SSx2.p2.m5" class="ltx_Math" alttext="\mathcal{O}(\mathcal{H})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo stretchy="false">)</mo></mrow></mrow></math> (Planck’s constant <math id="S0.SSx2.p2.m6" class="ltx_Math" alttext="\hbar" display="inline"><mi mathvariant="normal">ℏ</mi></math> appears as a scaling factor arising from physical considerations). The operation <math id="S0.SSx2.p2.m7" class="ltx_Math" alttext="(i\hbar)^{-1}[\cdot,\cdot]" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false">]</mo></mrow></mrow></math> thus gives <math id="S0.SSx2.p2.m8" class="ltx_Math" alttext="\mathcal{O}(\mathcal{H})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo stretchy="false">)</mo></mrow></mrow></math> the structure of a Lie algebra.</p>
+</div>
+<div id="S0.SSx2.p3" class="ltx_para">
+<p class="ltx_p">The time evolution of a quantum observable is described by the equation</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="\frac{dA}{dt}=\frac{i}{\hbar}[\hat{H},A]." display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>A</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>,</mo><mi>A</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Equation (<a href="#S0.E3" title="(3) ‣ Quantum systems ‣ quantization" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) is equivalent to the <em class="ltx_emph ltx_font_italic">time-dependent</em> Schrödinger’s equation</p>
+<table id="S0.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E4.m1" class="ltx_Math" alttext="i\hbar\frac{d\Psi}{dt}=\hat{H}\Psi." display="block"><mrow><mrow><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi mathvariant="normal">Ψ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mi mathvariant="normal">Ψ</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S0.SSx3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">The problem of quantization</h2>
+
+<div id="S0.SSx3.p1" class="ltx_para">
+<p class="ltx_p">The problem of quantization is to find a correspondence between a quantum system and a classical system; this is clearly not always possible. Thus, specific methods of quantization describe several ways of constructing a pair <math id="S0.SSx3.p1.m1" class="ltx_Math" alttext="(\mathcal{H},\hat{H})" display="inline"><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>,</mo><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">)</mo></mrow></math> from a triplet <math id="S0.SSx3.p1.m2" class="ltx_Math" alttext="(M,\omega,H)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo>,</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></math>. Furthermore, in order to give physical meaning to the observables in the quantum system, there should be a map</p>
+<table id="S0.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E5.m1" class="ltx_Math" alttext="q\colon C^{\infty}(M)\to\mathcal{O}(\mathcal{H})," display="block"><mrow><mrow><mi>q</mi><mo>:</mo><mrow><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">satisfying the following conditions:</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is a Lie algebra homomorphism,</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="q(H)=\hat{H}" display="inline"><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Thmrmkx2" class="ltx_theorem ltx_theorem_rmk">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark</span>.</h6>
+<div id="Thmrmkx2.p1" class="ltx_para">
+<p class="ltx_p">Note that <math id="Thmrmkx2.p1.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is not an algebra homomorphism. Much of the complexity of quantization lies in the fact that, while <math id="Thmrmkx2.p1.m2" class="ltx_Math" alttext="C^{\infty}(M)" display="inline"><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a commutative algebra, its image in <math id="Thmrmkx2.p1.m3" class="ltx_Math" alttext="\mathcal{O}(\mathcal{H})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo stretchy="false">)</mo></mrow></mrow></math> necessarily does not commute.</p>
+</div>
+</div>
+<div id="S0.SSx3.p2" class="ltx_para">
+<p class="ltx_p">The following is a list of some well-known methods of quantization:</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">Canonical quantization</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p">Geometric quantization</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p">Deformation quantization</p>
+</div>
+</li>
+<li id="I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i4.p1" class="ltx_para">
+<p class="ltx_p">Path-integral quantization</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.SSx3.p3" class="ltx_para">
+<p class="ltx_p">A detailed example of geometric quantization on quantum Riemannian spaces can be found in
+ref. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Abhay Ashtekar and Jerzy Lewandowski. 2005. Quantum Geometry and Its Applications.
+<span class="ltx_text ltx_font_typewriter">http://cgpg.gravity.psu.edu/people/Ashtekar/articles/qgfinal.pdf</span>Available PDF download.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">quantization</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Quantization</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:36:59</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:36:59</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">27</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81S10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53D50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46L65</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81R50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81R15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantisation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">canonical quantization</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Weyl-quantization</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CCliffordAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AsymptoticMorphismsAndWignerWeylMoyalQuantizationProcedures</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HamiltonianEquations</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PoissonBracket</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SchrodingersWaveEquation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CanonicalQuantization</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HamiltonianOperatorOfAQuantumSystem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumSpaceTimes</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QFTOrQuantumFieldTheories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QEDInTh</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">classical system</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">classical state</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">classical observable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantum system</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantum state</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">quantum observable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:06:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

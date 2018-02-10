@@ -1,0 +1,236 @@
+<!DOCTYPE html><html>
+<head>
+<title>canonical quantization</title>
+<!--Generated on Sat Feb 10 13:06:27 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">canonical quantization</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Canonical quantization is a method of relating, or associating, a classical system of the form <math id="p1.m1" class="ltx_Math" alttext="(T^{*}X,\omega,H)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msup><mi>T</mi><mo>*</mo></msup><mo>⁢</mo><mi>X</mi></mrow><mo>,</mo><mi>ω</mi><mo>,</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a manifold, <math id="p1.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is the canonical symplectic form on <math id="p1.m4" class="ltx_Math" alttext="T^{*}X" display="inline"><mrow><msup><mi>T</mi><mo>*</mo></msup><mo>⁢</mo><mi>X</mi></mrow></math>, with a (more complex) quantum system represented by <math id="p1.m5" class="ltx_Math" alttext="H\in C^{\infty}(X)" display="inline"><mrow><mi>H</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="p1.m6" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is the
+Hamiltonian operator (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/HamiltonianOperatorOfAQuantumSystem</span>). Some of the early formulations of quantum mechanics used such quantization methods under the umbrella of the <em class="ltx_emph ltx_font_italic">correspondence principle or postulate</em>.
+The latter states that a correspondence exists between certain classical and quantum operators,
+(such as the Hamiltonian operators) or algebras (such as Lie or Poisson (brackets)), with the
+classical ones being in the real (<math id="p1.m7" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>) domain, and the quantum ones being in the complex (<math id="p1.m8" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>) domain.
+Whereas all classical observables and states are specified only by real numbers, the ’wave’ amplitudes in quantum
+theories are represented by complex functions. 
+<br class="ltx_break"></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(x^{i},p_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mi>i</mi></msup><mo>,</mo><msub><mi>p</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math> be a set of Darboux coordinates on <math id="p2.m2" class="ltx_Math" alttext="T^{*}X" display="inline"><mrow><msup><mi>T</mi><mo>*</mo></msup><mo>⁢</mo><mi>X</mi></mrow></math>. Then we may obtain from each coordinate function an operator on the Hilbert space <math id="p2.m3" class="ltx_Math" alttext="\mathcal{H}=L^{2}(X,\mu)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>=</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, consisting of functions on <math id="p2.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> that are square-integrable with respect to some measure <math id="p2.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>, by the <em class="ltx_emph ltx_font_italic">operator substitution</em> rule:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle x^{i}\mapsto\hat{x}^{i}" display="inline"><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>↦</mo><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m2" class="ltx_Math" alttext="\displaystyle=x^{i}\cdot," display="inline"><mrow><mo>=</mo><msup><mi>x</mi><mi>i</mi></msup><mo>⋅</mo><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle p_{i}\mapsto\hat{p}_{i}" display="inline"><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>↦</mo><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m2" class="ltx_Math" alttext="\displaystyle=-i\hbar\frac{\partial}{\partial x^{i}}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mfrac></mstyle></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p2.m6" class="ltx_Math" alttext="x^{i}\cdot" display="inline"><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>⋅</mo></mrow></math> is the “multiplication by <math id="p2.m7" class="ltx_Math" alttext="x^{i}" display="inline"><msup><mi>x</mi><mi>i</mi></msup></math>” operator. Using this rule, we may obtain operators from a larger class of functions. For example,</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="x^{i}x^{j}\mapsto\hat{x}^{i}\hat{x}^{j}=x^{i}x^{j}\cdot" display="inline"><mrow><msup><mi>x</mi><mi>i</mi></msup><msup><mi>x</mi><mi>j</mi></msup><mo>↦</mo><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msup><mo>=</mo><msup><mi>x</mi><mi>i</mi></msup><msup><mi>x</mi><mi>j</mi></msup><mo>⋅</mo></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="p_{i}p_{j}\mapsto\hat{p}_{i}\hat{p}_{j}=-\hbar^{2}\frac{\partial^{2}}{\partial
+x%
+^{i}x^{j}}" display="inline"><mrow><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow><mo>↦</mo><mrow><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub></mrow><mo>=</mo><mrow><mo>-</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><mo>⁡</mo><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>⁢</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mrow></mfrac></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I1.i3.p1.m1" class="ltx_Math" alttext="i\neq j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math> then <math id="I1.i3.p1.m2" class="ltx_Math" alttext="x^{i}p_{j}\mapsto\hat{x}^{i}\hat{p}_{j}=-i\hbar x^{i}\frac{\partial}{\partial x%
+^{j}}" display="inline"><mrow><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow><mo>↦</mo><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msup><mi>x</mi><mi>i</mi></msup><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mfrac></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Thmrmkx1" class="ltx_theorem ltx_theorem_rmk">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark</span>.</h6>
+<div id="Thmrmkx1.p1" class="ltx_para">
+<p class="ltx_p">The substitution rule creates an ambiguity for the function <math id="Thmrmkx1.p1.m1" class="ltx_Math" alttext="x^{i}p_{j}" display="inline"><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow></math> when <math id="Thmrmkx1.p1.m2" class="ltx_Math" alttext="i=j" display="inline"><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow></math>, since <math id="Thmrmkx1.p1.m3" class="ltx_Math" alttext="x^{i}p_{j}=p_{j}x^{i}" display="inline"><mrow><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><msub><mi>p</mi><mi>j</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>i</mi></msup></mrow></mrow></math>, whereas <math id="Thmrmkx1.p1.m4" class="ltx_Math" alttext="\hat{x}^{i}\hat{p}_{j}\neq\hat{p}_{j}\hat{x}^{i}" display="inline"><mrow><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub></mrow><mo>≠</mo><mrow><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup></mrow></mrow></math>. This is the <em class="ltx_emph ltx_font_italic">operator ordering</em> problem. One possible solution is to choose</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="x^{i}p_{j}\mapsto\frac{1}{2}\left(\hat{x}^{i}\hat{p}_{j}+\hat{p}_{j}\hat{x}^{i%
+}\right)," display="block"><mrow><mrow><mrow><msup><mi>x</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow><mo>↦</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub></mrow><mo>+</mo><mrow><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">since this choice produces an operator that is self-adjoint and therefore corresponds to a physical observable. More generally, there is a construction known as <em class="ltx_emph ltx_font_italic">Weyl quantization</em> that uses Fourier transforms to extend the substitution rules (<a href="#S0.E1" title="(1) ‣ canonical quantization" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)-(<a href="#S0.E2" title="(2) ‣ canonical quantization" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) to a map</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle C^{\infty}(T^{*}X)" display="inline"><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>T</mi><mo>*</mo></msup><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle\to\operatorname{Op}(\mathcal{H})" display="inline"><mrow><mi></mi><mo>→</mo><mrow><mi>Op</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle f" display="inline"><mi>f</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle\mapsto\hat{f}." display="inline"><mrow><mrow><mi></mi><mo>↦</mo><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Thmrmkx2" class="ltx_theorem ltx_theorem_rmk">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark</span>.</h6>
+<div id="Thmrmkx2.p1" class="ltx_para">
+<p class="ltx_p">This procedure is called “canonical” because it preserves the canonical Poisson brackets. In particular, we have that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{-i}{\hbar}[\hat{x}^{i},\hat{p}_{j}]:=\frac{-i}{\hbar}\left(\hat{x}^{i}%
+\hat{p}_{j}-\hat{p}_{j}\hat{x}^{i}\right)=\delta^{i}_{j}," display="block"><mrow><mrow><mrow><mfrac><mrow><mo>-</mo><mi>i</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>,</mo><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>:=</mo><mrow><mfrac><mrow><mo>-</mo><mi>i</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub></mrow><mo>-</mo><mrow><msub><mover accent="true"><mi>p</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>⁢</mo><msup><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><msubsup><mi>δ</mi><mi>j</mi><mi>i</mi></msubsup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which agrees with the Poisson bracket <math id="Thmrmkx2.p1.m1" class="ltx_Math" alttext="\{x^{i},p_{j}\}=\delta^{i}_{j}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><msup><mi>x</mi><mi>i</mi></msup><mo>,</mo><msub><mi>p</mi><mi>j</mi></msub><mo stretchy="false">}</mo></mrow><mo>=</mo><msubsup><mi>δ</mi><mi>j</mi><mi>i</mi></msubsup></mrow></math>.</p>
+</div>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 1</span>.</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmex1.p1.m1" class="ltx_Math" alttext="X=\mathbb{R}" display="inline"><mrow><mi>X</mi><mo>=</mo><mi>ℝ</mi></mrow></math>. The Hamiltonian function for a one-dimensional point particle with mass <math id="Thmex1.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="H=\frac{p^{2}}{2m}+V(x)," display="block"><mrow><mrow><mi>H</mi><mo>=</mo><mrow><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Thmex1.p1.m3" class="ltx_Math" alttext="V(x)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the potential energy. Then, by operator substitution, we obtain the Hamiltonian operator</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\hat{H}=\frac{-\hbar^{2}}{2m}\frac{d^{2}}{dx^{2}}+V(x)." display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">^</mo></mover><mo>=</mo><mrow><mrow><mfrac><mrow><mo>-</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">canonical quantization</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CanonicalQuantization</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:53:34</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:53:34</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81S10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 53D50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 46L65</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Quantization</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PoissonBracket</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HamiltonianOperatorOfAQuantumSystem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SchrodingerOperator</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AsymptoticMorphismsAndWignerWeylMoyalQuantizationProcedures</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">operator substitution rule</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">operator ordering problem</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:06:27 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

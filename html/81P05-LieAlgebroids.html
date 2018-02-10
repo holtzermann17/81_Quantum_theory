@@ -1,0 +1,83 @@
+<!DOCTYPE html><html>
+<head>
+<title>Lie algebroids</title>
+<!--Generated on Sat Feb 10 13:05:11 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Lie algebroids</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Topic on Lie algebroids</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">This is a topic entry on Lie algebroids that focuses on their quantum applications and extensions of current algebraic theories.</p>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Lie algebroids</em> generalize <em class="ltx_emph ltx_font_italic">Lie algebras</em>, and in certain quantum systems they represent <em class="ltx_emph ltx_font_italic">extended quantum (algebroid) symmetries</em>. One can think of a <em class="ltx_emph ltx_font_italic">Lie algebroid</em> as generalizing the idea of a tangent bundle where the tangent space at a point is effectively the equivalence class of curves meeting at that point (thus
+suggesting a groupoid approach), as well as serving as a site on which to study infinitesimal geometry (see, for example, ref. <cite class="ltx_cite ltx_citemacro_cite">[<span class="ltx_ref ltx_missing_citation ltx_ref_self">Mackenzie2005</span>]</cite>). The formal definition of a <em class="ltx_emph ltx_font_italic">Lie algebroid</em> is presented next. 
+<br class="ltx_break"></p>
+</div>
+<div id="S0.SS1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition 0.1</span>
+Let <math id="S0.SS1.p3.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> be a manifold and let <math id="S0.SS1.p3.m2" class="ltx_Math" alttext="\mathfrak{X}(M)" display="inline"><mrow><mi>𝔛</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote the set of vector fields on <math id="S0.SS1.p3.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. Then, a
+<em class="ltx_emph ltx_font_italic">Lie algebroid</em> over <math id="S0.SS1.p3.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> consists of a <em class="ltx_emph ltx_font_italic">vector bundle <math id="S0.SS1.p3.m5" class="ltx_Math" alttext="E{\longrightarrow}M" display="inline"><mrow><mi>E</mi><mo mathvariant="normal">⟶</mo><mi>M</mi></mrow></math>,
+equipped with a Lie bracket <math id="S0.SS1.p3.m6" class="ltx_Math" alttext="[~{},~{}]" display="inline"><mrow><mo mathvariant="normal" rspace="5.8pt" stretchy="false">[</mo><mo mathvariant="normal" rspace="5.8pt">,</mo><mo mathvariant="normal" stretchy="false">]</mo></mrow></math> on the space of sections <math id="S0.SS1.p3.m7" class="ltx_Math" alttext="\gamma(E)" display="inline"><mrow><mi>γ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>,
+and a bundle map <math id="S0.SS1.p3.m8" class="ltx_Math" alttext="\Upsilon:E{\longrightarrow}TM" display="inline"><mrow><mi mathvariant="normal">Υ</mi><mo mathvariant="normal">:</mo><mrow><mi>E</mi><mo mathvariant="normal">⟶</mo><mrow><mi>T</mi><mo mathvariant="italic">⁢</mo><mi>M</mi></mrow></mrow></mrow></math></em>, usually called the <em class="ltx_emph ltx_font_italic">anchor</em>.
+Furthermore, there is an induced map <math id="S0.SS1.p3.m9" class="ltx_Math" alttext="\Upsilon:\gamma(E){\longrightarrow}\mathfrak{X}(M)" display="inline"><mrow><mi mathvariant="normal">Υ</mi><mo>:</mo><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⟶</mo><mrow><mi>𝔛</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+which is required to be a map of Lie algebras, such that given sections <math id="S0.SS1.p3.m10" class="ltx_Math" alttext="\alpha,\beta\in\gamma(E)" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and a differentiable function <math id="S0.SS1.p3.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, the following
+Leibniz rule is satisfied :</p>
+</div>
+<div id="S0.SS1.p4" class="ltx_para">
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="[\alpha,f\beta]=f[\alpha,\beta]+(\Upsilon(\alpha))\beta~{}." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>α</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mi>β</mi></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">]</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Υ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+3.3pt"><mi>β</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(0.1)</span></td>
+</tr>
+</table>
+</div>
+<div id="S0.Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 0.1</span>.</h6>
+<div id="S0.Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">A typical example of a Lie algebroid is obtained when <math id="S0.Thmexample1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is a Poisson
+manifold and <math id="S0.Thmexample1.p1.m2" class="ltx_Math" alttext="E=T^{*}M" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><msup><mi>T</mi><mo>*</mo></msup><mo>⁢</mo><mi>M</mi></mrow></mrow></math>, that is <math id="S0.Thmexample1.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is the cotangent bundle of <math id="S0.Thmexample1.p1.m4" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+</div>
+<div id="S0.SS1.p5" class="ltx_para">
+<p class="ltx_p">Now suppose we have a Lie groupoid <math id="S0.SS1.p5.m1" class="ltx_Math" alttext="\mathsf{G}" display="inline"><mi>𝖦</mi></math>:</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="r,s~{}:~{}\hbox{}" display="block"><mrow><mrow><mi>r</mi><mo>,</mo><mpadded width="+3.3pt"><mi>s</mi></mpadded></mrow><mo rspace="5.8pt">:</mo><mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(0.2)</span></td>
+</tr>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:05:11 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

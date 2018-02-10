@@ -1,0 +1,210 @@
+<!DOCTYPE html><html>
+<head>
+<title>Gel’fand triple</title>
+<!--Generated on Sat Feb 10 13:05:13 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Gel’fand triple</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Gel’fand (or Gelfand) triple</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">The basic idea is to equip a separable Hilbert space <math id="S1.p1.m1" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> with a dense <em class="ltx_emph ltx_font_italic">Topological Subvector Space (<math id="S1.p1.m2" class="ltx_Math" alttext="TVS" display="inline"><mrow><mi>T</mi><mo mathvariant="italic">⁢</mo><mi>V</mi><mo mathvariant="italic">⁢</mo><mi>S</mi></mrow></math>)</em> of test functions in such a manner that the dual of the subspace of test functions <math id="S1.p1.m3" class="ltx_Math" alttext="T_{f}" display="inline"><msub><mi>T</mi><mi>f</mi></msub></math> enhances the Hilbert space <math id="S1.p1.m4" class="ltx_Math" alttext="\mathcal{H}" display="inline"><mi class="ltx_font_mathcaligraphic">ℋ</mi></math> through embedding into a larger topological subvector space <math id="S1.p1.m5" class="ltx_Math" alttext="T^{*}" display="inline"><msup><mi>T</mi><mo>*</mo></msup></math>; the elements of <math id="S1.p1.m6" class="ltx_Math" alttext="T^{*}" display="inline"><msup><mi>T</mi><mo>*</mo></msup></math> represent generalized eigenvectors for the continuous spectrum of normal-and possibly unbounded-linear operators <math id="S1.p1.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">One begins the Gelfand construction with a Banach space <math id="S1.p2.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, or the more general TVS considered above, and denote the dual TVS of <math id="S1.p2.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> as <math id="S1.p2.m3" class="ltx_Math" alttext="B^{*}" display="inline"><msup><mi>B</mi><mo>*</mo></msup></math> so that
+<math id="S1.p2.m4" class="ltx_Math" alttext="j:B\rightarrow\mathcal{H}" display="inline"><mrow><mi>j</mi><mo>:</mo><mrow><mi>B</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi></mrow></mrow></math> is an <em class="ltx_emph ltx_font_italic">injective bounded operator</em> with dense image. One then considers a canonical isomorphism <math id="S1.p2.m5" class="ltx_Math" alttext="i_{c}:\mathcal{H}\cong\mathcal{H}^{*}" display="inline"><mrow><msub><mi>i</mi><mi>c</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>≅</mo><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>*</mo></msup></mrow></mrow></math> determined by the inner product given by the <span class="ltx_text ltx_font_italic">Riesz theorem</span>. The Banach transpose, or dual of <math id="S1.p2.m6" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> is the operator <math id="S1.p2.m7" class="ltx_Math" alttext="j^{*}:\mathcal{H}^{*}\to B^{*}" display="inline"><mrow><msup><mi>j</mi><mo>*</mo></msup><mo>:</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>*</mo></msup><mo>→</mo><msup><mi>B</mi><mo>*</mo></msup></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Then, one has a composition morphism <math id="S1.p3.m1" class="ltx_Math" alttext="k:\mathcal{H}\rightarrow B^{*}" display="inline"><mrow><mi>k</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>→</mo><msup><mi>B</mi><mo>*</mo></msup></mrow></mrow></math> as
+<math id="S1.p3.m2" class="ltx_Math" alttext="\mathcal{H}\to\mathcal{H}^{*}\to B^{*}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>→</mo><msup><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>*</mo></msup><mo>→</mo><msup><mi>B</mi><mo>*</mo></msup></mrow></math> , so that <math id="S1.p3.m3" class="ltx_Math" alttext="k=j^{*}\circ i_{c}" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><msup><mi>j</mi><mo>*</mo></msup><mo>∘</mo><msub><mi>i</mi><mi>c</mi></msub></mrow></mrow></math> that can be employed to define the Gelfand triple as follows.
+</p>
+</div>
+<div id="S1.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1.1</span>.</h6>
+<div id="S1.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">Gelfand triple</span> is defined by the operator sequence:</p>
+</div>
+<div id="S1.Thmdefinition1.p2" class="ltx_para">
+<p class="ltx_p"><math id="S1.Thmdefinition1.p2.m1" class="ltx_Math" alttext="B\rightarrow\mathcal{H}\rightarrow B^{*}," display="inline"><mrow><mrow><mi>B</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>→</mo><msup><mi>B</mi><mo>*</mo></msup></mrow><mo>,</mo></mrow></math></p>
+</div>
+<div id="S1.Thmdefinition1.p3" class="ltx_para">
+<p class="ltx_p">where <math id="S1.Thmdefinition1.p3.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is the composition morphism <math id="S1.Thmdefinition1.p3.m2" class="ltx_Math" alttext="k:\mathcal{H}\to B^{*}" display="inline"><mrow><mi>k</mi><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>→</mo><msup><mi>B</mi><mo>*</mo></msup></mrow></mrow></math> defined by <math id="S1.Thmdefinition1.p3.m3" class="ltx_Math" alttext="j^{*}\circ i_{c}" display="inline"><mrow><msup><mi>j</mi><mo>*</mo></msup><mo>∘</mo><msub><mi>i</mi><mi>c</mi></msub></mrow></math></p>
+</div>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Example:</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">An interesting example of a Gel’fand triple which is preserved by the Fourier transform (FT) is obtained when <math id="S1.SS1.p1.m1" class="ltx_Math" alttext="B=\mathcal{S}(\mathcal{R}^{n})" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒮</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi class="ltx_font_mathcaligraphic">ℛ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> –the Schwartz space,
+<math id="S1.SS1.p1.m2" class="ltx_Math" alttext="B^{*}=\mathcal{S}^{t}" display="inline"><mrow><msup><mi>B</mi><mo>*</mo></msup><mo>=</mo><msup><mi class="ltx_font_mathcaligraphic">𝒮</mi><mi>t</mi></msup></mrow></math>-the space of tempered Schwartz distributions and
+<math id="S1.SS1.p1.m3" class="ltx_Math" alttext="\mathcal{H}=L^{2}(\mathcal{R}^{n})" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℋ</mi><mo>=</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi class="ltx_font_mathcaligraphic">ℛ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Acknowledgement</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">The formalism utilized here followed the <span class="ltx_text ltx_font_typewriter">http://ncatlab.org/nlab/show/Gelfand+triple</span>presentation by Urs Schreiber of the Gel’fand triple at <span class="ltx_text ltx_font_typewriter">http://ncatlab.org/nlab/show/HomePage<math id="S1.SS2.p1.m1" class="ltx_Math" alttext="nLab" display="inline"><mrow><mi mathvariant="normal">n</mi><mo mathvariant="monospace">⁢</mo><mi mathvariant="normal">L</mi><mo mathvariant="monospace">⁢</mo><mi mathvariant="normal">a</mi><mo mathvariant="monospace">⁢</mo><mi mathvariant="normal">b</mi></mrow></math></span>- a ‘steered’ wiki for Mathematics, Physical Mathematics and Philosophy.</p>
+</div>
+</section>
+<section id="S1.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.3 </span>References</h3>
+
+<div id="S1.SS3.p1" class="ltx_para">
+<p class="ltx_p">J.-P. Antoine. Dirac formalism and symmetry problems in quantum mechanics. I. General Dirac formalism. Journal of Mathematical Physics, 10(1):53–69, 1969.</p>
+</div>
+<div id="S1.SS3.p2" class="ltx_para">
+<p class="ltx_p">N.Bogoliubov, A.Logunov, and I.Todorov. Introduction to Axiomatic Quantum Field Theory, chapter 1 Some Basic Concepts of Functional Analysis 4 The Space of States, pages 12–43, 113–128. Benjamin, Reading, Massachusetts, 1975.</p>
+</div>
+<div id="S1.SS3.p3" class="ltx_para">
+<p class="ltx_p">R.de la Madrid. Quantum Mechanics in Rigged Hilbert Space Language. PhD thesis, Depertamento de Fisica Teorica Facultad de Ciencias. Universidad de Valladolid, 2001. (available here)</p>
+</div>
+<div id="S1.SS3.p4" class="ltx_para">
+<p class="ltx_p">M.Gadella and F.Gomez. A unified mathematical formalism for the dirac formulation of quantum mechanics. Foundations of Physics, 32:815–869, 2002. (available here)</p>
+</div>
+<div id="S1.SS3.p5" class="ltx_para">
+<p class="ltx_p">M.Gadella and F.Gomez. On the mathematical basis of the dirac formulation of quantum mechanics. International Journal of Theoretical Physics, 42:2225–2254, 2003.</p>
+</div>
+<div id="S1.SS3.p6" class="ltx_para">
+<p class="ltx_p">M.Gadella and F.Gomez. Dirac formulation of quantum mechanics: Recent and new results. Reports on Mathematical Physics, 59:127–143, 2007.</p>
+</div>
+<div id="S1.SS3.p7" class="ltx_para">
+<p class="ltx_p">I.M. Gel’fand and N.J. Vilenkin. Generalized Functions, vol. 4: Some Applications of Harmonic Analysis, volume4, chapter 2-4, pages 26–133. Academic Press, New York, 1964.</p>
+</div>
+<div id="S1.SS3.p8" class="ltx_para">
+<p class="ltx_p">I. M. Gel’fand, A. G. Kostyucenko, Expansion in eigenfunctions of differential and other operators) (Russian), Dokl. Akad. Nauk SSSR (N.S.) 103 (1955), 349–352, MR73136</p>
+</div>
+<div id="S1.SS3.p9" class="ltx_para">
+<p class="ltx_p">I. M. Gel’fand, N. Ja. Vilenkin, Generalized functions, vol. 4. Some applications of harmonic analysis. Equipped Hilbert spaces, Fizmatgiz, Moscow, 1961 MR146653, English transl. Acad. Press 1964 MR173945</p>
+</div>
+<div id="S1.SS3.p10" class="ltx_para">
+<p class="ltx_p">Ciprian Foiash, Décompositions intégrales des familles spectrales et
+semi–spectrales en opérateurs qui sortent de l’espace Hilbertien, Acta Sci. Math. Szeged 20, 1959, 117–155. MR115092</p>
+</div>
+<div id="S1.SS3.p11" class="ltx_para">
+<p class="ltx_p">John Roberts, The Dirac bra and ket formalism, J. Mathematical Phys. 7 (1966), 1097–1104, MR216836, Rigged Hilbert spaces in quantum mechanics , Comm. Math. Physics 3, n. 2 (1966), 98–119, MR228243, euclid</p>
+</div>
+<div id="S1.SS3.p12" class="ltx_para">
+<p class="ltx_p">J.E. Roberts. The Dirac bra and ket formalism. Journal of Mathematical Physics, 7(6):1097–1104, 1966.</p>
+</div>
+<div id="S1.SS3.p13" class="ltx_para">
+<p class="ltx_p">A.R. Marlow. Unified Dirac–Von Neumann formulation of quantum mechanics. I. Mathematical theory. Journal of Mathematical Physics, 6:919–927, 1965.</p>
+</div>
+<div id="S1.SS3.p14" class="ltx_para">
+<p class="ltx_p">E.Prugovecki. The bra and ket formalism in extended Hilbert space. J. Math. Phys., 14:1410–1422, 1973.</p>
+</div>
+<div id="S1.SS3.p15" class="ltx_para">
+<p class="ltx_p">J.E. Roberts. Rigged Hilbert spaces in quantum mechanics. Commun. math. Phys., 3:98–119, 1966.</p>
+</div>
+<div id="S1.SS3.p16" class="ltx_para">
+<p class="ltx_p">Tjostheim. A note on the unified Dirac-Von Neumann formulation of quantum mechanics. Journal of Mathematical Physics, 16(4):766–767, 4 1975</p>
+</div>
+<div id="S1.SS3.p17" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Gel’fand triple</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GelfandTriple</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:22:51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:22:51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81P10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rigged Hilbert space</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S1.SS3.p17.m1" class="ltx_Math" alttext="\mathcal{S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r"><math id="S1.SS3.p17.m2" class="ltx_Math" alttext="{\mathcal{S}}^{t}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒮</mi><mi>t</mi></msup></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">injective bounded operator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">
+<math id="S1.SS3.p17.m3" class="ltx_Math" alttext="&lt;m_{x}&gt;" display="inline"><mrow><mo>&lt;</mo><msub><mi>m</mi><mi>x</mi></msub><mo>&gt;</mo></mrow></math> operator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TVS</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">topological subvector space</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">canonical isomorphism</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:05:13 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

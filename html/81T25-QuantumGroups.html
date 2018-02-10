@@ -1,0 +1,318 @@
+<!DOCTYPE html><html>
+<head>
+<title>quantum groups</title>
+<!--Generated on Sat Feb 10 13:07:06 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">quantum groups</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Introduction</h2>
+
+<div id="S0.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.1</span>.</h6>
+<div id="S0.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">quantum group</em> is often defined as the dual of a Hopf algebra or coalgebra. Actually, quantum groups are constructed by employing certain Hopf algebras as “building blocks”, and in the case of finite groups they are obtained from the latter by Fourier transformation of the group elements.</p>
+</div>
+</div>
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Let us consider next, alternative definitions of quantum groups that indeed possess extended quantum symmetries and algebraic properties distinct from those of Hopf algebras.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Quantum Groups, Quantum Operator Algebras and Related Symmetries</h2>
+
+<div id="S0.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 0.2</span>.</h6>
+<div id="S0.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Quantum groups</span> are defined as locally compact topological groups endowed with a left Haar measure system, and also with at least one internal quantum symmetry, such as the intrinsic spin symmetry represented by either Pauli matrices or the Dirac algebra of observable spin operators.</p>
+</div>
+</div>
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">For additional examples of quantum groups the reader is referred to the last six publications listed in the bibliography.</p>
+</div>
+<div id="S0.Thmremark1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 0.1</span>.</h6>
+<div id="S0.Thmremark1.p1" class="ltx_para">
+<p class="ltx_p">One can also consider quantum groups as a particular case of quantum groupoids in the limiting
+case where there is only one symmetry type present in the quantum groupoid.</p>
+</div>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>Quantum Groups, Paragroups and Operator Algebras in Quantum Theories</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">Quantum theories adopted a new lease of life post 1955 when von Neumann beautifully re-formulated Quantum Mechanics (QM) in the mathematically rigorous context of Hilbert spaces and operator algebras. From a current physics perspective, von Neumann’s approach to quantum mechanics has done however much more: it has not only paved the way to expanding the role of symmetry in
+physics, as for example with the Wigner-Eckhart theorem and its
+applications, but also revealed the fundamental importance in
+quantum physics of the state space geometry of (quantum) operator
+algebras. Subsequent developments of the quantum operator algebra were aimed at identifying more general quantum symmetries than those defined for example by symmetry groups, groups of unitary operators and Lie groups. Several fruitful quantum algebraic concepts were developed, such as: the Ocneanu <span class="ltx_text ltx_font_italic">paragroups</span>-later found to be represented by Kac–Moody algebras, quantum ‘groups’ represented either as Hopf algebras or locally compact groups with Haar measure, ‘quantum’ groupoids represented as weak Hopf algebras, and so on. The Ocneanu <span class="ltx_text ltx_font_italic">paragroups</span> case is particularly interesting as it can be considered as an extension through quantization of certain finite group symmetries to infinitely-dimensional von Neumann type <math id="S0.SS3.p1.m1" class="ltx_Math" alttext="II_{1}" display="inline"><mrow><mi>I</mi><mo>⁢</mo><msub><mi>I</mi><mn>1</mn></msub></mrow></math> factors (subalgebras), and are, in effect, <span class="ltx_text ltx_font_italic">‘quantized groups’</span> that can be nicely constructed as Kac algebras; in fact, it was recently shown that a paragroup can be constructed from a crossed product by an outer action of a Kac algebra. This suggests a relation to categorical aspects of paragroups (rigid monoidal tensor categories previously reported in the literature). The strict symmetry of the group of (quantum) unitary operators is thus naturally extended through paragroups to the symmetry of the latter structure’s unitary representations; furthermore, if a subfactor of the von Neumann algebra arises as a crossed product by a finite group action, the paragroup for this subfactor contains a very similar group structure to that of the original finite group, and also has a unitary representation theory similar to that of the original finite group. Last-but-not least, a paragroup yields a <em class="ltx_emph ltx_font_italic">complete invariant</em> for irreducible inclusions of AFD von Neumannn type <math id="S0.SS3.p1.m2" class="ltx_Math" alttext="II_{1}" display="inline"><mrow><mi>I</mi><mo>⁢</mo><msub><mi>I</mi><mn>1</mn></msub></mrow></math> factors with finite index and finite depth (Theorem 2.6. of Sato, 2001). This can be considered as a kind of internal, ‘hidden’ quantum symmetry of von Neumann algebras.</p>
+</div>
+<div id="S0.SS3.p2" class="ltx_para">
+<p class="ltx_p">On the other hand, unlike paragroups, (quantum) locally compact groups are not readily constructed as either Kac or Hopf C*-algebras. In recent years the techniques of Hopf symmetry and those of weak Hopf C*-algebras, sometimes called <em class="ltx_emph ltx_font_italic">quantum groupoids</em> (cf Böhm et al.,1999),
+provide important tools–in addition to the paragroups– for studying the broader relationships of the Wigner fusion rules algebra, <math id="S0.SS3.p2.m1" class="ltx_Math" alttext="6j" display="inline"><mrow><mn>6</mn><mo>⁢</mo><mi>j</mi></mrow></math>–symmetry (Rehren, 1997), as well as the study of the noncommutative
+symmetries of subfactors within the Jones tower constructed from finite index depth 2 inclusion of factors, also recently considered from the viewpoint of related Galois correspondences (Nikshych and Vainerman, 2000).</p>
+</div>
+<div id="S0.Thmremark2" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 0.2</span>.</h6>
+<div id="S0.Thmremark2.p1" class="ltx_para">
+<p class="ltx_p">Compact quantum groups (CQGs) (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CompactQuantumGroup</span>) are of great interest in physical mathematics
+especially in relation to locally compact quantum groups (L-CQGs) (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/LocallyCompactQuantumGroup</span>).</p>
+</div>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+M. Chaician and A. Demichev: <em class="ltx_emph ltx_font_italic">Introduction to Quantum Groups</em>, World Scientific (1996).
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+V. G. Drinfel’d: Quantum groups, In <em class="ltx_emph ltx_font_italic">Proc. Intl. Congress of
+Mathematicians, Berkeley 1986</em>, (ed. A. Gleason), Berkeley, 798-820 (1987).
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+P.. I. Etingof and A. N. Varchenko, Solutions of the Quantum Dynamical Yang-Baxter Equation and Dynamical Quantum Groups, <em class="ltx_emph ltx_font_italic">Comm.Math.Phys.</em>, <span class="ltx_text ltx_font_bold">196</span>: 591-640 (1998).
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+P. I. Etingof and A. N. Varchenko: Exchange dynamical quantum groups, <em class="ltx_emph ltx_font_italic">Commun. Math. Phys.</em> <span class="ltx_text ltx_font_bold">205</span> (1): 19-52 (1999)
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+P. I. Etingof and O. Schiffmann: Lectures on the dynamical Yang–Baxter equations, in <em class="ltx_emph ltx_font_italic">Quantum Groups and Lie Theory (Durham, 1999)</em>, pp. 89-129, Cambridge University Press, Cambridge, 2001.
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock">
+J. M. G. Fell.: The Dual Spaces of C*–Algebras., <em class="ltx_emph ltx_font_italic">Transactions of the American
+Mathematical Society</em>, <span class="ltx_text ltx_font_bold">94</span>: 365–403 (1960).
+
+</span>
+      </li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">7</span>
+        
+<span class="ltx_bibblock">
+P. Hahn: Haar measure for measure groupoids., <span class="ltx_text ltx_font_italic">Trans. Amer. Math. Soc</span>. <span class="ltx_text ltx_font_bold">242</span>: 1–33(1978).
+
+</span>
+      </li>
+      
+<li id="bib.bib8" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">8</span>
+        
+<span class="ltx_bibblock">
+P. Hahn: The regular representations of measure groupoids., <span class="ltx_text ltx_font_italic">Trans. Amer. Math. Soc</span>. <span class="ltx_text ltx_font_bold">242</span>:34–72(1978).
+
+</span>
+      </li>
+      
+<li id="bib.bib9" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">9</span>
+        
+<span class="ltx_bibblock">
+C. Heunen, N. P. Landsman, B. Spitters.: A topos for algebraic quantum theory, (2008) 
+<br class="ltx_break">arXiv:0709.4364v2 [quant–ph]
+
+</span>
+      </li>
+      
+<li id="bib.bib10" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">10</span>
+        
+<span class="ltx_bibblock">
+S. Majid. Quantum groups, <span class="ltx_text ltx_font_typewriter">http://www.ams.org/notices/200601/what-is.pdf</span>on line
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">quantum groups</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumGroups</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:12:22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:12:22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">38</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">bci1 (20947)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81T25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81T18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81T13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81T10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81T05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81R50</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Hopf algebras</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">locally compact groupoids with Haar measure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HopfAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HaarMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LocallyCompactQuantumGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CompactQuantumGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GroupoidAndGroupRepresentationsRelatedToQuantumSymmetries</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumGroupoids2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Groupoids</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumSpaceTimes</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">QuantumCategory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LocallyCompactQuantumGroupsUniformContinuity2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UniformCon</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">quantum group</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">local quantum symmetry</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 13:07:06 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
